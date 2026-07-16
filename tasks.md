@@ -2,13 +2,13 @@
 
 ---
 
-### 🏁 Sprint 0 — Setup e Fundação do Projeto
+### 🏁 Sprint 0 — Setup e Fundação do Projeto ✅
 
 **Objetivo:** Preparar o ambiente, configurações globais e estrutura base do projeto.
 
 ---
 
-- [ ] **0.1 — Configuração do Ambiente Python**
+- [x ] **0.1 — Configuração do Ambiente Python**
   - [x] 0.1.1 — Criar e ativar virtualenv (`python -m venv .venv`)
   - [ x] 0.1.2 — Instalar Django 6.x (`pip install django`)
   - [x ] 0.1.3 — Gerar `requirements.txt` (`pip freeze > requirements.txt`)
@@ -30,18 +30,18 @@
   - [x] 0.3.3 — Incluir `path('categorias/', include('categories.urls'))`
   - [x] 0.3.4 — Incluir `path('transacoes/', include('transactions.urls'))`
   - [x] 0.3.5 — Incluir `path('perfil/', include('profiles.urls'))`
-  - [ ] 0.3.6 — Incluir `path('dashboard/', include('core_views'))` ou criar view de dashboard em app dedicada
+  - [x] 0.3.6 — Incluir `path('dashboard/', include('core_views'))` ou criar view de dashboard em app dedicada
 
-- [ ] **0.4 — Template Base Global (`templates/base.html`)**
-  - [ ] 0.4.1 — Criar arquivo `templates/base.html` com estrutura HTML5 completa
-  - [ ] 0.4.2 — Incluir link da fonte Inter do Google Fonts
-  - [ ] 0.4.3 — Incluir CDN do TailwindCSS Play (`<script src="https://cdn.tailwindcss.com"></script>`)
-  - [ ] 0.4.4 — Definir bloco `{% block title %}` para título dinâmico por página
-  - [ ] 0.4.5 — Definir bloco `{% block content %}` para conteúdo de cada página
-  - [ ] 0.4.6 — Implementar renderização de mensagens Django Messages com estilo do design system
-  - [ ] 0.4.7 — Criar `templates/base_auth.html` (layout com sidebar) herdando de `base.html`
-  - [ ] 0.4.8 — Implementar sidebar com: logo Finanpy, links de navegação, dados do usuário logado e botão de logout
-  - [ ] 0.4.9 — Implementar destaque de item ativo na sidebar usando `request.resolver_match.url_name`
+- [x] **0.4 — Template Base Global (`templates/base.html`)**
+  - [x] 0.4.1 — Criar arquivo `templates/base.html` com estrutura HTML5 completa
+  - [x] 0.4.2 — Incluir link da fonte Inter do Google Fonts
+  - [x] 0.4.3 — Incluir CDN do TailwindCSS Play (`<script src="https://cdn.tailwindcss.com"></script>`)
+  - [x] 0.4.4 — Definir bloco `{% block title %}` para título dinâmico por página
+  - [x] 0.4.5 — Definir bloco `{% block content %}` para conteúdo de cada página
+  - [x] 0.4.6 — Implementar renderização de mensagens Django Messages com estilo do design system
+  - [x] 0.4.7 — Criar `templates/base_auth.html` (layout com sidebar) herdando de `base.html`
+  - [x] 0.4.8 — Implementar sidebar com: logo Finanpy, links de navegação, dados do usuário logado e botão de logout
+  - [x] 0.4.9 — Implementar destaque de item ativo na sidebar usando `request.resolver_match.url_name`
 
 ---
 
