@@ -15,21 +15,21 @@
   - [x ] 0.1.4 — Criar arquivo `.gitignore` com: `.venv/`, `db.sqlite3`, `*.pyc`, `__pycache__/`, `.env`
   - [x ] 0.1.5 — Criar arquivo `.env` para variáveis sensíveis e adicionar ao `.gitignore`
 
-- [ x] **0.2 — Configuração do `settings.py`**
-  - [x ] 0.2.1 — Mover `SECRET_KEY` para variável de ambiente (usando `os.environ.get` ou `python-decouple`)
-  - [x ] 0.2.2 — Configurar `AUTH_USER_MODEL = 'users.CustomUser'` (antes de qualquer migration)
-  - [x ] 0.2.3 — Adicionar todos os apps ao `INSTALLED_APPS`: `accounts`, `categories`, `profiles`, `transactions`, `users`
-  - [ ] 0.2.4 — Configurar `LANGUAGE_CODE = 'pt-br'` e `TIME_ZONE = 'America/Sao_Paulo'`
-  - [ ] 0.2.5 — Configurar diretório de templates globais: `TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']`
-  - [ ] 0.2.6 — Configurar `STATIC_URL` e `STATICFILES_DIRS`
-  - [ ] 0.2.7 — Configurar `LOGIN_URL`, `LOGIN_REDIRECT_URL` e `LOGOUT_REDIRECT_URL`
+- [x] **0.2 — Configuração do `settings.py`**
+  - [x] 0.2.1 — Mover `SECRET_KEY` para variável de ambiente (usando `os.environ.get` ou `python-decouple`)
+  - [x] 0.2.2 — Configurar `AUTH_USER_MODEL = 'users.CustomUser'` (antes de qualquer migration)
+  - [x] 0.2.3 — Adicionar todos os apps ao `INSTALLED_APPS`: `accounts`, `categories`, `profiles`, `transactions`, `users`
+  - [x] 0.2.4 — Configurar `LANGUAGE_CODE = 'pt-br'` e `TIME_ZONE = 'America/Sao_Paulo'`
+  - [x] 0.2.5 — Configurar diretório de templates globais: `TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']`
+  - [x] 0.2.6 — Configurar `STATIC_URL` e `STATICFILES_DIRS`
+  - [x] 0.2.7 — Configurar `LOGIN_URL`, `LOGIN_REDIRECT_URL` e `LOGOUT_REDIRECT_URL`
 
-- [ ] **0.3 — Configuração de URLs raiz (`core/urls.py`)**
-  - [ ] 0.3.1 — Incluir `path('', include('users.urls'))` para landing e autenticação
-  - [ ] 0.3.2 — Incluir `path('accounts/', include('accounts.urls'))`
-  - [ ] 0.3.3 — Incluir `path('categories/', include('categories.urls'))`
-  - [ ] 0.3.4 — Incluir `path('transactions/', include('transactions.urls'))`
-  - [ ] 0.3.5 — Incluir `path('profile/', include('profiles.urls'))`
+- [x] **0.3 — Configuração de URLs raiz (`core/urls.py`)**
+  - [x] 0.3.1 — Incluir `path('', include('users.urls'))` para landing e autenticação
+  - [x] 0.3.2 — Incluir `path('contas/', include('accounts.urls'))`
+  - [x] 0.3.3 — Incluir `path('categorias/', include('categories.urls'))`
+  - [x] 0.3.4 — Incluir `path('transacoes/', include('transactions.urls'))`
+  - [x] 0.3.5 — Incluir `path('perfil/', include('profiles.urls'))`
   - [ ] 0.3.6 — Incluir `path('dashboard/', include('core_views'))` ou criar view de dashboard em app dedicada
 
 - [ ] **0.4 — Template Base Global (`templates/base.html`)**
