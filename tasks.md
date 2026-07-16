@@ -60,11 +60,11 @@
   - [x] 1.1.6 — Adicionar campo `username` como opcional/nulo ou removê-lo (definir estratégia)
   - [x] 1.1.7 — Registrar no `admin.py` com `UserAdmin` customizado
 
-- [ ] **1.2 — Backend de Autenticação por E-mail (`users/backends.py`)**
-  - [ ] 1.2.1 — Criar classe `EmailBackend` herdando de `ModelBackend`
-  - [ ] 1.2.2 — Sobrescrever método `authenticate(request, email=None, password=None, **kwargs)`
-  - [ ] 1.2.3 — Buscar usuário por `email` ao invés de `username`
-  - [ ] 1.2.4 — Adicionar `AUTHENTICATION_BACKENDS = ['users.backends.EmailBackend']` no `settings.py`
+- [x] **1.2 — Backend de Autenticação por E-mail (`users/backends.py`)**
+  - [x] 1.2.1 — Criar classe `EmailBackend` herdando de `ModelBackend`
+  - [x] 1.2.2 — Sobrescrever método `authenticate(request, email=None, password=None, **kwargs)`
+  - [x] 1.2.3 — Buscar usuário por `email` ao invés de `username`
+  - [x] 1.2.4 — Adicionar `AUTHENTICATION_BACKENDS = ['users.backends.EmailBackend']` no `settings.py`
 
 - [ ] **1.3 — Formulários de Autenticação (`users/forms.py`)**
   - [ ] 1.3.1 — Criar `UserRegistrationForm` herdando de `UserCreationForm`

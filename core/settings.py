@@ -117,6 +117,7 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 
 # Authentication
+AUTHENTICATION_BACKENDS = ['users.backends.EmailBackend']
 LOGIN_URL = '/entrar/'
 LOGIN_REDIRECT_URL = '/dashboard/'
 LOGOUT_REDIRECT_URL = '/'
