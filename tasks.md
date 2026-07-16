@@ -51,14 +51,14 @@
 
 ---
 
-- [ ] **1.1 — Model `CustomUser` (`users/models.py`)**
-  - [ ] 1.1.1 — Criar classe `CustomUser` herdando de `AbstractUser`
-  - [ ] 1.1.2 — Adicionar campo `email = models.EmailField(unique=True)` (sem aspas duplas)
-  - [ ] 1.1.3 — Adicionar campos `created_at = models.DateTimeField(auto_now_add=True)` e `updated_at = models.DateTimeField(auto_now=True)`
-  - [ ] 1.1.4 — Definir `USERNAME_FIELD = 'email'`
-  - [ ] 1.1.5 — Definir `REQUIRED_FIELDS = ['first_name', 'last_name']` (remove username dos required)
-  - [ ] 1.1.6 — Adicionar campo `username` como opcional/nulo ou removê-lo (definir estratégia)
-  - [ ] 1.1.7 — Registrar no `admin.py` com `UserAdmin` customizado
+- [x] **1.1 — Model `CustomUser` (`users/models.py`)**
+  - [x] 1.1.1 — Criar classe `CustomUser` herdando de `AbstractUser`
+  - [x] 1.1.2 — Adicionar campo `email = models.EmailField(unique=True)` (sem aspas duplas)
+  - [x] 1.1.3 — Adicionar campos `created_at = models.DateTimeField(auto_now_add=True)` e `updated_at = models.DateTimeField(auto_now=True)`
+  - [x] 1.1.4 — Definir `USERNAME_FIELD = 'email'`
+  - [x] 1.1.5 — Definir `REQUIRED_FIELDS = ['first_name', 'last_name']` (remove username dos required)
+  - [x] 1.1.6 — Adicionar campo `username` como opcional/nulo ou removê-lo (definir estratégia)
+  - [x] 1.1.7 — Registrar no `admin.py` com `UserAdmin` customizado
 
 - [ ] **1.2 — Backend de Autenticação por E-mail (`users/backends.py`)**
   - [ ] 1.2.1 — Criar classe `EmailBackend` herdando de `ModelBackend`
