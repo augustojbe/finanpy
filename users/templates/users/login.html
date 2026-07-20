@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}Entrar — Finanpy{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-950 flex items-center justify-center px-4">
+    <div class="w-full max-w-md">
+
+        <!-- Logo -->
+        <div class="text-center mb-8">
+            <span class="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent font-bold text-2xl">
+                Finanpy
+            </span>
+            <p class="text-gray-400 mt-2 text-sm">Entre na sua conta</p>
+        </div>
+
+        <!-- Card do formulário -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+            <form method="post" novalidate>
+                {% csrf_token %}
+
+                {% if form.non_field_errors %}
+                    <div class="bg-rose-500/10 border border-rose-500/30 text-rose-400 px-4 py-3 rounded-lg text-sm mb-6">
+                        {% for error in form.non_field_errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <div class="space-y-4">
+                    <!-- E-mail -->
+                    <div class="space-y-1">
+                        <label for="{{ form.username.id_for_label }}" class="block text-sm font-medium text-gray-400">
+                            E-mail
+                        </label>
+                        <input type="email"
+                               name="{{ form.username.name }}"
+                               id="{{ form.username.id_for_label }}"
+                               value="{{ form.username.value|default:'' }}"
+                               class="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all duration-200 {% if form.username.errors %}border-rose-500{% endif %}"
+                               placeholder="seu@email.com"
+                               autofocus>
+                        {% if form.username.errors %}
+                            {% for error in form.username.errors %}
+                                <p class="text-xs text-rose-400">{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <!-- Senha -->
+                    <div class="space-y-1">
+                        <label for="{{ form.password.id_for_label }}" class="block text-sm font-medium text-gray-400">
+                            Senha
+                        </label>
+                        <input type="password"
+                               name="{{ form.password.name }}"
+                               id="{{ form.password.id_for_label }}"
+                               class="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all duration-200 {% if form.password.errors %}border-rose-500{% endif %}"
+                               placeholder="Sua senha">
+                        {% if form.password.errors %}
+                            {% for error in form.password.errors %}
+                                <p class="text-xs text-rose-400">{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <button type="submit"
+                        class="w-full mt-6 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                    Entrar
+                </button>
+            </form>
+
+            <p class="mt-6 text-center text-sm text-gray-400">
+                Não tem uma conta?
+                <a href="{% url 'users:register' %}" class="text-violet-400 hover:text-violet-300 font-medium transition-colors">
+                    Cadastre-se
+                </a>
+            </p>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

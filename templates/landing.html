@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block title %}Finanpy — Controle suas finanças{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-950 flex flex-col">
+
+    <!-- Header -->
+    <header class="border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <span class="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent font-bold text-xl">
+                Finanpy
+            </span>
+            <div class="flex items-center gap-3">
+                <a href="{% url 'users:login' %}"
+                   class="border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white font-medium py-2 px-5 rounded-lg transition-all duration-200 hover:bg-gray-800 text-sm">
+                    Entrar
+                </a>
+                <a href="{% url 'users:register' %}"
+                   class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold py-2 px-5 rounded-lg transition-all duration-200 text-sm">
+                    Cadastre-se
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="flex-1 flex items-center justify-center px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Controle suas finanças
+                <span class="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+                    de forma simples
+                </span>
+            </h1>
+            <p class="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
+                Acompanhe receitas, despesas e o saldo das suas contas em um só lugar.
+                Simples, rápido e sem complicação.
+            </p>
+            <a href="{% url 'users:register' %}"
+               class="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg shadow-violet-600/25">
+                Comece gratuitamente
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="max-w-5xl mx-auto px-6 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">Registre transações</h3>
+                <p class="text-gray-400 text-sm">Cadastre receitas e despesas por categoria e mantenha tudo organizado.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                <div class="w-10 h-10 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">Visualize seu saldo</h3>
+                <p class="text-gray-400 text-sm">Acompanhe o saldo de cada conta e veja o resumo do mês no dashboard.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">Múltiplas contas</h3>
+                <p class="text-gray-400 text-sm">Gerencie várias contas bancárias, carteiras e investimentos em um só lugar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-6">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; {% now 'Y' %}
+                <span class="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent font-semibold">
+                    Finanpy
+                </span>
+            </p>
+        </div>
+    </footer>
+
+</div>
+{% endblock %}

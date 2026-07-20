@@ -1,5 +1,12 @@
 from django.urls import path
 
+from users.views import LandingPageView, LoginView, LogoutView, RegisterView
+
 app_name = 'users'
 
-urlpatterns = []
+urlpatterns = [
+    path('', LandingPageView.as_view(), name='landing'),
+    path('cadastro/', RegisterView.as_view(), name='register'),
+    path('entrar/', LoginView.as_view(), name='login'),
+    path('sair/', LogoutView.as_view(), name='logout'),
+]

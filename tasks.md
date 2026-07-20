@@ -45,7 +45,7 @@
 
 ---
 
-### 🚀 Sprint 1 — App `users`: Autenticação e Usuário Customizado
+### 🚀 Sprint 1 — App `users`: Autenticação e Usuário Customizado ✅
 
 **Objetivo:** Implementar modelo de usuário com login por e-mail e fluxos de autenticação.
 
@@ -66,56 +66,56 @@
   - [x] 1.2.3 — Buscar usuário por `email` ao invés de `username`
   - [x] 1.2.4 — Adicionar `AUTHENTICATION_BACKENDS = ['users.backends.EmailBackend']` no `settings.py`
 
-- [ ] **1.3 — Formulários de Autenticação (`users/forms.py`)**
-  - [ ] 1.3.1 — Criar `UserRegistrationForm` herdando de `UserCreationForm`
-  - [ ] 1.3.2 — Adicionar campos: `first_name`, `last_name`, `email` no form de registro
-  - [ ] 1.3.3 — Adicionar validação de e-mail único no método `clean_email()`
-  - [ ] 1.3.4 — Criar `UserLoginForm` com campos `email` e `password`
-  - [ ] 1.3.5 — Garantir que todos os campos usem aspas simples nas strings
+- [x] **1.3 — Formulários de Autenticação (`users/forms.py`)**
+  - [x] 1.3.1 — Criar `UserRegistrationForm` herdando de `UserCreationForm`
+  - [x] 1.3.2 — Adicionar campos: `first_name`, `last_name`, `email` no form de registro
+  - [x] 1.3.3 — Adicionar validação de e-mail único no método `clean_email()`
+  - [x] 1.3.4 — Criar `UserLoginForm` com campos `email` e `password`
+  - [x] 1.3.5 — Garantir que todos os campos usem aspas simples nas strings
 
-- [ ] **1.4 — Views de Autenticação (`users/views.py`)**
-  - [ ] 1.4.1 — Criar `LandingPageView` (TemplateView) para a página pública `/`
-  - [ ] 1.4.2 — Criar `RegisterView` (FormView ou CreateView) para `/register/`
-    - [ ] 1.4.2.1 — Usar `UserRegistrationForm`
-    - [ ] 1.4.2.2 — Após sucesso: autenticar usuário automaticamente e redirecionar para dashboard
-    - [ ] 1.4.2.3 — Adicionar mensagem de sucesso via `messages.success()`
-  - [ ] 1.4.3 — Criar `LoginView` customizada (herdando de `auth.views.LoginView`)
-    - [ ] 1.4.3.1 — Configurar `authentication_form` para usar `UserLoginForm`
-    - [ ] 1.4.3.2 — Configurar `template_name = 'users/login.html'`
-    - [ ] 1.4.3.3 — Configurar `redirect_authenticated_user = True`
-  - [ ] 1.4.4 — Configurar `LogoutView` nativa do Django para `/logout/`
+- [x] **1.4 — Views de Autenticação (`users/views.py`)**
+  - [x] 1.4.1 — Criar `LandingPageView` (TemplateView) para a página pública `/`
+  - [x] 1.4.2 — Criar `RegisterView` (FormView ou CreateView) para `/register/`
+    - [x] 1.4.2.1 — Usar `UserRegistrationForm`
+    - [x] 1.4.2.2 — Após sucesso: autenticar usuário automaticamente e redirecionar para dashboard
+    - [x] 1.4.2.3 — Adicionar mensagem de sucesso via `messages.success()`
+  - [x] 1.4.3 — Criar `LoginView` customizada (herdando de `auth.views.LoginView`)
+    - [x] 1.4.3.1 — Configurar `authentication_form` para usar `UserLoginForm`
+    - [x] 1.4.3.2 — Configurar `template_name = 'users/login.html'`
+    - [x] 1.4.3.3 — Configurar `redirect_authenticated_user = True`
+  - [x] 1.4.4 — Configurar `LogoutView` nativa do Django para `/logout/`
 
-- [ ] **1.5 — URLs da App users (`users/urls.py`)**
-  - [ ] 1.5.1 — Criar `urlpatterns` com: `path('', LandingPageView, name='landing')`
-  - [ ] 1.5.2 — Adicionar `path('cadastro/', RegisterView, name='register')`
-  - [ ] 1.5.3 — Adicionar `path('entrar/', LoginView, name='login')`
-  - [ ] 1.5.4 — Adicionar `path('sair/', LogoutView, name='logout')`
+- [x] **1.5 — URLs da App users (`users/urls.py`)**
+  - [x] 1.5.1 — Criar `urlpatterns` com: `path('', LandingPageView, name='landing')`
+  - [x] 1.5.2 — Adicionar `path('cadastro/', RegisterView, name='register')`
+  - [x] 1.5.3 — Adicionar `path('entrar/', LoginView, name='login')`
+  - [x] 1.5.4 — Adicionar `path('sair/', LogoutView, name='logout')`
 
-- [ ] **1.6 — Templates de Autenticação**
-  - [ ] 1.6.1 — Criar `templates/landing.html` (página pública de apresentação)
-    - [ ] 1.6.1.1 — Header com logo e botões "Entrar" e "Cadastre-se"
-    - [ ] 1.6.1.2 — Seção hero com gradiente e descrição do produto
-    - [ ] 1.6.1.3 — Listar 3 features principais em cards
-    - [ ] 1.6.1.4 — Footer simples com nome do produto
-  - [ ] 1.6.2 — Criar `users/templates/users/register.html`
-    - [ ] 1.6.2.1 — Layout centralizado com card de formulário (fundo escuro)
-    - [ ] 1.6.2.2 — Logo Finanpy com gradiente no topo
-    - [ ] 1.6.2.3 — Form com campos: primeiro nome, sobrenome, e-mail, senha, confirmar senha
-    - [ ] 1.6.2.4 — Renderizar erros de formulário com estilo `text-rose-400`
-    - [ ] 1.6.2.5 — Botão primário "Criar conta" com gradiente violet→indigo
-    - [ ] 1.6.2.6 — Link para "Já tenho uma conta → Entrar"
-  - [ ] 1.6.3 — Criar `users/templates/users/login.html`
-    - [ ] 1.6.3.1 — Mesmo layout centralizado do registro
-    - [ ] 1.6.3.2 — Form com campos: e-mail e senha
-    - [ ] 1.6.3.3 — Renderizar mensagem de erro de credenciais inválidas
-    - [ ] 1.6.3.4 — Botão primário "Entrar"
-    - [ ] 1.6.3.5 — Link para "Não tenho conta → Cadastre-se"
+- [x] **1.6 — Templates de Autenticação**
+  - [x] 1.6.1 — Criar `templates/landing.html` (página pública de apresentação)
+    - [x] 1.6.1.1 — Header com logo e botões "Entrar" e "Cadastre-se"
+    - [x] 1.6.1.2 — Seção hero com gradiente e descrição do produto
+    - [x] 1.6.1.3 — Listar 3 features principais em cards
+    - [x] 1.6.1.4 — Footer simples com nome do produto
+  - [x] 1.6.2 — Criar `users/templates/users/register.html`
+    - [x] 1.6.2.1 — Layout centralizado com card de formulário (fundo escuro)
+    - [x] 1.6.2.2 — Logo Finanpy com gradiente no topo
+    - [x] 1.6.2.3 — Form com campos: primeiro nome, sobrenome, e-mail, senha, confirmar senha
+    - [x] 1.6.2.4 — Renderizar erros de formulário com estilo `text-rose-400`
+    - [x] 1.6.2.5 — Botão primário "Criar conta" com gradiente violet→indigo
+    - [x] 1.6.2.6 — Link para "Já tenho uma conta → Entrar"
+  - [x] 1.6.3 — Criar `users/templates/users/login.html`
+    - [x] 1.6.3.1 — Mesmo layout centralizado do registro
+    - [x] 1.6.3.2 — Form com campos: e-mail e senha
+    - [x] 1.6.3.3 — Renderizar mensagem de erro de credenciais inválidas
+    - [x] 1.6.3.4 — Botão primário "Entrar"
+    - [x] 1.6.3.5 — Link para "Não tenho conta → Cadastre-se"
 
-- [ ] **1.7 — Migration e Teste Manual**
-  - [ ] 1.7.1 — Rodar `python manage.py makemigrations users`
-  - [ ] 1.7.2 — Rodar `python manage.py migrate`
-  - [ ] 1.7.3 — Testar fluxo completo: acessar landing → cadastrar → logar → logout
-  - [ ] 1.7.4 — Verificar que login com username falha e login com e-mail funciona
+- [x] **1.7 — Migration e Teste Manual**
+  - [x] 1.7.1 — Rodar `python manage.py makemigrations users`
+  - [x] 1.7.2 — Rodar `python manage.py migrate`
+  - [x] 1.7.3 — Testar fluxo completo: acessar landing → cadastrar → logar → logout
+  - [x] 1.7.4 — Verificar que login com username falha e login com e-mail funciona
 
 ---
 
