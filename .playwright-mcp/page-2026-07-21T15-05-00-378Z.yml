@@ -1,0 +1,52 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - heading "Page not found (404)" [level=1] [ref=f4e3]
+    - table [ref=f4e4]:
+      - rowgroup [ref=f4e5]:
+        - row [ref=f4e6]:
+          - rowheader "Request Method:" [ref=f4e7]
+          - cell "GET" [ref=f4e8]
+        - row [ref=f4e9]:
+          - rowheader "Request URL:" [ref=f4e10]
+          - cell "http://127.0.0.1:8000/pagina-inexistente/" [ref=f4e11]
+  - main [ref=f4e12]:
+    - paragraph [ref=f4e13]:
+      - text: Using the URLconf defined in
+      - code [ref=f4e14]: core.urls
+      - text: ", Django tried these URL patterns, in this order:"
+    - list [ref=f4e15]:
+      - listitem [ref=f4e16]:
+        - code [ref=f4e17]: admin/
+      - listitem [ref=f4e18]:
+        - code
+        - code [ref=f4e19]: "[name='landing']"
+      - listitem [ref=f4e20]:
+        - code
+        - code [ref=f4e21]: cadastro/ [name='register']
+      - listitem [ref=f4e22]:
+        - code
+        - code [ref=f4e23]: entrar/ [name='login']
+      - listitem [ref=f4e24]:
+        - code
+        - code [ref=f4e25]: sair/ [name='logout']
+      - listitem [ref=f4e26]:
+        - code [ref=f4e27]: contas/
+      - listitem [ref=f4e28]:
+        - code [ref=f4e29]: categorias/
+      - listitem [ref=f4e30]:
+        - code [ref=f4e31]: transacoes/
+      - listitem [ref=f4e32]:
+        - code [ref=f4e33]: perfil/
+      - listitem [ref=f4e34]:
+        - code [ref=f4e35]: dashboard/ [name='dashboard']
+    - paragraph [ref=f4e36]:
+      - text: The current path,
+      - code [ref=f4e37]: pagina-inexistente/
+      - text: ", didn’t match any of these."
+  - contentinfo [ref=f4e38]:
+    - paragraph [ref=f4e39]:
+      - text: You’re seeing this error because you have
+      - code [ref=f4e40]: DEBUG = True
+      - text: in your Django settings file. Change that to
+      - code [ref=f4e41]: "False"
+      - text: ", and Django will display a standard 404 page."

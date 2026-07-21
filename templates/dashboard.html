@@ -3,8 +3,202 @@
 {% block title %}Dashboard — Finanpy{% endblock %}
 
 {% block page_content %}
-<div class="text-center py-20">
-    <h1 class="text-3xl font-bold text-white mb-2">Dashboard</h1>
-    <p class="text-gray-400">Em construção — Sprint 6.</p>
+
+<!-- Header -->
+<div class="mb-8">
+    <h1 class="text-2xl lg:text-3xl font-bold text-white mb-1">Dashboard</h1>
+    <p class="text-gray-400">{{ current_period }}</p>
+    <p class="text-sm text-gray-400 mt-1">Olá, {{ request.user.first_name }}!</p>
 </div>
+
+{% if not accounts and not recent_transactions %}
+<!-- Welcome CTA -->
+<div class="bg-gray-900 border border-gray-800 rounded-xl p-10 text-center">
+    <div class="mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+    </div>
+    <h2 class="text-xl font-semibold text-white mb-2">Bem-vindo ao Finanpy!</h2>
+    <p class="text-gray-400 mb-6 max-w-md mx-auto">
+        Parece que você ainda não tem dados cadastrados. Comece criando uma conta bancária e depois registre suas transações.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="{% url 'accounts:create' %}"
+           class="w-full sm:w-auto bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 text-center">
+            Criar conta
+        </a>
+        <a href="{% url 'transactions:create' %}"
+           class="w-full sm:w-auto border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white font-medium py-2.5 px-6 rounded-lg transition-all duration-200 hover:bg-gray-800 text-center">
+            Nova transação
+        </a>
+    </div>
+</div>
+{% else %}
+
+<!-- 3 Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-10">
+
+    <!-- Receitas do Mês -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <div class="flex items-center justify-between mb-2">
+            <span class="text-sm text-gray-400">Receitas do Mês</span>
+            <span class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+            </span>
+        </div>
+        <p class="text-2xl font-bold text-emerald-400 tabular-nums">R$ {{ total_income|floatformat:2 }}</p>
+        <p class="text-xs text-gray-500 mt-1">Mês atual</p>
+    </div>
+
+    <!-- Despesas do Mês -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <div class="flex items-center justify-between mb-2">
+            <span class="text-sm text-gray-400">Despesas do Mês</span>
+            <span class="p-2 bg-rose-500/10 rounded-lg text-rose-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </span>
+        </div>
+        <p class="text-2xl font-bold text-rose-400 tabular-nums">R$ {{ total_expense|floatformat:2 }}</p>
+        <p class="text-xs text-gray-500 mt-1">Mês atual</p>
+    </div>
+
+    <!-- Saldo do Mês -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <div class="flex items-center justify-between mb-2">
+            <span class="text-sm text-gray-400">Saldo do Mês</span>
+            <span class="p-2 bg-violet-500/10 rounded-lg text-violet-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </span>
+        </div>
+        <p class="text-2xl font-bold tabular-nums {% if balance >= 0 %}text-emerald-400{% else %}text-rose-400{% endif %}">
+            R$ {{ balance|floatformat:2 }}
+        </p>
+        <p class="text-xs text-gray-500 mt-1">Mês atual</p>
+    </div>
+
+</div>
+
+<!-- Últimas Transações -->
+<section class="mb-10">
+    <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-semibold text-white">Últimas Transações</h2>
+        <a href="{% url 'transactions:list' %}" class="text-sm text-violet-400 hover:text-violet-300 transition-colors duration-200">
+            Ver todas →
+        </a>
+    </div>
+
+    {% if recent_transactions %}
+    <div class="overflow-x-auto rounded-xl border border-gray-800">
+        <table class="w-full text-sm">
+            <thead class="bg-gray-800/50">
+                <tr>
+                    <th class="text-left text-gray-400 font-medium px-3 lg:px-6 py-3">Data</th>
+                    <th class="text-left text-gray-400 font-medium px-3 lg:px-6 py-3">Descrição</th>
+                    <th class="text-left text-gray-400 font-medium px-3 lg:px-6 py-3 hidden md:table-cell">Categoria</th>
+                    <th class="text-left text-gray-400 font-medium px-3 lg:px-6 py-3 hidden lg:table-cell">Conta</th>
+                    <th class="text-right text-gray-400 font-medium px-3 lg:px-6 py-3">Valor</th>
+                    <th class="text-left text-gray-400 font-medium px-3 lg:px-6 py-3 hidden sm:table-cell">Tipo</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800">
+                {% for transaction in recent_transactions %}
+                <tr class="hover:bg-gray-800/30 transition-colors duration-150">
+                    <td class="px-3 lg:px-6 py-4 text-gray-200 whitespace-nowrap text-sm">{{ transaction.date|date:"d/m/Y" }}</td>
+                    <td class="px-3 lg:px-6 py-4 text-gray-200 max-w-[120px] sm:max-w-[200px] truncate text-sm">{{ transaction.description }}</td>
+                    <td class="px-3 lg:px-6 py-4 text-gray-300 whitespace-nowrap hidden md:table-cell">
+                        {% if transaction.category %}
+                            {{ transaction.category.name }}
+                        {% else %}
+                            <span class="text-gray-500">—</span>
+                        {% endif %}
+                    </td>
+                    <td class="px-3 lg:px-6 py-4 text-gray-300 whitespace-nowrap hidden lg:table-cell">{{ transaction.account.name }}</td>
+                    <td class="px-3 lg:px-6 py-4 text-right whitespace-nowrap tabular-nums font-semibold text-sm {% if transaction.transaction_type == 'income' %}text-emerald-400{% else %}text-rose-400{% endif %}">
+                        R$ {{ transaction.amount|floatformat:2 }}
+                    </td>
+                    <td class="px-3 lg:px-6 py-4 whitespace-nowrap hidden sm:table-cell">
+                        {% if transaction.transaction_type == 'income' %}
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                Receita
+                            </span>
+                        {% else %}
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                                Despesa
+                            </span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-10 text-center">
+        <p class="text-gray-400 mb-4">Nenhuma transação no mês atual.</p>
+        <a href="{% url 'transactions:create' %}"
+           class="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors duration-200 text-sm font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Registrar primeira transação
+        </a>
+    </div>
+    {% endif %}
+</section>
+
+<!-- Minhas Contas -->
+<section>
+    <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-semibold text-white">Minhas Contas</h2>
+        <a href="{% url 'accounts:list' %}" class="text-sm text-violet-400 hover:text-violet-300 transition-colors duration-200">
+            Gerenciar →
+        </a>
+    </div>
+
+    {% if accounts %}
+    <div class="overflow-x-auto rounded-xl border border-gray-800">
+        <table class="w-full text-sm">
+            <thead class="bg-gray-800/50">
+                <tr>
+                    <th class="text-left text-gray-400 font-medium px-6 py-3">Conta</th>
+                    <th class="text-left text-gray-400 font-medium px-6 py-3">Tipo</th>
+                    <th class="text-right text-gray-400 font-medium px-6 py-3">Saldo atual</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800">
+                {% for item in accounts %}
+                <tr class="hover:bg-gray-800/30 transition-colors duration-150">
+                    <td class="px-6 py-4 text-gray-200 font-medium">{{ item.account.name }}</td>
+                    <td class="px-6 py-4 text-gray-300 whitespace-nowrap">{{ item.account.get_account_type_display }}</td>
+                    <td class="px-6 py-4 text-right whitespace-nowrap tabular-nums font-semibold {% if item.balance >= 0 %}text-emerald-400{% else %}text-rose-400{% endif %}">
+                        R$ {{ item.balance|floatformat:2 }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-10 text-center">
+        <p class="text-gray-400 mb-4">Você ainda não tem contas cadastradas.</p>
+        <a href="{% url 'accounts:create' %}"
+           class="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors duration-200 text-sm font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Criar conta
+        </a>
+    </div>
+    {% endif %}
+</section>
+
+{% endif %}
+
 {% endblock %}

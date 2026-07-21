@@ -1,0 +1,85 @@
+- generic [ref=f20e2]:
+  - complementary [ref=f20e3]:
+    - generic [ref=f20e4]: Finanpy
+    - navigation [ref=f20e6]:
+      - link "Dashboard" [ref=f20e7] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Contas" [ref=f20e10] [cursor=pointer]:
+        - /url: /contas/
+      - link "Categorias" [ref=f20e13] [cursor=pointer]:
+        - /url: /categorias/
+      - link "Transações" [ref=f20e16] [cursor=pointer]:
+        - /url: /transacoes/
+      - link "Perfil" [ref=f20e19] [cursor=pointer]:
+        - /url: /perfil/
+    - generic [ref=f20e22]:
+      - generic [ref=f20e23]:
+        - generic [ref=f20e24]: T
+        - generic [ref=f20e26]:
+          - paragraph [ref=f20e27]: Teste QA
+          - paragraph [ref=f20e28]: qa-test@finanpy.com
+      - button "Sair" [ref=f20e30] [cursor=pointer]
+  - main [ref=f20e34]:
+    - generic [ref=f20e35]:
+      - generic [ref=f20e36]:
+        - heading "Dashboard" [level=1] [ref=f20e37]
+        - paragraph [ref=f20e38]: Julho 2026
+        - paragraph [ref=f20e39]: Olá, Teste!
+      - generic [ref=f20e40]:
+        - generic [ref=f20e41]:
+          - generic [ref=f20e42]: Receitas do Mês
+          - paragraph [ref=f20e47]: R$ 5000,00
+          - paragraph [ref=f20e48]: Mês atual
+        - generic [ref=f20e49]:
+          - generic [ref=f20e50]: Despesas do Mês
+          - paragraph [ref=f20e55]: R$ 800,00
+          - paragraph [ref=f20e56]: Mês atual
+        - generic [ref=f20e57]:
+          - generic [ref=f20e58]: Saldo do Mês
+          - paragraph [ref=f20e63]: R$ 4200,00
+          - paragraph [ref=f20e64]: Mês atual
+      - generic [ref=f20e65]:
+        - generic [ref=f20e66]:
+          - heading "Últimas Transações" [level=2] [ref=f20e67]
+          - link "Ver todas →" [ref=f20e68] [cursor=pointer]:
+            - /url: /transacoes/
+        - table [ref=f20e70]:
+          - rowgroup [ref=f20e71]:
+            - row [ref=f20e72]:
+              - columnheader "Data" [ref=f20e73]
+              - columnheader "Descrição" [ref=f20e74]
+              - columnheader "Categoria" [ref=f20e75]
+              - columnheader "Conta" [ref=f20e76]
+              - columnheader "Valor" [ref=f20e77]
+              - columnheader "Tipo" [ref=f20e78]
+          - rowgroup [ref=f20e79]:
+            - row [ref=f20e80]:
+              - cell "21/07/2026" [ref=f20e81]
+              - cell "Supermercado" [ref=f20e82]
+              - cell "Alimentação" [ref=f20e83]
+              - cell "Conta Principal" [ref=f20e84]
+              - cell "R$ 800,00" [ref=f20e85]
+              - cell "Despesa" [ref=f20e86]
+            - row [ref=f20e88]:
+              - cell "21/07/2026" [ref=f20e89]
+              - cell "Salário" [ref=f20e90]
+              - cell "Salário" [ref=f20e91]
+              - cell "Conta Principal" [ref=f20e92]
+              - cell "R$ 5000,00" [ref=f20e93]
+              - cell "Receita" [ref=f20e94]
+      - generic [ref=f20e96]:
+        - generic [ref=f20e97]:
+          - heading "Minhas Contas" [level=2] [ref=f20e98]
+          - link "Gerenciar →" [ref=f20e99] [cursor=pointer]:
+            - /url: /contas/
+        - table [ref=f20e101]:
+          - rowgroup [ref=f20e102]:
+            - row [ref=f20e103]:
+              - columnheader "Conta" [ref=f20e104]
+              - columnheader "Tipo" [ref=f20e105]
+              - columnheader "Saldo atual" [ref=f20e106]
+          - rowgroup [ref=f20e107]:
+            - row [ref=f20e108]:
+              - cell "Conta Principal" [ref=f20e109]
+              - cell "Conta Corrente" [ref=f20e110]
+              - cell "R$ 5200,00" [ref=f20e111]

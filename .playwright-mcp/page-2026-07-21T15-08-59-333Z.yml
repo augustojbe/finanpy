@@ -1,0 +1,37 @@
+- generic [active] [ref=f17e1]:
+  - generic [ref=f17e2]: Conta criada com sucesso. Bem-vindo ao Finanpy!
+  - generic [ref=f17e6]:
+    - complementary [ref=f17e7]:
+      - generic [ref=f17e8]: Finanpy
+      - navigation [ref=f17e10]:
+        - link "Dashboard" [ref=f17e11] [cursor=pointer]:
+          - /url: /dashboard/
+        - link "Contas" [ref=f17e14] [cursor=pointer]:
+          - /url: /contas/
+        - link "Categorias" [ref=f17e17] [cursor=pointer]:
+          - /url: /categorias/
+        - link "Transações" [ref=f17e20] [cursor=pointer]:
+          - /url: /transacoes/
+        - link "Perfil" [ref=f17e23] [cursor=pointer]:
+          - /url: /perfil/
+      - generic [ref=f17e26]:
+        - generic [ref=f17e27]:
+          - generic [ref=f17e28]: T
+          - generic [ref=f17e30]:
+            - paragraph [ref=f17e31]: Teste Usuario
+            - paragraph [ref=f17e32]: qa-test@finanpy.local
+        - button "Sair" [ref=f17e34] [cursor=pointer]
+    - main [ref=f17e38]:
+      - generic [ref=f17e39]:
+        - generic [ref=f17e40]:
+          - heading "Dashboard" [level=1] [ref=f17e41]
+          - paragraph [ref=f17e42]: Julho 2026
+          - paragraph [ref=f17e43]: Olá, Teste!
+        - generic [ref=f17e44]:
+          - heading "Bem-vindo ao Finanpy!" [level=2] [ref=f17e48]
+          - paragraph [ref=f17e49]: Parece que você ainda não tem dados cadastrados. Comece criando uma conta bancária e depois registre suas transações.
+          - generic [ref=f17e50]:
+            - link "Criar conta" [ref=f17e51] [cursor=pointer]:
+              - /url: /contas/nova/
+            - link "Nova transação" [ref=f17e52] [cursor=pointer]:
+              - /url: /transacoes/nova/

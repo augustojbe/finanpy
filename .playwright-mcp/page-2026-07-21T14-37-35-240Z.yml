@@ -1,0 +1,71 @@
+- generic [ref=f50e2]:
+  - complementary [ref=f50e3]:
+    - generic [ref=f50e4]: Finanpy
+    - navigation [ref=f50e5]:
+      - link "Dashboard" [ref=f50e6] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Contas" [ref=f50e9] [cursor=pointer]:
+        - /url: /contas/
+      - link "Categorias" [ref=f50e12] [cursor=pointer]:
+        - /url: /categorias/
+      - link "Transações" [ref=f50e15] [cursor=pointer]:
+        - /url: /transacoes/
+      - link "Perfil" [ref=f50e18] [cursor=pointer]:
+        - /url: /perfil/
+    - generic [ref=f50e21]:
+      - generic [ref=f50e22]:
+        - generic [ref=f50e23]: T
+        - generic [ref=f50e25]:
+          - paragraph [ref=f50e26]: Teste QA
+          - paragraph [ref=f50e27]: qa-test@finanpy.com
+      - button "Sair" [ref=f50e29] [cursor=pointer]
+  - main [ref=f50e32]:
+    - generic [ref=f50e34]:
+      - generic [ref=f50e35]:
+        - heading "Nova Transação" [level=1] [ref=f50e36]
+        - paragraph [ref=f50e37]: Registre uma nova receita ou despesa.
+      - generic [ref=f50e39]:
+        - generic [ref=f50e40]:
+          - generic [ref=f50e41]:
+            - generic [ref=f50e42]: Tipo
+            - combobox "Tipo" [ref=f50e43]:
+              - option "---------" [selected]
+              - option "Receita"
+              - option "Despesa"
+          - generic [ref=f50e44]:
+            - generic [ref=f50e45]: Descrição
+            - textbox "Descrição" [ref=f50e46]
+          - generic [ref=f50e47]:
+            - generic [ref=f50e48]: Valor
+            - spinbutton "Valor" [ref=f50e49]
+          - generic [ref=f50e50]:
+            - generic [ref=f50e51]: Data
+            - textbox "Data" [ref=f50e52]
+          - generic [ref=f50e53]:
+            - generic [ref=f50e54]: Conta
+            - combobox "Conta" [ref=f50e55]:
+              - option "---------" [selected]
+              - option "Conta Principal"
+          - generic [ref=f50e56]:
+            - generic [ref=f50e57]: Categoria
+            - combobox "Categoria" [ref=f50e58]:
+              - option "---------" [selected]
+              - option "🍔 Alimentação"
+              - option "📚 Educação"
+              - option "💻 Freelance"
+              - option "📈 Investimentos"
+              - option "🎮 Lazer"
+              - option "🏠 Moradia"
+              - option "📦 Outros"
+              - option "💰 Outros"
+              - option "💼 Salário"
+              - option "💊 Saúde"
+              - option "🚗 Transporte"
+              - option "👕 Vestuário"
+          - generic [ref=f50e59]:
+            - generic [ref=f50e60]: Observações
+            - textbox "Observações" [ref=f50e61]
+        - generic [ref=f50e62]:
+          - button "Salvar" [ref=f50e63] [cursor=pointer]
+          - link "Cancelar" [ref=f50e64] [cursor=pointer]:
+            - /url: /transacoes/

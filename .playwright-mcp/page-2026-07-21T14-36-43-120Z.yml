@@ -1,0 +1,45 @@
+- generic [ref=f46e2]:
+  - complementary [ref=f46e3]:
+    - generic [ref=f46e4]: Finanpy
+    - navigation [ref=f46e5]:
+      - link "Dashboard" [ref=f46e6] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Contas" [ref=f46e9] [cursor=pointer]:
+        - /url: /contas/
+      - link "Categorias" [ref=f46e12] [cursor=pointer]:
+        - /url: /categorias/
+      - link "Transações" [ref=f46e15] [cursor=pointer]:
+        - /url: /transacoes/
+      - link "Perfil" [ref=f46e18] [cursor=pointer]:
+        - /url: /perfil/
+    - generic [ref=f46e21]:
+      - generic [ref=f46e22]:
+        - generic [ref=f46e23]: T
+        - generic [ref=f46e25]:
+          - paragraph [ref=f46e26]: Teste QA
+          - paragraph [ref=f46e27]: qa-test@finanpy.com
+      - button "Sair" [ref=f46e29] [cursor=pointer]
+  - main [ref=f46e32]:
+    - generic [ref=f46e34]:
+      - generic [ref=f46e35]:
+        - heading "Nova Conta" [level=1] [ref=f46e36]
+        - paragraph [ref=f46e37]: Cadastre uma nova conta bancária.
+      - generic [ref=f46e39]:
+        - generic [ref=f46e40]:
+          - generic [ref=f46e41]:
+            - generic [ref=f46e42]: Nome
+            - textbox "Nome" [ref=f46e43]
+          - generic [ref=f46e44]:
+            - generic [ref=f46e45]: Tipo de conta
+            - combobox "Tipo de conta" [ref=f46e46]:
+              - option "Conta Corrente" [selected]
+              - option "Poupança"
+              - option "Carteira"
+              - option "Investimento"
+          - generic [ref=f46e47]:
+            - generic [ref=f46e48]: Saldo inicial
+            - spinbutton "Saldo inicial" [ref=f46e49]: "0"
+        - generic [ref=f46e50]:
+          - button "Salvar" [ref=f46e51] [cursor=pointer]
+          - link "Cancelar" [ref=f46e52] [cursor=pointer]:
+            - /url: /contas/

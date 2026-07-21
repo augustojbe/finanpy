@@ -359,71 +359,71 @@
 
 ---
 
-### 📊 Sprint 6 — Dashboard Principal
+### 📊 Sprint 6 — Dashboard Principal ✅
 
 **Objetivo:** Implementar dashboard com resumo financeiro do mês atual.
 
 ---
 
-- [ ] **6.1 — View do Dashboard**
-  - [ ] 6.1.1 — Criar `DashboardView` (LoginRequiredMixin + TemplateView) em arquivo `views.py` na raiz ou em app dedicada
-  - [ ] 6.1.2 — Calcular no contexto: `total_income` (receitas do mês), `total_expense` (despesas do mês), `balance` (diferença)
-  - [ ] 6.1.3 — Consultar últimas 5 transações com `select_related`
-  - [ ] 6.1.4 — Consultar todas as contas ativas do usuário com saldo atual
-  - [ ] 6.1.5 — Filtrar dados pelo mês e ano atual usando `date__month` e `date__year`
+- [x] **6.1 — View do Dashboard**
+  - [x] 6.1.1 — Criar `DashboardView` (LoginRequiredMixin + TemplateView) em arquivo `views.py` na raiz ou em app dedicada
+  - [x] 6.1.2 — Calcular no contexto: `total_income` (receitas do mês), `total_expense` (despesas do mês), `balance` (diferença)
+  - [x] 6.1.3 — Consultar últimas 5 transações com `select_related`
+  - [x] 6.1.4 — Consultar todas as contas ativas do usuário com saldo atual
+  - [x] 6.1.5 — Filtrar dados pelo mês e ano atual usando `date__month` e `date__year`
 
-- [ ] **6.2 — URL do Dashboard**
-  - [ ] 6.2.1 — Adicionar em `core/urls.py`: `path('dashboard/', DashboardView.as_view(), name='dashboard')`
-  - [ ] 6.2.2 — Configurar `LOGIN_REDIRECT_URL = '/dashboard/'` no `settings.py`
+- [x] **6.2 — URL do Dashboard**
+  - [x] 6.2.1 — Adicionar em `core/urls.py`: `path('dashboard/', DashboardView.as_view(), name='dashboard')`
+  - [x] 6.2.2 — Configurar `LOGIN_REDIRECT_URL = '/dashboard/'` no `settings.py`
 
-- [ ] **6.3 — Template do Dashboard**
-  - [ ] 6.3.1 — Criar `templates/dashboard.html` herdando de `base_auth.html`
-  - [ ] 6.3.2 — Implementar header com: título "Dashboard", período atual e saudação ao usuário
-  - [ ] 6.3.3 — Grid de 3 cards de métricas: Receitas (emerald), Despesas (rose), Saldo do mês (violet)
-  - [ ] 6.3.4 — Seção "Últimas Transações": tabela compacta com as 5 mais recentes e link para ver todas
-  - [ ] 6.3.5 — Seção "Minhas Contas": lista de contas com saldo atual e link para gerenciar
-  - [ ] 6.3.6 — Estado vazio: mensagens CTA quando não há contas ou transações
+- [x] **6.3 — Template do Dashboard**
+  - [x] 6.3.1 — Criar `templates/dashboard.html` herdando de `base_auth.html`
+  - [x] 6.3.2 — Implementar header com: título "Dashboard", período atual e saudação ao usuário
+  - [x] 6.3.3 — Grid de 3 cards de métricas: Receitas (emerald), Despesas (rose), Saldo do mês (violet)
+  - [x] 6.3.4 — Seção "Últimas Transações": tabela compacta com as 5 mais recentes e link para ver todas
+  - [x] 6.3.5 — Seção "Minhas Contas": lista de contas com saldo atual e link para gerenciar
+  - [x] 6.3.6 — Estado vazio: mensagens CTA quando não há contas ou transações
 
-- [ ] **6.4 — Testes Manuais do Dashboard**
-  - [ ] 6.4.1 — Verificar que usuário sem dados vê o dashboard com mensagens de boas-vindas
-  - [ ] 6.4.2 — Verificar cálculos de receita, despesa e saldo com dados reais
-  - [ ] 6.4.3 — Verificar links de ação que levam às seções corretas
+- [x] **6.4 — Testes Manuais do Dashboard**
+  - [x] 6.4.1 — Verificar que usuário sem dados vê o dashboard com mensagens de boas-vindas
+  - [x] 6.4.2 — Verificar cálculos de receita, despesa e saldo com dados reais
+  - [x] 6.4.3 — Verificar links de ação que levam às seções corretas
 
 ---
 
-### 🎨 Sprint 7 — Refinamento Visual e UX
+### 🎨 Sprint 7 — Refinamento Visual e UX ✅
 
 **Objetivo:** Polir o design system, consistência visual e experiência do usuário.
 
 ---
 
-- [ ] **7.1 — Consistência do Design System**
-  - [ ] 7.1.1 — Revisar todos os templates e garantir herança correta de `base_auth.html` ou `base.html`
-  - [ ] 7.1.2 — Garantir que todos os inputs seguem o padrão de classes do design system
-  - [ ] 7.1.3 — Garantir que todos os botões seguem os padrões documentados (primário, secundário, perigo)
-  - [ ] 7.1.4 — Garantir que mensagens Django Messages são renderizadas corretamente em todos os fluxos
-  - [ ] 7.1.5 — Verificar active state da sidebar em todas as páginas
+- [x] **7.1 — Consistência do Design System**
+  - [x] 7.1.1 — Revisar todos os templates e garantir herança correta de `base_auth.html` ou `base.html`
+  - [x] 7.1.2 — Garantir que todos os inputs seguem o padrão de classes do design system
+  - [x] 7.1.3 — Garantir que todos os botões seguem os padrões documentados (primário, secundário, perigo)
+  - [x] 7.1.4 — Garantir que mensagens Django Messages são renderizadas corretamente em todos os fluxos
+  - [x] 7.1.5 — Verificar active state da sidebar em todas as páginas
 
-- [ ] **7.2 — Responsividade Mobile**
-  - [ ] 7.2.1 — Testar sidebar em viewport mobile (deve colapsar ou virar menu hamburguer)
-  - [ ] 7.2.2 — Verificar grid de cards no dashboard em mobile (1 coluna)
-  - [ ] 7.2.3 — Verificar tabela de transações em mobile (scroll horizontal)
-  - [ ] 7.2.4 — Verificar formulários em mobile (campo fullwidth, botões fullwidth)
+- [x] **7.2 — Responsividade Mobile**
+  - [x] 7.2.1 — Testar sidebar em viewport mobile (deve colapsar ou virar menu hamburguer)
+  - [x] 7.2.2 — Verificar grid de cards no dashboard em mobile (1 coluna)
+  - [x] 7.2.3 — Verificar tabela de transações em mobile (scroll horizontal)
+  - [x] 7.2.4 — Verificar formulários em mobile (campo fullwidth, botões fullwidth)
 
-- [ ] **7.3 — Tratamento de Erros e Edge Cases**
-  - [ ] 7.3.1 — Criar template `templates/404.html` com design system
-  - [ ] 7.3.2 — Criar template `templates/500.html` com design system
-  - [ ] 7.3.3 — Verificar mensagem de erro ao tentar excluir conta com transações
-  - [ ] 7.3.4 — Verificar mensagem de erro ao tentar excluir categoria com transações
-  - [ ] 7.3.5 — Verificar redirect para login ao tentar acessar URL protegida sem autenticação
+- [x] **7.3 — Tratamento de Erros e Edge Cases**
+  - [x] 7.3.1 — Criar template `templates/404.html` com design system
+  - [x] 7.3.2 — Criar template `templates/500.html` com design system
+  - [x] 7.3.3 — Verificar mensagem de erro ao tentar excluir conta com transações
+  - [x] 7.3.4 — Verificar mensagem de erro ao tentar excluir categoria com transações
+  - [x] 7.3.5 — Verificar redirect para login ao tentar acessar URL protegida sem autenticação
 
-- [ ] **7.4 — Revisão Final de Código**
-  - [ ] 7.4.1 — Verificar conformidade PEP 8 em todos os arquivos Python
-  - [ ] 7.4.2 — Garantir uso de aspas simples em todo código Python
-  - [ ] 7.4.3 — Garantir que nenhum model está sem `created_at` e `updated_at`
-  - [ ] 7.4.4 — Verificar que todas as queries filtram por `user=request.user`
-  - [ ] 7.4.5 — Remover imports não utilizados
-  - [ ] 7.4.6 — Revisar `admin.py` de todos os apps para configuração adequada
+- [x] **7.4 — Revisão Final de Código**
+  - [x] 7.4.1 — Verificar conformidade PEP 8 em todos os arquivos Python
+  - [x] 7.4.2 — Garantir uso de aspas simples em todo código Python
+  - [x] 7.4.3 — Garantir que nenhum model está sem `created_at` e `updated_at`
+  - [x] 7.4.4 — Verificar que todas as queries filtram por `user=request.user`
+  - [x] 7.4.5 — Remover imports não utilizados
+  - [x] 7.4.6 — Revisar `admin.py` de todos os apps para configuração adequada
 
 ---
 

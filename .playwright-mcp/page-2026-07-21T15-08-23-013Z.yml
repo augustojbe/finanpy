@@ -1,0 +1,43 @@
+- generic [ref=f15e3]:
+  - generic [ref=f15e4]:
+    - text: Finanpy
+    - paragraph [ref=f15e5]: Crie sua conta gratuitamente
+  - generic [ref=f15e6]:
+    - generic [ref=f15e7]:
+      - generic [ref=f15e8]:
+        - generic [ref=f15e9]:
+          - generic [ref=f15e10]: Nome
+          - textbox "Nome" [ref=f15e11]:
+            - /placeholder: Seu nome
+            - text: Teste
+        - generic [ref=f15e12]:
+          - generic [ref=f15e13]: Sobrenome
+          - textbox "Sobrenome" [ref=f15e14]:
+            - /placeholder: Seu sobrenome
+            - text: Usuario
+        - generic [ref=f15e15]:
+          - generic [ref=f15e16]: E-mail
+          - textbox "E-mail" [ref=f15e17]:
+            - /placeholder: seu@email.com
+            - text: qa-test@finanpy.local
+        - generic [ref=f15e18]:
+          - generic [ref=f15e19]: Senha
+          - textbox "Senha" [ref=f15e20]:
+            - /placeholder: Mínimo de 8 caracteres
+          - paragraph
+          - list [ref=f15e21]:
+            - listitem [ref=f15e22]: Sua senha não pode ser muito parecida com o resto das suas informações pessoais.
+            - listitem [ref=f15e23]: Sua senha precisa conter pelo menos 8 caracteres.
+            - listitem [ref=f15e24]: Sua senha não pode ser uma senha comumente utilizada.
+            - listitem [ref=f15e25]: Sua senha não pode ser inteiramente numérica.
+          - paragraph
+        - generic [ref=f15e26]:
+          - generic [ref=f15e27]: Confirmar senha
+          - textbox "Confirmar senha" [invalid] [ref=f15e28]:
+            - /placeholder: Repita a senha
+          - paragraph [ref=f15e29]: A senha é muito parecida com primeiro nome
+      - button "Criar conta" [ref=f15e30] [cursor=pointer]
+    - paragraph [ref=f15e31]:
+      - text: Já tem uma conta?
+      - link "Entrar" [ref=f15e32] [cursor=pointer]:
+        - /url: /entrar/
