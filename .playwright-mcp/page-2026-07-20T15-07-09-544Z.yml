@@ -1,0 +1,1144 @@
+- generic [active] [ref=f7e1]:
+  - banner [ref=f7e2]:
+    - heading "NoReverseMatch at /dashboard/" [level=1] [ref=f7e3]
+    - generic [ref=f7e4]: Reverse for 'list' not found. 'list' is not a valid view function or pattern name.
+    - table [ref=f7e5]:
+      - rowgroup [ref=f7e6]:
+        - row [ref=f7e7]:
+          - rowheader "Request Method:" [ref=f7e8]
+          - cell "GET" [ref=f7e9]
+        - row [ref=f7e10]:
+          - rowheader "Request URL:" [ref=f7e11]
+          - cell "http://127.0.0.1:8000/dashboard/" [ref=f7e12]
+        - row [ref=f7e13]:
+          - rowheader "Django Version:" [ref=f7e14]
+          - cell "6.0.7" [ref=f7e15]
+        - row [ref=f7e16]:
+          - rowheader "Exception Type:" [ref=f7e17]
+          - cell "NoReverseMatch" [ref=f7e18]
+        - row [ref=f7e19]:
+          - rowheader "Exception Value:" [ref=f7e20]
+          - cell "Reverse for 'list' not found. 'list' is not a valid view function or pattern name." [ref=f7e21]
+        - row [ref=f7e23]:
+          - rowheader "Exception Location:" [ref=f7e24]
+          - cell "/home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/urls/resolvers.py, line 842, in _reverse_with_prefix" [ref=f7e25]
+        - row [ref=f7e26]:
+          - rowheader "Raised during:" [ref=f7e27]
+          - cell "core.views.DashboardView" [ref=f7e28]
+        - row [ref=f7e29]:
+          - rowheader "Python Executable:" [ref=f7e30]
+          - cell "/home/augustojbe/ia-master/finanpy/.venv/bin/python" [ref=f7e31]
+        - row [ref=f7e32]:
+          - rowheader "Python Version:" [ref=f7e33]
+          - cell "3.12.3" [ref=f7e34]
+        - row [ref=f7e35]:
+          - rowheader "Python Path:" [ref=f7e36]
+          - cell [ref=f7e37]:
+            - code [ref=f7e39]: "['/home/augustojbe/ia-master/finanpy', '/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload', '/home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages']"
+        - row [ref=f7e40]:
+          - rowheader "Server time:" [ref=f7e41]
+          - cell "Mon, 20 Jul 2026 12:07:08 -0300" [ref=f7e42]
+  - main [ref=f7e43]:
+    - generic [ref=f7e44]:
+      - heading "Error during template rendering" [level=2] [ref=f7e45]
+      - paragraph [ref=f7e46]:
+        - text: In template
+        - code [ref=f7e47]: /home/augustojbe/ia-master/finanpy/templates/base_auth.html
+        - text: ", error at line"
+        - strong [ref=f7e48]: "34"
+      - heading "Reverse for 'list' not found. 'list' is not a valid view function or pattern name." [level=3] [ref=f7e49]
+      - table [ref=f7e50]:
+        - rowgroup [ref=f7e51]:
+          - row [ref=f7e52]:
+            - rowheader "24" [ref=f7e53]
+            - 'cell "{% else %}" [ref=f7e54]'
+          - row [ref=f7e55]:
+            - rowheader "25" [ref=f7e56]
+            - cell "text-gray-400 hover:text-white hover:bg-gray-800 border border-transparent" [ref=f7e57]
+          - row [ref=f7e58]:
+            - rowheader "26" [ref=f7e59]
+            - 'cell "{% endif %}\">" [ref=f7e60]'
+          - row [ref=f7e61]:
+            - rowheader "27" [ref=f7e62]
+            - cell "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">" [ref=f7e63]
+          - row [ref=f7e64]:
+            - rowheader "28" [ref=f7e65]
+            - cell "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\" />" [ref=f7e66]
+          - row [ref=f7e67]:
+            - rowheader "29" [ref=f7e68]
+            - cell "</svg>" [ref=f7e69]
+          - row [ref=f7e70]:
+            - rowheader "30" [ref=f7e71]
+            - cell "Dashboard" [ref=f7e72]
+          - row [ref=f7e73]:
+            - rowheader "31" [ref=f7e74]
+            - cell "</a>" [ref=f7e75]
+          - row [ref=f7e76]:
+            - rowheader "32" [ref=f7e77]
+            - cell [ref=f7e78]
+          - row [ref=f7e79]:
+            - rowheader "33" [ref=f7e80]
+            - cell "<!-- Contas -->" [ref=f7e81]
+          - row [ref=f7e82]:
+            - rowheader "34" [ref=f7e83]
+            - 'cell "<a href=\"{% url ''accounts:list'' %}\"" [ref=f7e84]'
+          - row [ref=f7e85]:
+            - rowheader "35" [ref=f7e86]
+            - cell "class=\"flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-colors duration-200" [ref=f7e87]
+          - row [ref=f7e88]:
+            - rowheader "36" [ref=f7e89]
+            - 'cell "{% if request.resolver_match.app_name == ''accounts'' %}" [ref=f7e90]'
+          - row [ref=f7e91]:
+            - rowheader "37" [ref=f7e92]
+            - cell "bg-violet-600/20 text-violet-400 border border-violet-600/30" [ref=f7e93]
+          - row [ref=f7e94]:
+            - rowheader "38" [ref=f7e95]
+            - 'cell "{% else %}" [ref=f7e96]'
+          - row [ref=f7e97]:
+            - rowheader "39" [ref=f7e98]
+            - cell "text-gray-400 hover:text-white hover:bg-gray-800 border border-transparent" [ref=f7e99]
+          - row [ref=f7e100]:
+            - rowheader "40" [ref=f7e101]
+            - 'cell "{% endif %}\">" [ref=f7e102]'
+          - row [ref=f7e103]:
+            - rowheader "41" [ref=f7e104]
+            - cell "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">" [ref=f7e105]
+          - row [ref=f7e106]:
+            - rowheader "42" [ref=f7e107]
+            - cell "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z\" />" [ref=f7e108]
+          - row [ref=f7e109]:
+            - rowheader "43" [ref=f7e110]
+            - cell "</svg>" [ref=f7e111]
+          - row [ref=f7e112]:
+            - rowheader "44" [ref=f7e113]
+            - cell "Contas" [ref=f7e114]
+    - generic [ref=f7e115]:
+      - heading [level=2] [ref=f7e116]:
+        - text: Traceback
+        - button "Switch to copy-and-paste view" [ref=f7e118] [cursor=pointer]
+      - list [ref=f7e120]:
+        - listitem [ref=f7e121]:
+          - code [ref=f7e122]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py
+          - text: ", line 55, in inner"
+          - list [ref=f7e124]:
+            - listitem [ref=f7e125] [cursor=pointer]:
+              - text: response = get_response(request) ^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e126]: …
+          - group [ref=f7e127]:
+            - generic "Local vars" [ref=f7e128] [cursor=pointer]
+        - listitem [ref=f7e129]:
+          - code [ref=f7e130]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/core/handlers/base.py
+          - text: ", line 221, in _get_response"
+          - list [ref=f7e132]:
+            - listitem [ref=f7e133] [cursor=pointer]:
+              - text: response = response.render() ^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e134]: …
+          - group [ref=f7e135]:
+            - generic "Local vars" [ref=f7e136] [cursor=pointer]
+        - listitem [ref=f7e137]:
+          - code [ref=f7e138]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/response.py
+          - text: ", line 114, in render"
+          - list [ref=f7e140]:
+            - listitem [ref=f7e141] [cursor=pointer]:
+              - text: self.content = self.rendered_content ^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e142]: …
+          - group [ref=f7e143]:
+            - generic "Local vars" [ref=f7e144] [cursor=pointer]
+        - listitem [ref=f7e145]:
+          - code [ref=f7e146]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/response.py
+          - text: ", line 92, in rendered_content"
+          - list [ref=f7e148]:
+            - listitem [ref=f7e149] [cursor=pointer]:
+              - text: return template.render(context, self._request) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e150]: …
+          - group [ref=f7e151]:
+            - generic "Local vars" [ref=f7e152] [cursor=pointer]
+        - listitem [ref=f7e153]:
+          - code [ref=f7e154]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/backends/django.py
+          - text: ", line 107, in render"
+          - list [ref=f7e156]:
+            - listitem [ref=f7e157] [cursor=pointer]:
+              - text: return self.template.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e158]: …
+          - group [ref=f7e159]:
+            - generic "Local vars" [ref=f7e160] [cursor=pointer]
+        - listitem [ref=f7e161]:
+          - code [ref=f7e162]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 174, in render"
+          - list [ref=f7e164]:
+            - listitem [ref=f7e165] [cursor=pointer]:
+              - text: return self._render(context) ^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e166]: …
+          - group [ref=f7e167]:
+            - generic "Local vars" [ref=f7e168] [cursor=pointer]
+        - listitem [ref=f7e169]:
+          - code [ref=f7e170]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 166, in _render"
+          - list [ref=f7e172]:
+            - listitem [ref=f7e173] [cursor=pointer]:
+              - text: return self.nodelist.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e174]: …
+          - group [ref=f7e175]:
+            - generic "Local vars" [ref=f7e176] [cursor=pointer]
+        - listitem [ref=f7e177]:
+          - code [ref=f7e178]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 1091, in render"
+          - list [ref=f7e180]:
+            - listitem [ref=f7e181] [cursor=pointer]:
+              - text: return SafeString("".join([node.render_annotated(context) for node in self])) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e182]: …
+          - group [ref=f7e183]:
+            - generic "Local vars" [ref=f7e184] [cursor=pointer]
+        - listitem [ref=f7e185]:
+          - code [ref=f7e186]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 1052, in render_annotated"
+          - list [ref=f7e188]:
+            - listitem [ref=f7e189] [cursor=pointer]:
+              - text: return self.render(context) ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e190]: …
+          - group [ref=f7e191]:
+            - generic "Local vars" [ref=f7e192] [cursor=pointer]
+        - listitem [ref=f7e193]:
+          - code [ref=f7e194]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/loader_tags.py
+          - text: ", line 160, in render"
+          - list [ref=f7e196]:
+            - listitem [ref=f7e197] [cursor=pointer]:
+              - text: return compiled_parent._render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e198]: …
+          - group [ref=f7e199]:
+            - generic "Local vars" [ref=f7e200] [cursor=pointer]
+        - listitem [ref=f7e201]:
+          - code [ref=f7e202]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 166, in _render"
+          - list [ref=f7e204]:
+            - listitem [ref=f7e205] [cursor=pointer]:
+              - text: return self.nodelist.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e206]: …
+          - group [ref=f7e207]:
+            - generic "Local vars" [ref=f7e208] [cursor=pointer]
+        - listitem [ref=f7e209]:
+          - code [ref=f7e210]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 1091, in render"
+          - list [ref=f7e212]:
+            - listitem [ref=f7e213] [cursor=pointer]:
+              - text: return SafeString("".join([node.render_annotated(context) for node in self])) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e214]: …
+          - group [ref=f7e215]:
+            - generic "Local vars" [ref=f7e216] [cursor=pointer]
+        - listitem [ref=f7e217]:
+          - code [ref=f7e218]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 1052, in render_annotated"
+          - list [ref=f7e220]:
+            - listitem [ref=f7e221] [cursor=pointer]:
+              - text: return self.render(context) ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e222]: …
+          - group [ref=f7e223]:
+            - generic "Local vars" [ref=f7e224] [cursor=pointer]
+        - listitem [ref=f7e225]:
+          - code [ref=f7e226]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/loader_tags.py
+          - text: ", line 160, in render"
+          - list [ref=f7e228]:
+            - listitem [ref=f7e229] [cursor=pointer]:
+              - text: return compiled_parent._render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e230]: …
+          - group [ref=f7e231]:
+            - generic "Local vars" [ref=f7e232] [cursor=pointer]
+        - listitem [ref=f7e233]:
+          - code [ref=f7e234]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 166, in _render"
+          - list [ref=f7e236]:
+            - listitem [ref=f7e237] [cursor=pointer]:
+              - text: return self.nodelist.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e238]: …
+          - group [ref=f7e239]:
+            - generic "Local vars" [ref=f7e240] [cursor=pointer]
+        - listitem [ref=f7e241]:
+          - code [ref=f7e242]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 1091, in render"
+          - list [ref=f7e244]:
+            - listitem [ref=f7e245] [cursor=pointer]:
+              - text: return SafeString("".join([node.render_annotated(context) for node in self])) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e246]: …
+          - group [ref=f7e247]:
+            - generic "Local vars" [ref=f7e248] [cursor=pointer]
+        - listitem [ref=f7e249]:
+          - code [ref=f7e250]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 1052, in render_annotated"
+          - list [ref=f7e252]:
+            - listitem [ref=f7e253] [cursor=pointer]:
+              - text: return self.render(context) ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e254]: …
+          - group [ref=f7e255]:
+            - generic "Local vars" [ref=f7e256] [cursor=pointer]
+        - listitem [ref=f7e257]:
+          - code [ref=f7e258]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/loader_tags.py
+          - text: ", line 66, in render"
+          - list [ref=f7e260]:
+            - listitem [ref=f7e261] [cursor=pointer]:
+              - text: result = block.nodelist.render(context) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e262]: …
+          - group [ref=f7e263]:
+            - generic "Local vars" [ref=f7e264] [cursor=pointer]
+        - listitem [ref=f7e265]:
+          - code [ref=f7e266]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 1091, in render"
+          - list [ref=f7e268]:
+            - listitem [ref=f7e269] [cursor=pointer]:
+              - text: return SafeString("".join([node.render_annotated(context) for node in self])) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e270]: …
+          - group [ref=f7e271]:
+            - generic "Local vars" [ref=f7e272] [cursor=pointer]
+        - listitem [ref=f7e273]:
+          - code [ref=f7e274]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/base.py
+          - text: ", line 1052, in render_annotated"
+          - list [ref=f7e276]:
+            - listitem [ref=f7e277] [cursor=pointer]:
+              - text: return self.render(context) ^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e278]: …
+          - group [ref=f7e279]:
+            - generic "Local vars" [ref=f7e280] [cursor=pointer]
+        - listitem [ref=f7e281]:
+          - code [ref=f7e282]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/template/defaulttags.py
+          - text: ", line 511, in render"
+          - list [ref=f7e284]:
+            - listitem [ref=f7e285] [cursor=pointer]:
+              - text: url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e286]: …
+          - group [ref=f7e287]:
+            - generic "Local vars" [ref=f7e288] [cursor=pointer]
+        - listitem [ref=f7e289]:
+          - code [ref=f7e290]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/urls/base.py
+          - text: ", line 98, in reverse"
+          - list [ref=f7e292]:
+            - listitem [ref=f7e293] [cursor=pointer]:
+              - text: resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e294]: …
+          - group [ref=f7e295]:
+            - generic "Local vars" [ref=f7e296] [cursor=pointer]
+        - listitem [ref=f7e297]:
+          - code [ref=f7e298]: /home/augustojbe/ia-master/finanpy/.venv/lib/python3.12/site-packages/django/urls/resolvers.py
+          - text: ", line 842, in _reverse_with_prefix"
+          - list [ref=f7e300]:
+            - listitem [ref=f7e301] [cursor=pointer]:
+              - text: raise NoReverseMatch(msg) ^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f7e302]: …
+          - group [ref=f7e303]:
+            - generic "Local vars" [ref=f7e304] [cursor=pointer]
+    - generic [ref=f7e305]:
+      - heading "Request information" [level=2] [ref=f7e306]
+      - heading "USER" [level=3] [ref=f7e307]
+      - paragraph [ref=f7e308]: teste@example.com
+      - heading "GET" [level=3] [ref=f7e309]
+      - paragraph [ref=f7e310]: No GET data
+      - heading "POST" [level=3] [ref=f7e311]
+      - paragraph [ref=f7e312]: No POST data
+      - heading "FILES" [level=3] [ref=f7e313]
+      - paragraph [ref=f7e314]: No FILES data
+      - heading "COOKIES" [level=3] [ref=f7e315]
+      - table [ref=f7e316]:
+        - rowgroup [ref=f7e317]:
+          - row [ref=f7e318]:
+            - columnheader "Variable" [ref=f7e319]
+            - columnheader "Value" [ref=f7e320]
+        - rowgroup [ref=f7e321]:
+          - row [ref=f7e322]:
+            - cell "messages" [ref=f7e323]
+            - cell "'W1siX19qc29uX21lc3NhZ2UiLDAsMjUsIkNvbnRhIGNyaWFkYSBjb20gc3VjZXNzby4gQmVtLXZpbmRvIGFvIEZpbmFucHkhIiwiIl1d:1wlpaG:uiqohl_JsFj0h2XewyBv48iC__Cc9srTGo7CUmLYAgA'" [ref=f7e324]
+          - row [ref=f7e326]:
+            - cell "csrftoken" [ref=f7e327]
+            - cell "'********************'" [ref=f7e328]
+          - row [ref=f7e330]:
+            - cell "sessionid" [ref=f7e331]
+            - cell "'********************'" [ref=f7e332]
+      - heading "META" [level=3] [ref=f7e334]
+      - table [ref=f7e335]:
+        - rowgroup [ref=f7e336]:
+          - row [ref=f7e337]:
+            - columnheader "Variable" [ref=f7e338]
+            - columnheader "Value" [ref=f7e339]
+        - rowgroup [ref=f7e340]:
+          - row [ref=f7e341]:
+            - cell "AGENT" [ref=f7e342]
+            - cell "'1'" [ref=f7e343]
+          - row [ref=f7e345]:
+            - cell "CINNAMON_VERSION" [ref=f7e346]
+            - cell "'6.4.8'" [ref=f7e347]
+          - row [ref=f7e349]:
+            - cell "CLUTTER_IM_MODULE" [ref=f7e350]
+            - cell "'ibus'" [ref=f7e351]
+          - row [ref=f7e353]:
+            - cell "COLORTERM" [ref=f7e354]
+            - cell "'truecolor'" [ref=f7e355]
+          - row [ref=f7e357]:
+            - cell "CONTENT_LENGTH" [ref=f7e358]
+            - cell "''" [ref=f7e359]
+          - row [ref=f7e361]:
+            - cell "CONTENT_TYPE" [ref=f7e362]
+            - cell "'text/plain'" [ref=f7e363]
+          - row [ref=f7e365]:
+            - cell "CSRF_COOKIE" [ref=f7e366]
+            - cell "'la8seIClRYljqg3WaK3Xg6rgVPgR5Fmt'" [ref=f7e367]
+          - row [ref=f7e369]:
+            - cell "DBUS_SESSION_BUS_ADDRESS" [ref=f7e370]
+            - cell "'unix:path=/run/user/1000/bus'" [ref=f7e371]
+          - row [ref=f7e373]:
+            - cell "DESKTOP_SESSION" [ref=f7e374]
+            - cell "'cinnamon'" [ref=f7e375]
+          - row [ref=f7e377]:
+            - cell "DISPLAY" [ref=f7e378]
+            - cell "':0'" [ref=f7e379]
+          - row [ref=f7e381]:
+            - cell "DJANGO_SETTINGS_MODULE" [ref=f7e382]
+            - cell "'core.settings'" [ref=f7e383]
+          - row [ref=f7e385]:
+            - cell "GATEWAY_INTERFACE" [ref=f7e386]
+            - cell "'CGI/1.1'" [ref=f7e387]
+          - row [ref=f7e389]:
+            - cell "GDMSESSION" [ref=f7e390]
+            - cell "'cinnamon'" [ref=f7e391]
+          - row [ref=f7e393]:
+            - cell "GDM_LANG" [ref=f7e394]
+            - cell "'pt_BR'" [ref=f7e395]
+          - row [ref=f7e397]:
+            - cell "GNOME_DESKTOP_SESSION_ID" [ref=f7e398]
+            - cell "'this-is-deprecated'" [ref=f7e399]
+          - row [ref=f7e401]:
+            - cell "GNOME_TERMINAL_SCREEN" [ref=f7e402]
+            - cell "'/org/gnome/Terminal/screen/79a94e7d_288a_41d2_824a_b78241e3eeb9'" [ref=f7e403]
+          - row [ref=f7e405]:
+            - cell "GNOME_TERMINAL_SERVICE" [ref=f7e406]
+            - cell "':1.135'" [ref=f7e407]
+          - row [ref=f7e409]:
+            - cell "GPG_AGENT_INFO" [ref=f7e410]
+            - cell "'/run/user/1000/gnupg/S.gpg-agent:0:1'" [ref=f7e411]
+          - row [ref=f7e413]:
+            - cell "GTK3_MODULES" [ref=f7e414]
+            - cell "'xapp-gtk3-module'" [ref=f7e415]
+          - row [ref=f7e417]:
+            - cell "GTK_IM_MODULE" [ref=f7e418]
+            - cell "'ibus'" [ref=f7e419]
+          - row [ref=f7e421]:
+            - cell "GTK_MODULES" [ref=f7e422]
+            - cell "'gail:atk-bridge'" [ref=f7e423]
+          - row [ref=f7e425]:
+            - cell "HOME" [ref=f7e426]
+            - cell "'/home/augustojbe'" [ref=f7e427]
+          - row [ref=f7e429]:
+            - cell "HTTP_ACCEPT" [ref=f7e430]
+            - cell "'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'" [ref=f7e431]
+          - row [ref=f7e433]:
+            - cell "HTTP_ACCEPT_ENCODING" [ref=f7e434]
+            - cell "'gzip, deflate, br, zstd'" [ref=f7e435]
+          - row [ref=f7e437]:
+            - cell "HTTP_ACCEPT_LANGUAGE" [ref=f7e438]
+            - cell "'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'" [ref=f7e439]
+          - row [ref=f7e441]:
+            - cell "HTTP_CACHE_CONTROL" [ref=f7e442]
+            - cell "'max-age=0'" [ref=f7e443]
+          - row [ref=f7e445]:
+            - cell "HTTP_CONNECTION" [ref=f7e446]
+            - cell "'keep-alive'" [ref=f7e447]
+          - row [ref=f7e449]:
+            - cell "HTTP_COOKIE" [ref=f7e450]
+            - cell "'********************'" [ref=f7e451]
+          - row [ref=f7e453]:
+            - cell "HTTP_HOST" [ref=f7e454]
+            - cell "'127.0.0.1:8000'" [ref=f7e455]
+          - row [ref=f7e457]:
+            - cell "HTTP_REFERER" [ref=f7e458]
+            - cell "'http://127.0.0.1:8000/cadastro/'" [ref=f7e459]
+          - row [ref=f7e461]:
+            - cell "HTTP_SEC_CH_UA" [ref=f7e462]
+            - cell "'\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"'" [ref=f7e463]
+          - row [ref=f7e465]:
+            - cell "HTTP_SEC_CH_UA_MOBILE" [ref=f7e466]
+            - cell "'?0'" [ref=f7e467]
+          - row [ref=f7e469]:
+            - cell "HTTP_SEC_CH_UA_PLATFORM" [ref=f7e470]
+            - cell "'\"Linux\"'" [ref=f7e471]
+          - row [ref=f7e473]:
+            - cell "HTTP_SEC_FETCH_DEST" [ref=f7e474]
+            - cell "'document'" [ref=f7e475]
+          - row [ref=f7e477]:
+            - cell "HTTP_SEC_FETCH_MODE" [ref=f7e478]
+            - cell "'navigate'" [ref=f7e479]
+          - row [ref=f7e481]:
+            - cell "HTTP_SEC_FETCH_SITE" [ref=f7e482]
+            - cell "'same-origin'" [ref=f7e483]
+          - row [ref=f7e485]:
+            - cell "HTTP_SEC_FETCH_USER" [ref=f7e486]
+            - cell "'?1'" [ref=f7e487]
+          - row [ref=f7e489]:
+            - cell "HTTP_UPGRADE_INSECURE_REQUESTS" [ref=f7e490]
+            - cell "'1'" [ref=f7e491]
+          - row [ref=f7e493]:
+            - cell "HTTP_USER_AGENT" [ref=f7e494]
+            - cell "('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) ' 'Chrome/149.0.0.0 Safari/537.36')" [ref=f7e495]
+          - row [ref=f7e497]:
+            - cell "JAVA_HOME" [ref=f7e498]
+            - cell "'/usr/lib/jvm/java-17-openjdk-amd64/bin/java'" [ref=f7e499]
+          - row [ref=f7e501]:
+            - cell "LANG" [ref=f7e502]
+            - cell "'pt_BR.UTF-8'" [ref=f7e503]
+          - row [ref=f7e505]:
+            - cell "LANGUAGE" [ref=f7e506]
+            - cell "'pt_BR:pt:en'" [ref=f7e507]
+          - row [ref=f7e509]:
+            - cell "LESSCLOSE" [ref=f7e510]
+            - cell "'/usr/bin/lesspipe %s %s'" [ref=f7e511]
+          - row [ref=f7e513]:
+            - cell "LESSOPEN" [ref=f7e514]
+            - cell "'| /usr/bin/lesspipe %s'" [ref=f7e515]
+          - row [ref=f7e517]:
+            - cell "LOGNAME" [ref=f7e518]
+            - cell "'augustojbe'" [ref=f7e519]
+          - row [ref=f7e521]:
+            - cell "LS_COLORS" [ref=f7e522]
+            - cell [ref=f7e523]
+          - row [ref=f7e525]:
+            - cell "NVM_BIN" [ref=f7e526]
+            - cell "'/home/augustojbe/.nvm/versions/node/v24.17.0/bin'" [ref=f7e527]
+          - row [ref=f7e529]:
+            - cell "NVM_CD_FLAGS" [ref=f7e530]
+            - cell "''" [ref=f7e531]
+          - row [ref=f7e533]:
+            - cell "NVM_DIR" [ref=f7e534]
+            - cell "'/home/augustojbe/.nvm'" [ref=f7e535]
+          - row [ref=f7e537]:
+            - cell "NVM_INC" [ref=f7e538]
+            - cell "'/home/augustojbe/.nvm/versions/node/v24.17.0/include/node'" [ref=f7e539]
+          - row [ref=f7e541]:
+            - cell "OLDPWD" [ref=f7e542]
+            - cell "'/home/augustojbe/ia-master/finanpy'" [ref=f7e543]
+          - row [ref=f7e545]:
+            - cell "OPENCODE" [ref=f7e546]
+            - cell "'1'" [ref=f7e547]
+          - row [ref=f7e549]:
+            - cell "OPENCODE_PID" [ref=f7e550]
+            - cell "'52968'" [ref=f7e551]
+          - row [ref=f7e553]:
+            - cell "PATH" [ref=f7e554]
+            - cell "'/home/augustojbe/ia-master/finanpy/.venv/bin:/usr/lib/jvm/java-17-openjdk-amd64/bin/java/bin:/home/augustojbe/.nvm/versions/node/v24.17.0/bin:/home/augustojbe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'" [ref=f7e555]
+          - row [ref=f7e557]:
+            - cell "PATH_INFO" [ref=f7e558]
+            - cell "'/dashboard/'" [ref=f7e559]
+          - row [ref=f7e561]:
+            - cell "PS1" [ref=f7e562]
+            - cell "'(.venv) '" [ref=f7e563]
+          - row [ref=f7e565]:
+            - cell "PWD" [ref=f7e566]
+            - cell "'/home/augustojbe/ia-master/finanpy'" [ref=f7e567]
+          - row [ref=f7e569]:
+            - cell "QT_ACCESSIBILITY" [ref=f7e570]
+            - cell "'1'" [ref=f7e571]
+          - row [ref=f7e573]:
+            - cell "QT_IM_MODULE" [ref=f7e574]
+            - cell "'ibus'" [ref=f7e575]
+          - row [ref=f7e577]:
+            - cell "QUERY_STRING" [ref=f7e578]
+            - cell "''" [ref=f7e579]
+          - row [ref=f7e581]:
+            - cell "REMOTE_ADDR" [ref=f7e582]
+            - cell "'127.0.0.1'" [ref=f7e583]
+          - row [ref=f7e585]:
+            - cell "REMOTE_HOST" [ref=f7e586]
+            - cell "''" [ref=f7e587]
+          - row [ref=f7e589]:
+            - cell "REQUEST_METHOD" [ref=f7e590]
+            - cell "'GET'" [ref=f7e591]
+          - row [ref=f7e593]:
+            - cell "RUN_MAIN" [ref=f7e594]
+            - cell "'true'" [ref=f7e595]
+          - row [ref=f7e597]:
+            - cell "SCRIPT_NAME" [ref=f7e598]
+            - cell "''" [ref=f7e599]
+          - row [ref=f7e601]:
+            - cell "SERVER_NAME" [ref=f7e602]
+            - cell "'mint'" [ref=f7e603]
+          - row [ref=f7e605]:
+            - cell "SERVER_PORT" [ref=f7e606]
+            - cell "'8000'" [ref=f7e607]
+          - row [ref=f7e609]:
+            - cell "SERVER_PROTOCOL" [ref=f7e610]
+            - cell "'HTTP/1.1'" [ref=f7e611]
+          - row [ref=f7e613]:
+            - cell "SERVER_SOFTWARE" [ref=f7e614]
+            - cell "'WSGIServer/0.2'" [ref=f7e615]
+          - row [ref=f7e617]:
+            - cell "SESSION_MANAGER" [ref=f7e618]
+            - cell "'local/mint:@/tmp/.ICE-unix/2291,unix/mint:/tmp/.ICE-unix/2291'" [ref=f7e619]
+          - row [ref=f7e621]:
+            - cell "SHELL" [ref=f7e622]
+            - cell "'/bin/bash'" [ref=f7e623]
+          - row [ref=f7e625]:
+            - cell "SHLVL" [ref=f7e626]
+            - cell "'2'" [ref=f7e627]
+          - row [ref=f7e629]:
+            - cell "SSH_AUTH_SOCK" [ref=f7e630]
+            - cell "'********************'" [ref=f7e631]
+          - row [ref=f7e633]:
+            - cell "TERM" [ref=f7e634]
+            - cell "'xterm-256color'" [ref=f7e635]
+          - row [ref=f7e637]:
+            - cell "TZ" [ref=f7e638]
+            - cell "'America/Sao_Paulo'" [ref=f7e639]
+          - row [ref=f7e641]:
+            - cell "USER" [ref=f7e642]
+            - cell "'augustojbe'" [ref=f7e643]
+          - row [ref=f7e645]:
+            - cell "VIRTUAL_ENV" [ref=f7e646]
+            - cell "'/home/augustojbe/ia-master/finanpy/.venv'" [ref=f7e647]
+          - row [ref=f7e649]:
+            - cell "VIRTUAL_ENV_PROMPT" [ref=f7e650]
+            - cell "'(.venv) '" [ref=f7e651]
+          - row [ref=f7e653]:
+            - cell "VTE_VERSION" [ref=f7e654]
+            - cell "'7600'" [ref=f7e655]
+          - row [ref=f7e657]:
+            - cell "XAUTHORITY" [ref=f7e658]
+            - cell "'********************'" [ref=f7e659]
+          - row [ref=f7e661]:
+            - cell "XDG_CONFIG_DIRS" [ref=f7e662]
+            - cell "'/etc/xdg/xdg-cinnamon:/etc/xdg'" [ref=f7e663]
+          - row [ref=f7e665]:
+            - cell "XDG_CURRENT_DESKTOP" [ref=f7e666]
+            - cell "'X-Cinnamon'" [ref=f7e667]
+          - row [ref=f7e669]:
+            - cell "XDG_DATA_DIRS" [ref=f7e670]
+            - cell "'/usr/share/gnome:/usr/share/cinnamon:/usr/share/gnome:/home/augustojbe/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'" [ref=f7e671]
+          - row [ref=f7e673]:
+            - cell "XDG_GREETER_DATA_DIR" [ref=f7e674]
+            - cell "'/var/lib/lightdm-data/augustojbe'" [ref=f7e675]
+          - row [ref=f7e677]:
+            - cell "XDG_RUNTIME_DIR" [ref=f7e678]
+            - cell "'/run/user/1000'" [ref=f7e679]
+          - row [ref=f7e681]:
+            - cell "XDG_SEAT" [ref=f7e682]
+            - cell "'seat0'" [ref=f7e683]
+          - row [ref=f7e685]:
+            - cell "XDG_SEAT_PATH" [ref=f7e686]
+            - cell "'/org/freedesktop/DisplayManager/Seat0'" [ref=f7e687]
+          - row [ref=f7e689]:
+            - cell "XDG_SESSION_CLASS" [ref=f7e690]
+            - cell "'user'" [ref=f7e691]
+          - row [ref=f7e693]:
+            - cell "XDG_SESSION_DESKTOP" [ref=f7e694]
+            - cell "'cinnamon'" [ref=f7e695]
+          - row [ref=f7e697]:
+            - cell "XDG_SESSION_ID" [ref=f7e698]
+            - cell "'c2'" [ref=f7e699]
+          - row [ref=f7e701]:
+            - cell "XDG_SESSION_PATH" [ref=f7e702]
+            - cell "'/org/freedesktop/DisplayManager/Session0'" [ref=f7e703]
+          - row [ref=f7e705]:
+            - cell "XDG_SESSION_TYPE" [ref=f7e706]
+            - cell "'x11'" [ref=f7e707]
+          - row [ref=f7e709]:
+            - cell "XDG_VTNR" [ref=f7e710]
+            - cell "'7'" [ref=f7e711]
+          - row [ref=f7e713]:
+            - cell "XMODIFIERS" [ref=f7e714]
+            - cell "'@im=ibus'" [ref=f7e715]
+          - row [ref=f7e717]:
+            - cell "_" [ref=f7e718]
+            - cell "'/usr/bin/setsid'" [ref=f7e719]
+          - row [ref=f7e721]:
+            - cell "npm_config_user_agent" [ref=f7e722]
+            - cell "'npm/undefined node/v24.3.0 linux x64 workspaces/false'" [ref=f7e723]
+          - row [ref=f7e725]:
+            - cell "wsgi.errors" [ref=f7e726]
+            - cell "<_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>" [ref=f7e727]
+          - row [ref=f7e729]:
+            - cell "wsgi.file_wrapper" [ref=f7e730]
+            - cell "<class 'wsgiref.util.FileWrapper'>" [ref=f7e731]
+          - row [ref=f7e733]:
+            - cell "wsgi.input" [ref=f7e734]
+            - cell "<django.core.handlers.wsgi.LimitedStream object at 0x726d3f8a1a50>" [ref=f7e735]
+          - row [ref=f7e737]:
+            - cell "wsgi.multiprocess" [ref=f7e738]
+            - cell "False" [ref=f7e739]
+          - row [ref=f7e741]:
+            - cell "wsgi.multithread" [ref=f7e742]
+            - cell "True" [ref=f7e743]
+          - row [ref=f7e745]:
+            - cell "wsgi.run_once" [ref=f7e746]
+            - cell "False" [ref=f7e747]
+          - row [ref=f7e749]:
+            - cell "wsgi.url_scheme" [ref=f7e750]
+            - cell "'http'" [ref=f7e751]
+          - row [ref=f7e753]:
+            - cell "wsgi.version" [ref=f7e754]
+            - cell "(1, 0)" [ref=f7e755]
+      - heading "Settings" [level=3] [ref=f7e757]
+      - heading [level=4] [ref=f7e758]:
+        - text: Using settings module
+        - code [ref=f7e759]: core.settings
+      - table [ref=f7e760]:
+        - rowgroup [ref=f7e761]:
+          - row [ref=f7e762]:
+            - columnheader "Setting" [ref=f7e763]
+            - columnheader "Value" [ref=f7e764]
+        - rowgroup [ref=f7e765]:
+          - row [ref=f7e766]:
+            - cell "ABSOLUTE_URL_OVERRIDES" [ref=f7e767]
+            - 'cell "{}" [ref=f7e768]'
+          - row [ref=f7e770]:
+            - cell "ADMINS" [ref=f7e771]
+            - cell "[]" [ref=f7e772]
+          - row [ref=f7e774]:
+            - cell "ALLOWED_HOSTS" [ref=f7e775]
+            - cell "[]" [ref=f7e776]
+          - row [ref=f7e778]:
+            - cell "APPEND_SLASH" [ref=f7e779]
+            - cell "True" [ref=f7e780]
+          - row [ref=f7e782]:
+            - cell "AUTHENTICATION_BACKENDS" [ref=f7e783]
+            - cell "'********************'" [ref=f7e784]
+          - row [ref=f7e786]:
+            - cell "AUTH_PASSWORD_VALIDATORS" [ref=f7e787]
+            - cell "'********************'" [ref=f7e788]
+          - row [ref=f7e790]:
+            - cell "AUTH_USER_MODEL" [ref=f7e791]
+            - cell "'********************'" [ref=f7e792]
+          - row [ref=f7e794]:
+            - cell "BASE_DIR" [ref=f7e795]
+            - cell "PosixPath('/home/augustojbe/ia-master/finanpy')" [ref=f7e796]
+          - row [ref=f7e798]:
+            - cell "CACHES" [ref=f7e799]
+            - 'cell "{''default'': {''BACKEND'': ''django.core.cache.backends.locmem.LocMemCache''}}" [ref=f7e800]'
+          - row [ref=f7e802]:
+            - cell "CACHE_MIDDLEWARE_ALIAS" [ref=f7e803]
+            - cell "'default'" [ref=f7e804]
+          - row [ref=f7e806]:
+            - cell "CACHE_MIDDLEWARE_KEY_PREFIX" [ref=f7e807]
+            - cell "'********************'" [ref=f7e808]
+          - row [ref=f7e810]:
+            - cell "CACHE_MIDDLEWARE_SECONDS" [ref=f7e811]
+            - cell "600" [ref=f7e812]
+          - row [ref=f7e814]:
+            - cell "CSRF_COOKIE_AGE" [ref=f7e815]
+            - cell "31449600" [ref=f7e816]
+          - row [ref=f7e818]:
+            - cell "CSRF_COOKIE_DOMAIN" [ref=f7e819]
+            - cell "None" [ref=f7e820]
+          - row [ref=f7e822]:
+            - cell "CSRF_COOKIE_HTTPONLY" [ref=f7e823]
+            - cell "False" [ref=f7e824]
+          - row [ref=f7e826]:
+            - cell "CSRF_COOKIE_NAME" [ref=f7e827]
+            - cell "'csrftoken'" [ref=f7e828]
+          - row [ref=f7e830]:
+            - cell "CSRF_COOKIE_PATH" [ref=f7e831]
+            - cell "'/'" [ref=f7e832]
+          - row [ref=f7e834]:
+            - cell "CSRF_COOKIE_SAMESITE" [ref=f7e835]
+            - cell "'Lax'" [ref=f7e836]
+          - row [ref=f7e838]:
+            - cell "CSRF_COOKIE_SECURE" [ref=f7e839]
+            - cell "False" [ref=f7e840]
+          - row [ref=f7e842]:
+            - cell "CSRF_FAILURE_VIEW" [ref=f7e843]
+            - cell "'django.views.csrf.csrf_failure'" [ref=f7e844]
+          - row [ref=f7e846]:
+            - cell "CSRF_HEADER_NAME" [ref=f7e847]
+            - cell "'HTTP_X_CSRFTOKEN'" [ref=f7e848]
+          - row [ref=f7e850]:
+            - cell "CSRF_TRUSTED_ORIGINS" [ref=f7e851]
+            - cell "[]" [ref=f7e852]
+          - row [ref=f7e854]:
+            - cell "CSRF_USE_SESSIONS" [ref=f7e855]
+            - cell "False" [ref=f7e856]
+          - row [ref=f7e858]:
+            - cell "DATABASES" [ref=f7e859]
+            - 'cell "{''default'': {''ATOMIC_REQUESTS'': False, ''AUTOCOMMIT'': True, ''CONN_HEALTH_CHECKS'': False, ''CONN_MAX_AGE'': 0, ''ENGINE'': ''django.db.backends.sqlite3'', ''HOST'': '''', ''NAME'': PosixPath(''/home/augustojbe/ia-master/finanpy/db.sqlite3''), ''OPTIONS'': {}, ''PASSWORD'': ''********************'', ''PORT'': '''', ''TEST'': {''CHARSET'': None, ''COLLATION'': None, ''MIGRATE'': True, ''MIRROR'': None, ''NAME'': None}, ''TIME_ZONE'': None, ''USER'': ''''}}" [ref=f7e860]'
+          - row [ref=f7e862]:
+            - cell "DATABASE_ROUTERS" [ref=f7e863]
+            - cell "[]" [ref=f7e864]
+          - row [ref=f7e866]:
+            - cell "DATA_UPLOAD_MAX_MEMORY_SIZE" [ref=f7e867]
+            - cell "2621440" [ref=f7e868]
+          - row [ref=f7e870]:
+            - cell "DATA_UPLOAD_MAX_NUMBER_FIELDS" [ref=f7e871]
+            - cell "1000" [ref=f7e872]
+          - row [ref=f7e874]:
+            - cell "DATA_UPLOAD_MAX_NUMBER_FILES" [ref=f7e875]
+            - cell "100" [ref=f7e876]
+          - row [ref=f7e878]:
+            - cell "DATETIME_FORMAT" [ref=f7e879]
+            - cell "'N j, Y, P'" [ref=f7e880]
+          - row [ref=f7e882]:
+            - cell "DATETIME_INPUT_FORMATS" [ref=f7e883]
+            - cell "['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M']" [ref=f7e884]
+          - row [ref=f7e886]:
+            - cell "DATE_FORMAT" [ref=f7e887]
+            - cell "'N j, Y'" [ref=f7e888]
+          - row [ref=f7e890]:
+            - cell "DATE_INPUT_FORMATS" [ref=f7e891]
+            - cell "['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y']" [ref=f7e892]
+          - row [ref=f7e894]:
+            - cell "DEBUG" [ref=f7e895]
+            - cell "True" [ref=f7e896]
+          - row [ref=f7e898]:
+            - cell "DEBUG_PROPAGATE_EXCEPTIONS" [ref=f7e899]
+            - cell "False" [ref=f7e900]
+          - row [ref=f7e902]:
+            - cell "DECIMAL_SEPARATOR" [ref=f7e903]
+            - cell "'.'" [ref=f7e904]
+          - row [ref=f7e906]:
+            - cell "DEFAULT_AUTO_FIELD" [ref=f7e907]
+            - cell "'django.db.models.BigAutoField'" [ref=f7e908]
+          - row [ref=f7e910]:
+            - cell "DEFAULT_CHARSET" [ref=f7e911]
+            - cell "'utf-8'" [ref=f7e912]
+          - row [ref=f7e914]:
+            - cell "DEFAULT_EXCEPTION_REPORTER" [ref=f7e915]
+            - cell "'django.views.debug.ExceptionReporter'" [ref=f7e916]
+          - row [ref=f7e918]:
+            - cell "DEFAULT_EXCEPTION_REPORTER_FILTER" [ref=f7e919]
+            - cell "'django.views.debug.SafeExceptionReporterFilter'" [ref=f7e920]
+          - row [ref=f7e922]:
+            - cell "DEFAULT_FROM_EMAIL" [ref=f7e923]
+            - cell "'webmaster@localhost'" [ref=f7e924]
+          - row [ref=f7e926]:
+            - cell "DEFAULT_INDEX_TABLESPACE" [ref=f7e927]
+            - cell "''" [ref=f7e928]
+          - row [ref=f7e930]:
+            - cell "DEFAULT_TABLESPACE" [ref=f7e931]
+            - cell "''" [ref=f7e932]
+          - row [ref=f7e934]:
+            - cell "DISALLOWED_USER_AGENTS" [ref=f7e935]
+            - cell "[]" [ref=f7e936]
+          - row [ref=f7e938]:
+            - cell "EMAIL_BACKEND" [ref=f7e939]
+            - cell "'django.core.mail.backends.smtp.EmailBackend'" [ref=f7e940]
+          - row [ref=f7e942]:
+            - cell "EMAIL_HOST" [ref=f7e943]
+            - cell "'localhost'" [ref=f7e944]
+          - row [ref=f7e946]:
+            - cell "EMAIL_HOST_PASSWORD" [ref=f7e947]
+            - cell "'********************'" [ref=f7e948]
+          - row [ref=f7e950]:
+            - cell "EMAIL_HOST_USER" [ref=f7e951]
+            - cell "''" [ref=f7e952]
+          - row [ref=f7e954]:
+            - cell "EMAIL_PORT" [ref=f7e955]
+            - cell "25" [ref=f7e956]
+          - row [ref=f7e958]:
+            - cell "EMAIL_SSL_CERTFILE" [ref=f7e959]
+            - cell "None" [ref=f7e960]
+          - row [ref=f7e962]:
+            - cell "EMAIL_SSL_KEYFILE" [ref=f7e963]
+            - cell "'********************'" [ref=f7e964]
+          - row [ref=f7e966]:
+            - cell "EMAIL_SUBJECT_PREFIX" [ref=f7e967]
+            - cell "'[Django] '" [ref=f7e968]
+          - row [ref=f7e970]:
+            - cell "EMAIL_TIMEOUT" [ref=f7e971]
+            - cell "None" [ref=f7e972]
+          - row [ref=f7e974]:
+            - cell "EMAIL_USE_LOCALTIME" [ref=f7e975]
+            - cell "False" [ref=f7e976]
+          - row [ref=f7e978]:
+            - cell "EMAIL_USE_SSL" [ref=f7e979]
+            - cell "False" [ref=f7e980]
+          - row [ref=f7e982]:
+            - cell "EMAIL_USE_TLS" [ref=f7e983]
+            - cell "False" [ref=f7e984]
+          - row [ref=f7e986]:
+            - cell "FILE_UPLOAD_DIRECTORY_PERMISSIONS" [ref=f7e987]
+            - cell "None" [ref=f7e988]
+          - row [ref=f7e990]:
+            - cell "FILE_UPLOAD_HANDLERS" [ref=f7e991]
+            - cell "['django.core.files.uploadhandler.MemoryFileUploadHandler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']" [ref=f7e992]
+          - row [ref=f7e994]:
+            - cell "FILE_UPLOAD_MAX_MEMORY_SIZE" [ref=f7e995]
+            - cell "2621440" [ref=f7e996]
+          - row [ref=f7e998]:
+            - cell "FILE_UPLOAD_PERMISSIONS" [ref=f7e999]
+            - cell "420" [ref=f7e1000]
+          - row [ref=f7e1002]:
+            - cell "FILE_UPLOAD_TEMP_DIR" [ref=f7e1003]
+            - cell "None" [ref=f7e1004]
+          - row [ref=f7e1006]:
+            - cell "FIRST_DAY_OF_WEEK" [ref=f7e1007]
+            - cell "0" [ref=f7e1008]
+          - row [ref=f7e1010]:
+            - cell "FIXTURE_DIRS" [ref=f7e1011]
+            - cell "[]" [ref=f7e1012]
+          - row [ref=f7e1014]:
+            - cell "FORCE_SCRIPT_NAME" [ref=f7e1015]
+            - cell "None" [ref=f7e1016]
+          - row [ref=f7e1018]:
+            - cell "FORMAT_MODULE_PATH" [ref=f7e1019]
+            - cell "None" [ref=f7e1020]
+          - row [ref=f7e1022]:
+            - cell "FORM_RENDERER" [ref=f7e1023]
+            - cell "'django.forms.renderers.DjangoTemplates'" [ref=f7e1024]
+          - row [ref=f7e1026]:
+            - cell "IGNORABLE_404_URLS" [ref=f7e1027]
+            - cell "[]" [ref=f7e1028]
+          - row [ref=f7e1030]:
+            - cell "INSTALLED_APPS" [ref=f7e1031]
+            - cell "['django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'accounts', 'categories', 'profiles', 'transactions', 'users']" [ref=f7e1032]
+          - row [ref=f7e1034]:
+            - cell "INTERNAL_IPS" [ref=f7e1035]
+            - cell "[]" [ref=f7e1036]
+          - row [ref=f7e1038]:
+            - cell "LANGUAGES" [ref=f7e1039]
+            - cell [ref=f7e1040]
+          - row [ref=f7e1042]:
+            - cell "LANGUAGES_BIDI" [ref=f7e1043]
+            - cell "['he', 'ar', 'ar-dz', 'ckb', 'fa', 'ug', 'ur']" [ref=f7e1044]
+          - row [ref=f7e1046]:
+            - cell "LANGUAGE_CODE" [ref=f7e1047]
+            - cell "'pt-br'" [ref=f7e1048]
+          - row [ref=f7e1050]:
+            - cell "LANGUAGE_COOKIE_AGE" [ref=f7e1051]
+            - cell "None" [ref=f7e1052]
+          - row [ref=f7e1054]:
+            - cell "LANGUAGE_COOKIE_DOMAIN" [ref=f7e1055]
+            - cell "None" [ref=f7e1056]
+          - row [ref=f7e1058]:
+            - cell "LANGUAGE_COOKIE_HTTPONLY" [ref=f7e1059]
+            - cell "False" [ref=f7e1060]
+          - row [ref=f7e1062]:
+            - cell "LANGUAGE_COOKIE_NAME" [ref=f7e1063]
+            - cell "'django_language'" [ref=f7e1064]
+          - row [ref=f7e1066]:
+            - cell "LANGUAGE_COOKIE_PATH" [ref=f7e1067]
+            - cell "'/'" [ref=f7e1068]
+          - row [ref=f7e1070]:
+            - cell "LANGUAGE_COOKIE_SAMESITE" [ref=f7e1071]
+            - cell "None" [ref=f7e1072]
+          - row [ref=f7e1074]:
+            - cell "LANGUAGE_COOKIE_SECURE" [ref=f7e1075]
+            - cell "False" [ref=f7e1076]
+          - row [ref=f7e1078]:
+            - cell "LOCALE_PATHS" [ref=f7e1079]
+            - cell "[]" [ref=f7e1080]
+          - row [ref=f7e1082]:
+            - cell "LOGGING" [ref=f7e1083]
+            - 'cell "{}" [ref=f7e1084]'
+          - row [ref=f7e1086]:
+            - cell "LOGGING_CONFIG" [ref=f7e1087]
+            - cell "'logging.config.dictConfig'" [ref=f7e1088]
+          - row [ref=f7e1090]:
+            - cell "LOGIN_REDIRECT_URL" [ref=f7e1091]
+            - cell "'/dashboard/'" [ref=f7e1092]
+          - row [ref=f7e1094]:
+            - cell "LOGIN_URL" [ref=f7e1095]
+            - cell "'/entrar/'" [ref=f7e1096]
+          - row [ref=f7e1098]:
+            - cell "LOGOUT_REDIRECT_URL" [ref=f7e1099]
+            - cell "'/'" [ref=f7e1100]
+          - row [ref=f7e1102]:
+            - cell "MANAGERS" [ref=f7e1103]
+            - cell "[]" [ref=f7e1104]
+          - row [ref=f7e1106]:
+            - cell "MEDIA_ROOT" [ref=f7e1107]
+            - cell "''" [ref=f7e1108]
+          - row [ref=f7e1110]:
+            - cell "MEDIA_URL" [ref=f7e1111]
+            - cell "'/'" [ref=f7e1112]
+          - row [ref=f7e1114]:
+            - cell "MESSAGE_STORAGE" [ref=f7e1115]
+            - cell "'django.contrib.messages.storage.fallback.FallbackStorage'" [ref=f7e1116]
+          - row [ref=f7e1118]:
+            - cell "MIDDLEWARE" [ref=f7e1119]
+            - cell "['django.middleware.security.SecurityMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware']" [ref=f7e1120]
+          - row [ref=f7e1122]:
+            - cell "MIGRATION_MODULES" [ref=f7e1123]
+            - 'cell "{}" [ref=f7e1124]'
+          - row [ref=f7e1126]:
+            - cell "MONTH_DAY_FORMAT" [ref=f7e1127]
+            - cell "'F j'" [ref=f7e1128]
+          - row [ref=f7e1130]:
+            - cell "NUMBER_GROUPING" [ref=f7e1131]
+            - cell "0" [ref=f7e1132]
+          - row [ref=f7e1134]:
+            - cell "PASSWORD_HASHERS" [ref=f7e1135]
+            - cell "'********************'" [ref=f7e1136]
+          - row [ref=f7e1138]:
+            - cell "PASSWORD_RESET_TIMEOUT" [ref=f7e1139]
+            - cell "'********************'" [ref=f7e1140]
+          - row [ref=f7e1142]:
+            - cell "PREPEND_WWW" [ref=f7e1143]
+            - cell "False" [ref=f7e1144]
+          - row [ref=f7e1146]:
+            - cell "ROOT_URLCONF" [ref=f7e1147]
+            - cell "'core.urls'" [ref=f7e1148]
+          - row [ref=f7e1150]:
+            - cell "SECRET_KEY" [ref=f7e1151]
+            - cell "'********************'" [ref=f7e1152]
+          - row [ref=f7e1154]:
+            - cell "SECRET_KEY_FALLBACKS" [ref=f7e1155]
+            - cell "'********************'" [ref=f7e1156]
+          - row [ref=f7e1158]:
+            - cell "SECURE_CONTENT_TYPE_NOSNIFF" [ref=f7e1159]
+            - cell "True" [ref=f7e1160]
+          - row [ref=f7e1162]:
+            - cell "SECURE_CROSS_ORIGIN_OPENER_POLICY" [ref=f7e1163]
+            - cell "'same-origin'" [ref=f7e1164]
+          - row [ref=f7e1166]:
+            - cell "SECURE_CSP" [ref=f7e1167]
+            - 'cell "{}" [ref=f7e1168]'
+          - row [ref=f7e1170]:
+            - cell "SECURE_CSP_REPORT_ONLY" [ref=f7e1171]
+            - 'cell "{}" [ref=f7e1172]'
+          - row [ref=f7e1174]:
+            - cell "SECURE_HSTS_INCLUDE_SUBDOMAINS" [ref=f7e1175]
+            - cell "False" [ref=f7e1176]
+          - row [ref=f7e1178]:
+            - cell "SECURE_HSTS_PRELOAD" [ref=f7e1179]
+            - cell "False" [ref=f7e1180]
+          - row [ref=f7e1182]:
+            - cell "SECURE_HSTS_SECONDS" [ref=f7e1183]
+            - cell "0" [ref=f7e1184]
+          - row [ref=f7e1186]:
+            - cell "SECURE_PROXY_SSL_HEADER" [ref=f7e1187]
+            - cell "None" [ref=f7e1188]
+          - row [ref=f7e1190]:
+            - cell "SECURE_REDIRECT_EXEMPT" [ref=f7e1191]
+            - cell "[]" [ref=f7e1192]
+          - row [ref=f7e1194]:
+            - cell "SECURE_REFERRER_POLICY" [ref=f7e1195]
+            - cell "'same-origin'" [ref=f7e1196]
+          - row [ref=f7e1198]:
+            - cell "SECURE_SSL_HOST" [ref=f7e1199]
+            - cell "None" [ref=f7e1200]
+          - row [ref=f7e1202]:
+            - cell "SECURE_SSL_REDIRECT" [ref=f7e1203]
+            - cell "False" [ref=f7e1204]
+          - row [ref=f7e1206]:
+            - cell "SERVER_EMAIL" [ref=f7e1207]
+            - cell "'root@localhost'" [ref=f7e1208]
+          - row [ref=f7e1210]:
+            - cell "SESSION_CACHE_ALIAS" [ref=f7e1211]
+            - cell "'default'" [ref=f7e1212]
+          - row [ref=f7e1214]:
+            - cell "SESSION_COOKIE_AGE" [ref=f7e1215]
+            - cell "1209600" [ref=f7e1216]
+          - row [ref=f7e1218]:
+            - cell "SESSION_COOKIE_DOMAIN" [ref=f7e1219]
+            - cell "None" [ref=f7e1220]
+          - row [ref=f7e1222]:
+            - cell "SESSION_COOKIE_HTTPONLY" [ref=f7e1223]
+            - cell "True" [ref=f7e1224]
+          - row [ref=f7e1226]:
+            - cell "SESSION_COOKIE_NAME" [ref=f7e1227]
+            - cell "'sessionid'" [ref=f7e1228]
+          - row [ref=f7e1230]:
+            - cell "SESSION_COOKIE_PATH" [ref=f7e1231]
+            - cell "'/'" [ref=f7e1232]
+          - row [ref=f7e1234]:
+            - cell "SESSION_COOKIE_SAMESITE" [ref=f7e1235]
+            - cell "'Lax'" [ref=f7e1236]
+          - row [ref=f7e1238]:
+            - cell "SESSION_COOKIE_SECURE" [ref=f7e1239]
+            - cell "False" [ref=f7e1240]
+          - row [ref=f7e1242]:
+            - cell "SESSION_ENGINE" [ref=f7e1243]
+            - cell "'django.contrib.sessions.backends.db'" [ref=f7e1244]
+          - row [ref=f7e1246]:
+            - cell "SESSION_EXPIRE_AT_BROWSER_CLOSE" [ref=f7e1247]
+            - cell "False" [ref=f7e1248]
+          - row [ref=f7e1250]:
+            - cell "SESSION_FILE_PATH" [ref=f7e1251]
+            - cell "None" [ref=f7e1252]
+          - row [ref=f7e1254]:
+            - cell "SESSION_SAVE_EVERY_REQUEST" [ref=f7e1255]
+            - cell "False" [ref=f7e1256]
+          - row [ref=f7e1258]:
+            - cell "SESSION_SERIALIZER" [ref=f7e1259]
+            - cell "'django.contrib.sessions.serializers.JSONSerializer'" [ref=f7e1260]
+          - row [ref=f7e1262]:
+            - cell "SETTINGS_MODULE" [ref=f7e1263]
+            - cell "'core.settings'" [ref=f7e1264]
+          - row [ref=f7e1266]:
+            - cell "SHORT_DATETIME_FORMAT" [ref=f7e1267]
+            - cell "'m/d/Y P'" [ref=f7e1268]
+          - row [ref=f7e1270]:
+            - cell "SHORT_DATE_FORMAT" [ref=f7e1271]
+            - cell "'m/d/Y'" [ref=f7e1272]
+          - row [ref=f7e1274]:
+            - cell "SIGNED_COOKIE_LEGACY_SALT_FALLBACK" [ref=f7e1275]
+            - cell "True" [ref=f7e1276]
+          - row [ref=f7e1278]:
+            - cell "SIGNING_BACKEND" [ref=f7e1279]
+            - cell "'django.core.signing.TimestampSigner'" [ref=f7e1280]
+          - row [ref=f7e1282]:
+            - cell "SILENCED_SYSTEM_CHECKS" [ref=f7e1283]
+            - cell "[]" [ref=f7e1284]
+          - row [ref=f7e1286]:
+            - cell "STATICFILES_DIRS" [ref=f7e1287]
+            - cell "[PosixPath('/home/augustojbe/ia-master/finanpy/static')]" [ref=f7e1288]
+          - row [ref=f7e1290]:
+            - cell "STATICFILES_FINDERS" [ref=f7e1291]
+            - cell "['django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder']" [ref=f7e1292]
+          - row [ref=f7e1294]:
+            - cell "STATIC_ROOT" [ref=f7e1295]
+            - cell "None" [ref=f7e1296]
+          - row [ref=f7e1298]:
+            - cell "STATIC_URL" [ref=f7e1299]
+            - cell "'/static/'" [ref=f7e1300]
+          - row [ref=f7e1302]:
+            - cell "STORAGES" [ref=f7e1303]
+            - 'cell "{''default'': {''BACKEND'': ''django.core.files.storage.FileSystemStorage''}, ''staticfiles'': {''BACKEND'': ''django.contrib.staticfiles.storage.StaticFilesStorage''}}" [ref=f7e1304]'
+          - row [ref=f7e1306]:
+            - cell "TASKS" [ref=f7e1307]
+            - 'cell "{''default'': {''BACKEND'': ''django.tasks.backends.immediate.ImmediateBackend''}}" [ref=f7e1308]'
+          - row [ref=f7e1310]:
+            - cell "TEMPLATES" [ref=f7e1311]
+            - 'cell "[{''APP_DIRS'': True, ''BACKEND'': ''django.template.backends.django.DjangoTemplates'', ''DIRS'': [PosixPath(''/home/augustojbe/ia-master/finanpy/templates'')], ''OPTIONS'': {''context_processors'': [''django.template.context_processors.request'', ''django.contrib.auth.context_processors.auth'', ''django.contrib.messages.context_processors.messages'']}}]" [ref=f7e1312]'
+          - row [ref=f7e1314]:
+            - cell "TEST_NON_SERIALIZED_APPS" [ref=f7e1315]
+            - cell "[]" [ref=f7e1316]
+          - row [ref=f7e1318]:
+            - cell "TEST_RUNNER" [ref=f7e1319]
+            - cell "'django.test.runner.DiscoverRunner'" [ref=f7e1320]
+          - row [ref=f7e1322]:
+            - cell "THOUSAND_SEPARATOR" [ref=f7e1323]
+            - cell "','" [ref=f7e1324]
+          - row [ref=f7e1326]:
+            - cell "TIME_FORMAT" [ref=f7e1327]
+            - cell "'P'" [ref=f7e1328]
+          - row [ref=f7e1330]:
+            - cell "TIME_INPUT_FORMATS" [ref=f7e1331]
+            - cell "['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']" [ref=f7e1332]
+          - row [ref=f7e1334]:
+            - cell "TIME_ZONE" [ref=f7e1335]
+            - cell "'America/Sao_Paulo'" [ref=f7e1336]
+          - row [ref=f7e1338]:
+            - cell "URLIZE_ASSUME_HTTPS" [ref=f7e1339]
+            - cell "False" [ref=f7e1340]
+          - row [ref=f7e1342]:
+            - cell "USE_I18N" [ref=f7e1343]
+            - cell "True" [ref=f7e1344]
+          - row [ref=f7e1346]:
+            - cell "USE_THOUSAND_SEPARATOR" [ref=f7e1347]
+            - cell "False" [ref=f7e1348]
+          - row [ref=f7e1350]:
+            - cell "USE_TZ" [ref=f7e1351]
+            - cell "True" [ref=f7e1352]
+          - row [ref=f7e1354]:
+            - cell "USE_X_FORWARDED_HOST" [ref=f7e1355]
+            - cell "False" [ref=f7e1356]
+          - row [ref=f7e1358]:
+            - cell "USE_X_FORWARDED_PORT" [ref=f7e1359]
+            - cell "False" [ref=f7e1360]
+          - row [ref=f7e1362]:
+            - cell "WSGI_APPLICATION" [ref=f7e1363]
+            - cell "'core.wsgi.application'" [ref=f7e1364]
+          - row [ref=f7e1366]:
+            - cell "X_FRAME_OPTIONS" [ref=f7e1367]
+            - cell "'DENY'" [ref=f7e1368]
+          - row [ref=f7e1370]:
+            - cell "YEAR_MONTH_FORMAT" [ref=f7e1371]
+            - cell "'F Y'" [ref=f7e1372]
+  - contentinfo [ref=f7e1374]:
+    - paragraph [ref=f7e1375]:
+      - text: You’re seeing this error because you have
+      - code [ref=f7e1376]: DEBUG = True
+      - text: in your Django settings file. Change that to
+      - code [ref=f7e1377]: "False"
+      - text: ", and Django will display a standard page generated by the handler for this status code."

@@ -31,45 +31,36 @@
             </a>
 
             <!-- Contas -->
-            <a href="{% url 'accounts:list' %}"
+            <a href="#"
                class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-colors duration-200
-                      {% if request.resolver_match.app_name == 'accounts' %}
-                          bg-violet-600/20 text-violet-400 border border-violet-600/30
-                      {% else %}
-                          text-gray-400 hover:text-white hover:bg-gray-800 border border-transparent
-                      {% endif %}">
+                      text-gray-600 cursor-not-allowed">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
                 Contas
+                <span class="ml-auto text-[10px] text-gray-600">em breve</span>
             </a>
 
             <!-- Categorias -->
-            <a href="{% url 'categories:list' %}"
+            <a href="#"
                class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-colors duration-200
-                      {% if request.resolver_match.app_name == 'categories' %}
-                          bg-violet-600/20 text-violet-400 border border-violet-600/30
-                      {% else %}
-                          text-gray-400 hover:text-white hover:bg-gray-800 border border-transparent
-                      {% endif %}">
+                      text-gray-600 cursor-not-allowed">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 8V5a2 2 0 012-2z" />
                 </svg>
                 Categorias
+                <span class="ml-auto text-[10px] text-gray-600">em breve</span>
             </a>
 
             <!-- Transações -->
-            <a href="{% url 'transactions:list' %}"
+            <a href="#"
                class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-colors duration-200
-                      {% if request.resolver_match.app_name == 'transactions' %}
-                          bg-violet-600/20 text-violet-400 border border-violet-600/30
-                      {% else %}
-                          text-gray-400 hover:text-white hover:bg-gray-800 border border-transparent
-                      {% endif %}">
+                      text-gray-600 cursor-not-allowed">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                 </svg>
                 Transações
+                <span class="ml-auto text-[10px] text-gray-600">em breve</span>
             </a>
 
             <!-- Perfil -->

@@ -1,0 +1,36 @@
+- generic [ref=f20e3]:
+  - generic [ref=f20e4]:
+    - text: Finanpy
+    - paragraph [ref=f20e5]: Crie sua conta gratuitamente
+  - generic [ref=f20e6]:
+    - generic [ref=f20e7]:
+      - generic [ref=f20e8]:
+        - generic [ref=f20e9]:
+          - generic [ref=f20e10]: Nome
+          - textbox "Nome" [ref=f20e11]:
+            - /placeholder: Seu nome
+            - text: Duplicado
+        - generic [ref=f20e12]:
+          - generic [ref=f20e13]: Sobrenome
+          - textbox "Sobrenome" [ref=f20e14]:
+            - /placeholder: Seu sobrenome
+            - text: Teste
+        - generic [ref=f20e15]:
+          - generic [ref=f20e16]: E-mail
+          - textbox "E-mail" [ref=f20e17]:
+            - /placeholder: seu@email.com
+            - text: teste@example.com
+          - paragraph [ref=f20e18]: Este e-mail já está cadastrado.
+        - generic [ref=f20e19]:
+          - generic [ref=f20e20]: Senha
+          - textbox "Senha" [ref=f20e21]:
+            - /placeholder: Mínimo de 8 caracteres
+        - generic [ref=f20e22]:
+          - generic [ref=f20e23]: Confirmar senha
+          - textbox "Confirmar senha" [ref=f20e24]:
+            - /placeholder: Repita a senha
+      - button "Criar conta" [ref=f20e25] [cursor=pointer]
+    - paragraph [ref=f20e26]:
+      - text: Já tem uma conta?
+      - link "Entrar" [ref=f20e27] [cursor=pointer]:
+        - /url: /entrar/

@@ -116,55 +116,56 @@
   - [x] 1.7.2 — Rodar `python manage.py migrate`
   - [x] 1.7.3 — Testar fluxo completo: acessar landing → cadastrar → logar → logout
   - [x] 1.7.4 — Verificar que login com username falha e login com e-mail funciona
+  - [x] 1.7.5 — QA executado: bugs encontrados e corrigidos (ver prompt/qa-report-sprint1.md)
 
 ---
 
-### 🧑‍💼 Sprint 2 — App `profiles`: Perfil do Usuário
+### 🧑‍💼 Sprint 2 — App `profiles`: Perfil do Usuário ✅
 
 **Objetivo:** Criar perfil automático de usuário via signal e tela de edição.
 
 ---
 
-- [ ] **2.1 — Model `Profile` (`profiles/models.py`)**
-  - [ ] 2.1.1 — Criar classe `Profile` com `OneToOneField` para `CustomUser`
-  - [ ] 2.1.2 — Adicionar campo `phone = models.CharField(max_length=20, blank=True)`
-  - [ ] 2.1.3 — Adicionar campos `created_at` e `updated_at`
-  - [ ] 2.1.4 — Definir `__str__` retornando o email do usuário
-  - [ ] 2.1.5 — Registrar no `admin.py`
+- [x] **2.1 — Model `Profile` (`profiles/models.py`)**
+  - [x] 2.1.1 — Criar classe `Profile` com `OneToOneField` para `CustomUser`
+  - [x] 2.1.2 — Adicionar campo `phone = models.CharField(max_length=20, blank=True)`
+  - [x] 2.1.3 — Adicionar campos `created_at` e `updated_at`
+  - [x] 2.1.4 — Definir `__str__` retornando o email do usuário
+  - [x] 2.1.5 — Registrar no `admin.py`
 
-- [ ] **2.2 — Signal de Criação Automática (`profiles/signals.py`)**
-  - [ ] 2.2.1 — Criar arquivo `profiles/signals.py`
-  - [ ] 2.2.2 — Importar `post_save` e `CustomUser`
-  - [ ] 2.2.3 — Criar função `create_user_profile` decorada com `@receiver(post_save, sender=CustomUser)`
-  - [ ] 2.2.4 — Usar `Profile.objects.get_or_create(user=instance)` dentro da função
-  - [ ] 2.2.5 — Registrar o signal no método `ready()` do `ProfilesConfig` em `apps.py`
-    - [ ] 2.2.5.1 — Sobrescrever `ready(self)` em `profiles/apps.py`
-    - [ ] 2.2.5.2 — Adicionar `import profiles.signals` dentro do método `ready()`
+- [x] **2.2 — Signal de Criação Automática (`profiles/signals.py`)**
+  - [x] 2.2.1 — Criar arquivo `profiles/signals.py`
+  - [x] 2.2.2 — Importar `post_save` e `CustomUser`
+  - [x] 2.2.3 — Criar função `create_user_profile` decorada com `@receiver(post_save, sender=CustomUser)`
+  - [x] 2.2.4 — Usar `Profile.objects.get_or_create(user=instance)` dentro da função
+  - [x] 2.2.5 — Registrar o signal no método `ready()` do `ProfilesConfig` em `apps.py`
+    - [x] 2.2.5.1 — Sobrescrever `ready(self)` em `profiles/apps.py`
+    - [x] 2.2.5.2 — Adicionar `import profiles.signals` dentro do método `ready()`
 
-- [ ] **2.3 — Formulários de Perfil (`profiles/forms.py`)**
-  - [ ] 2.3.1 — Criar `ProfileForm` (ModelForm do Profile) com campo `phone`
-  - [ ] 2.3.2 — Criar `UserUpdateForm` (ModelForm do CustomUser) com campos `first_name`, `last_name`
-  - [ ] 2.3.3 — Criar `PasswordChangeForm` customizado ou usar nativo do Django
+- [x] **2.3 — Formulários de Perfil (`profiles/forms.py`)**
+  - [x] 2.3.1 — Criar `ProfileForm` (ModelForm do Profile) com campo `phone`
+  - [x] 2.3.2 — Criar `UserUpdateForm` (ModelForm do CustomUser) com campos `first_name`, `last_name`
+  - [x] 2.3.3 — Criar `PasswordChangeForm` customizado ou usar nativo do Django
 
-- [ ] **2.4 — Views de Perfil (`profiles/views.py`)**
-  - [ ] 2.4.1 — Criar `ProfileView` (LoginRequiredMixin + UpdateView ou TemplateView)
-  - [ ] 2.4.2 — Renderizar dois forms juntos: `UserUpdateForm` e `ProfileForm`
-  - [ ] 2.4.3 — Salvar os dois forms no `post()` após validação
-  - [ ] 2.4.4 — Adicionar `PasswordChangeView` usando view nativa do Django customizada com template do design system
-  - [ ] 2.4.5 — Garantir que todas as views usam `LoginRequiredMixin`
+- [x] **2.4 — Views de Perfil (`profiles/views.py`)**
+  - [x] 2.4.1 — Criar `ProfileView` (LoginRequiredMixin + UpdateView)
+  - [x] 2.4.2 — Renderizar dois forms juntos: `UserUpdateForm` e `ProfileForm`
+  - [x] 2.4.3 — Salvar os dois forms no `post()` após validação
+  - [x] 2.4.4 — Adicionar `PasswordChangeView` usando view nativa do Django customizada com template do design system
+  - [x] 2.4.5 — Garantir que todas as views usam `LoginRequiredMixin`
 
-- [ ] **2.5 — URLs e Templates de Perfil**
-  - [ ] 2.5.1 — Criar `profiles/urls.py` com paths para perfil e alteração de senha
-  - [ ] 2.5.2 — Criar `profiles/templates/profiles/profile.html`
-    - [ ] 2.5.2.1 — Herdar de `base_auth.html` (layout com sidebar)
-    - [ ] 2.5.2.2 — Seção de dados pessoais com form `UserUpdateForm` e `ProfileForm`
-    - [ ] 2.5.2.3 — Seção separada para alteração de senha
-    - [ ] 2.5.2.4 — Aplicar design system (inputs, botões, cards)
+- [x] **2.5 — URLs e Templates de Perfil**
+  - [x] 2.5.1 — Criar `profiles/urls.py` com paths para perfil e alteração de senha
+  - [x] 2.5.2 — Criar `profiles/templates/profiles/profile.html`
+    - [x] 2.5.2.1 — Herdar de `base_auth.html` (layout com sidebar)
+    - [x] 2.5.2.2 — Seção de dados pessoais com form `UserUpdateForm` e `ProfileForm`
+    - [x] 2.5.2.3 — Seção separada para alteração de senha
+    - [x] 2.5.2.4 — Aplicar design system (inputs, botões, cards)
 
-- [ ] **2.6 — Migration**
-  - [ ] 2.6.1 — Rodar `python manage.py makemigrations profiles`
-  - [ ] 2.6.2 — Rodar `python manage.py migrate`
-  - [ ] 2.6.3 — Testar criação automática de perfil ao registrar novo usuário
+- [x] **2.6 — Migration**
+  - [x] 2.6.1 — Rodar `python manage.py makemigrations profiles`
+  - [x] 2.6.2 — Rodar `python manage.py migrate`
+  - [x] 2.6.3 — Testar criação automática de perfil ao registrar novo usuário
 
 ---
 

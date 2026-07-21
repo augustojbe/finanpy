@@ -1,0 +1,26 @@
+- generic [ref=f4e2]:
+  - banner [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - generic [ref=f4e5]: Finanpy
+      - generic [ref=f4e6]:
+        - link "Entrar" [ref=f4e7] [cursor=pointer]:
+          - /url: /entrar/
+        - link "Cadastre-se" [ref=f4e8] [cursor=pointer]:
+          - /url: /cadastro/
+  - generic [ref=f4e10]:
+    - heading "Controle suas finanças de forma simples" [level=1] [ref=f4e11]
+    - paragraph [ref=f4e12]: Acompanhe receitas, despesas e o saldo das suas contas em um só lugar. Simples, rápido e sem complicação.
+    - link "Comece gratuitamente" [ref=f4e13] [cursor=pointer]:
+      - /url: /cadastro/
+  - generic [ref=f4e17]:
+    - generic [ref=f4e18]:
+      - heading "Registre transações" [level=3] [ref=f4e22]
+      - paragraph [ref=f4e23]: Cadastre receitas e despesas por categoria e mantenha tudo organizado.
+    - generic [ref=f4e24]:
+      - heading "Visualize seu saldo" [level=3] [ref=f4e28]
+      - paragraph [ref=f4e29]: Acompanhe o saldo de cada conta e veja o resumo do mês no dashboard.
+    - generic [ref=f4e30]:
+      - heading "Múltiplas contas" [level=3] [ref=f4e34]
+      - paragraph [ref=f4e35]: Gerencie várias contas bancárias, carteiras e investimentos em um só lugar.
+  - contentinfo [ref=f4e36]:
+    - paragraph [ref=f4e38]: © 2026 Finanpy

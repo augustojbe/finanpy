@@ -1,0 +1,18 @@
+- generic [active] [ref=f8e1]:
+  - link "Ir para o conteúdo principal" [ref=f8e2] [cursor=pointer]:
+    - /url: "#content-start"
+  - generic [ref=f8e3]:
+    - banner [ref=f8e4]:
+      - link "Administração do Django" [ref=f8e7] [cursor=pointer]:
+        - /url: /admin/
+    - navigation "Marcas de navegação" [ref=f8e8]:
+      - link "Início" [ref=f8e10] [cursor=pointer]:
+        - /url: /admin/
+    - main [ref=f8e12]:
+      - generic [ref=f8e13]:
+        - heading "Sessão encerrada" [level=1] [ref=f8e14]
+        - paragraph [ref=f8e15]: Obrigado por passar algum tempo de qualidade com o site hoje.
+        - paragraph [ref=f8e16]:
+          - link "Acessar novamente" [ref=f8e17] [cursor=pointer]:
+            - /url: /admin/
+    - contentinfo

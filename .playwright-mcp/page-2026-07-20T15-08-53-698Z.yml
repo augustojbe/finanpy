@@ -1,0 +1,33 @@
+- generic [ref=f12e2]:
+  - complementary [ref=f12e3]:
+    - generic [ref=f12e4]: Finanpy
+    - navigation [ref=f12e5]:
+      - link "Dashboard" [ref=f12e6] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Contas em breve" [ref=f12e9]:
+        - /url: "#"
+        - text: Contas
+        - generic [ref=f12e12]: em breve
+      - link "Categorias em breve" [ref=f12e13]:
+        - /url: "#"
+        - text: Categorias
+        - generic [ref=f12e16]: em breve
+      - link "Transações em breve" [ref=f12e17]:
+        - /url: "#"
+        - text: Transações
+        - generic [ref=f12e20]: em breve
+      - link "Perfil em breve" [ref=f12e21]:
+        - /url: "#"
+        - text: Perfil
+        - generic [ref=f12e24]: em breve
+    - generic [ref=f12e25]:
+      - generic [ref=f12e26]:
+        - generic [ref=f12e27]: U
+        - generic [ref=f12e29]:
+          - paragraph [ref=f12e30]: Usuário Teste
+          - paragraph [ref=f12e31]: teste@example.com
+      - button "Sair" [ref=f12e33] [cursor=pointer]
+  - main [ref=f12e36]:
+    - generic [ref=f12e38]:
+      - heading "Dashboard" [level=1] [ref=f12e39]
+      - paragraph [ref=f12e40]: Em construção — Sprint 6.

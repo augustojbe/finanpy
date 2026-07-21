@@ -34,5 +34,5 @@ class LoginView(AuthLoginView):
 
 
 class LogoutView(AuthLogoutView):
-    http_method_names = ['post', 'get', 'options']
+    next_page = reverse_lazy('users:landing')
 

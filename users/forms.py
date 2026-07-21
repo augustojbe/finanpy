@@ -23,6 +23,19 @@ class UserRegistrationForm(UserCreationForm):
         label='E-mail',
     )
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name in self.fields:
+            field = self.fields[field_name]
+            css_class = 'w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all duration-200'
+            if field_name in ('password1', 'password2'):
+                field.widget.attrs.update({
+                    'class': css_class,
+                    'placeholder': 'Mínimo de 8 caracteres' if field_name == 'password1' else 'Repita a senha',
+                })
+            else:
+                field.widget.attrs.update({'class': css_class})
+
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email', 'password1', 'password2')

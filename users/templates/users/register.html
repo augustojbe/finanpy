@@ -87,15 +87,14 @@
                         <label for="{{ form.password1.id_for_label }}" class="block text-sm font-medium text-gray-400">
                             Senha
                         </label>
-                        <input type="password"
-                               name="{{ form.password1.name }}"
-                               id="{{ form.password1.id_for_label }}"
-                               class="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all duration-200 {% if form.password1.errors %}border-rose-500{% endif %}"
-                               placeholder="Mínimo de 8 caracteres">
+                        {{ form.password1 }}
                         {% if form.password1.errors %}
                             {% for error in form.password1.errors %}
                                 <p class="text-xs text-rose-400">{{ error }}</p>
                             {% endfor %}
+                        {% endif %}
+                        {% if form.password1.help_text %}
+                            <p class="text-xs text-gray-500">{{ form.password1.help_text }}</p>
                         {% endif %}
                     </div>
 
@@ -104,11 +103,7 @@
                         <label for="{{ form.password2.id_for_label }}" class="block text-sm font-medium text-gray-400">
                             Confirmar senha
                         </label>
-                        <input type="password"
-                               name="{{ form.password2.name }}"
-                               id="{{ form.password2.id_for_label }}"
-                               class="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all duration-200 {% if form.password2.errors %}border-rose-500{% endif %}"
-                               placeholder="Repita a senha">
+                        {{ form.password2 }}
                         {% if form.password2.errors %}
                             {% for error in form.password2.errors %}
                                 <p class="text-xs text-rose-400">{{ error }}</p>

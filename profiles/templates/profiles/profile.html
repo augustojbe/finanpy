@@ -1,0 +1,158 @@
+{% extends 'base_auth.html' %}
+
+{% block title %}Perfil — Finanpy{% endblock %}
+
+{% block page_content %}
+<div class="max-w-2xl mx-auto space-y-8">
+
+    <div>
+        <h1 class="text-2xl font-bold text-white">Perfil</h1>
+        <p class="text-gray-400 text-sm mt-1">Gerencie seus dados pessoais e senha.</p>
+    </div>
+
+    <!-- Dados pessoais -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h2 class="text-lg font-semibold text-white mb-6">Dados pessoais</h2>
+        <form method="post" novalidate>
+            {% csrf_token %}
+
+            {% if form.non_field_errors or user_form.non_field_errors %}
+                <div class="bg-rose-500/10 border border-rose-500/30 text-rose-400 px-4 py-3 rounded-lg text-sm mb-6">
+                    {% for error in form.non_field_errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                    {% for error in user_form.non_field_errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="space-y-4">
+                <!-- Nome -->
+                <div class="space-y-1">
+                    <label for="{{ user_form.first_name.id_for_label }}" class="block text-sm font-medium text-gray-400">
+                        Nome
+                    </label>
+                    {{ user_form.first_name }}
+                    {% if user_form.first_name.errors %}
+                        {% for error in user_form.first_name.errors %}
+                            <p class="text-xs text-rose-400">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <!-- Sobrenome -->
+                <div class="space-y-1">
+                    <label for="{{ user_form.last_name.id_for_label }}" class="block text-sm font-medium text-gray-400">
+                        Sobrenome
+                    </label>
+                    {{ user_form.last_name }}
+                    {% if user_form.last_name.errors %}
+                        {% for error in user_form.last_name.errors %}
+                            <p class="text-xs text-rose-400">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <!-- Email (somente leitura) -->
+                <div class="space-y-1">
+                    <label class="block text-sm font-medium text-gray-400">E-mail</label>
+                    <input type="email"
+                           value="{{ request.user.email }}"
+                           disabled
+                           class="w-full bg-gray-800/50 border border-gray-700 text-gray-500 rounded-lg px-4 py-2.5 cursor-not-allowed">
+                </div>
+
+                <!-- Telefone -->
+                <div class="space-y-1">
+                    <label for="{{ form.phone.id_for_label }}" class="block text-sm font-medium text-gray-400">
+                        Telefone
+                    </label>
+                    {{ form.phone }}
+                    {% if form.phone.errors %}
+                        {% for error in form.phone.errors %}
+                            <p class="text-xs text-rose-400">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <button type="submit"
+                        class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                    Salvar alterações
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Alterar senha -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <h2 class="text-lg font-semibold text-white mb-6">Alterar senha</h2>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="action" value="change_password">
+
+            {% if password_form.non_field_errors %}
+                <div class="bg-rose-500/10 border border-rose-500/30 text-rose-400 px-4 py-3 rounded-lg text-sm mb-6">
+                    {% for error in password_form.non_field_errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="space-y-4">
+                <!-- Senha atual -->
+                <div class="space-y-1">
+                    <label for="{{ password_form.old_password.id_for_label }}" class="block text-sm font-medium text-gray-400">
+                        Senha atual
+                    </label>
+                    {{ password_form.old_password }}
+                    {% if password_form.old_password.errors %}
+                        {% for error in password_form.old_password.errors %}
+                            <p class="text-xs text-rose-400">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <!-- Nova senha -->
+                <div class="space-y-1">
+                    <label for="{{ password_form.new_password1.id_for_label }}" class="block text-sm font-medium text-gray-400">
+                        Nova senha
+                    </label>
+                    {{ password_form.new_password1 }}
+                    {% if password_form.new_password1.errors %}
+                        {% for error in password_form.new_password1.errors %}
+                            <p class="text-xs text-rose-400">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    {% if password_form.new_password1.help_text %}
+                        <p class="text-xs text-gray-500">{{ password_form.new_password1.help_text }}</p>
+                    {% endif %}
+                </div>
+
+                <!-- Confirmar nova senha -->
+                <div class="space-y-1">
+                    <label for="{{ password_form.new_password2.id_for_label }}" class="block text-sm font-medium text-gray-400">
+                        Confirmar nova senha
+                    </label>
+                    {{ password_form.new_password2 }}
+                    {% if password_form.new_password2.errors %}
+                        {% for error in password_form.new_password2.errors %}
+                            <p class="text-xs text-rose-400">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <button type="submit"
+                        class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                    Alterar senha
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
