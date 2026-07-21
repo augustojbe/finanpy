@@ -1,0 +1,60 @@
+- generic [active] [ref=f36e1]:
+  - banner [ref=f36e2]:
+    - heading "Page not found (404)" [level=1] [ref=f36e3]
+    - generic [ref=f36e4]: category não encontrado de acordo com a consulta
+    - table [ref=f36e5]:
+      - rowgroup [ref=f36e6]:
+        - row [ref=f36e7]:
+          - rowheader "Request Method:" [ref=f36e8]
+          - cell "GET" [ref=f36e9]
+        - row [ref=f36e10]:
+          - rowheader "Request URL:" [ref=f36e11]
+          - cell "http://127.0.0.1:8000/categorias/1/excluir/" [ref=f36e12]
+        - row [ref=f36e13]:
+          - rowheader "Raised by:" [ref=f36e14]
+          - cell "categories.views.CategoryDeleteView" [ref=f36e15]
+  - main [ref=f36e16]:
+    - paragraph [ref=f36e17]:
+      - text: Using the URLconf defined in
+      - code [ref=f36e18]: core.urls
+      - text: ", Django tried these URL patterns, in this order:"
+    - list [ref=f36e19]:
+      - listitem [ref=f36e20]:
+        - code [ref=f36e21]: admin/
+      - listitem [ref=f36e22]:
+        - code
+        - code [ref=f36e23]: "[name='landing']"
+      - listitem [ref=f36e24]:
+        - code
+        - code [ref=f36e25]: cadastro/ [name='register']
+      - listitem [ref=f36e26]:
+        - code
+        - code [ref=f36e27]: entrar/ [name='login']
+      - listitem [ref=f36e28]:
+        - code
+        - code [ref=f36e29]: sair/ [name='logout']
+      - listitem [ref=f36e30]:
+        - code [ref=f36e31]: contas/
+      - listitem [ref=f36e32]:
+        - code [ref=f36e33]: categorias/
+        - code [ref=f36e34]: "[name='list']"
+      - listitem [ref=f36e35]:
+        - code [ref=f36e36]: categorias/
+        - code [ref=f36e37]: nova/ [name='create']
+      - listitem [ref=f36e38]:
+        - code [ref=f36e39]: categorias/
+        - code [ref=f36e40]: <int:pk>/editar/ [name='update']
+      - listitem [ref=f36e41]:
+        - code [ref=f36e42]: categorias/
+        - code [ref=f36e43]: <int:pk>/excluir/ [name='delete']
+    - paragraph [ref=f36e44]:
+      - text: The current path,
+      - code [ref=f36e45]: categorias/1/excluir/
+      - text: ", matched the last one."
+  - contentinfo [ref=f36e46]:
+    - paragraph [ref=f36e47]:
+      - text: You’re seeing this error because you have
+      - code [ref=f36e48]: DEBUG = True
+      - text: in your Django settings file. Change that to
+      - code [ref=f36e49]: "False"
+      - text: ", and Django will display a standard 404 page."

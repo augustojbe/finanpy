@@ -1,0 +1,131 @@
+- generic [active] [ref=f33e1]:
+  - generic [ref=f33e2]: Categoria criada com sucesso.
+  - generic [ref=f33e6]:
+    - complementary [ref=f33e7]:
+      - generic [ref=f33e8]: Finanpy
+      - navigation [ref=f33e9]:
+        - link "Dashboard" [ref=f33e10] [cursor=pointer]:
+          - /url: /dashboard/
+        - link "Contas" [ref=f33e13] [cursor=pointer]:
+          - /url: /contas/
+        - link "Categorias" [ref=f33e16] [cursor=pointer]:
+          - /url: /categorias/
+        - link "Transações em breve" [ref=f33e19]:
+          - /url: "#"
+          - text: Transações
+          - generic [ref=f33e22]: em breve
+        - link "Perfil" [ref=f33e23] [cursor=pointer]:
+          - /url: /perfil/
+      - generic [ref=f33e26]:
+        - generic [ref=f33e27]:
+          - generic [ref=f33e28]: T
+          - generic [ref=f33e30]:
+            - paragraph [ref=f33e31]: Teste Categorias
+            - paragraph [ref=f33e32]: testecat@finanpy.com
+        - button "Sair" [ref=f33e34] [cursor=pointer]
+    - main [ref=f33e37]:
+      - generic [ref=f33e39]:
+        - generic [ref=f33e40]:
+          - heading "Categorias" [level=1] [ref=f33e41]
+          - link "Nova categoria" [ref=f33e42] [cursor=pointer]:
+            - /url: /categorias/nova/
+        - generic [ref=f33e43]:
+          - heading "Minhas Categorias" [level=2] [ref=f33e44]
+          - generic [ref=f33e46]:
+            - generic [ref=f33e47]:
+              - generic [ref=f33e48]:
+                - generic [ref=f33e49]: 🧪
+                - heading "Categoria Teste" [level=3] [ref=f33e50]
+              - generic [ref=f33e51]: Despesa
+            - generic [ref=f33e52]:
+              - link "Editar" [ref=f33e53] [cursor=pointer]:
+                - /url: /categorias/13/editar/
+              - link "Excluir" [ref=f33e56] [cursor=pointer]:
+                - /url: /categorias/13/excluir/
+        - generic [ref=f33e59]:
+          - heading "Categorias do Sistema" [level=2] [ref=f33e60]
+          - generic [ref=f33e61]:
+            - generic [ref=f33e63]:
+              - generic [ref=f33e64]:
+                - generic [ref=f33e65]: 🍔
+                - heading "Alimentação" [level=3] [ref=f33e66]
+              - generic [ref=f33e67]:
+                - generic [ref=f33e68]: Padrão
+                - generic [ref=f33e69]: Despesa
+            - generic [ref=f33e71]:
+              - generic [ref=f33e72]:
+                - generic [ref=f33e73]: 📚
+                - heading "Educação" [level=3] [ref=f33e74]
+              - generic [ref=f33e75]:
+                - generic [ref=f33e76]: Padrão
+                - generic [ref=f33e77]: Despesa
+            - generic [ref=f33e79]:
+              - generic [ref=f33e80]:
+                - generic [ref=f33e81]: 💻
+                - heading "Freelance" [level=3] [ref=f33e82]
+              - generic [ref=f33e83]:
+                - generic [ref=f33e84]: Padrão
+                - generic [ref=f33e85]: Receita
+            - generic [ref=f33e87]:
+              - generic [ref=f33e88]:
+                - generic [ref=f33e89]: 📈
+                - heading "Investimentos" [level=3] [ref=f33e90]
+              - generic [ref=f33e91]:
+                - generic [ref=f33e92]: Padrão
+                - generic [ref=f33e93]: Receita
+            - generic [ref=f33e95]:
+              - generic [ref=f33e96]:
+                - generic [ref=f33e97]: 🎮
+                - heading "Lazer" [level=3] [ref=f33e98]
+              - generic [ref=f33e99]:
+                - generic [ref=f33e100]: Padrão
+                - generic [ref=f33e101]: Despesa
+            - generic [ref=f33e103]:
+              - generic [ref=f33e104]:
+                - generic [ref=f33e105]: 🏠
+                - heading "Moradia" [level=3] [ref=f33e106]
+              - generic [ref=f33e107]:
+                - generic [ref=f33e108]: Padrão
+                - generic [ref=f33e109]: Despesa
+            - generic [ref=f33e111]:
+              - generic [ref=f33e112]:
+                - generic [ref=f33e113]: 📦
+                - heading "Outros" [level=3] [ref=f33e114]
+              - generic [ref=f33e115]:
+                - generic [ref=f33e116]: Padrão
+                - generic [ref=f33e117]: Despesa
+            - generic [ref=f33e119]:
+              - generic [ref=f33e120]:
+                - generic [ref=f33e121]: 💰
+                - heading "Outros" [level=3] [ref=f33e122]
+              - generic [ref=f33e123]:
+                - generic [ref=f33e124]: Padrão
+                - generic [ref=f33e125]: Receita
+            - generic [ref=f33e127]:
+              - generic [ref=f33e128]:
+                - generic [ref=f33e129]: 💼
+                - heading "Salário" [level=3] [ref=f33e130]
+              - generic [ref=f33e131]:
+                - generic [ref=f33e132]: Padrão
+                - generic [ref=f33e133]: Receita
+            - generic [ref=f33e135]:
+              - generic [ref=f33e136]:
+                - generic [ref=f33e137]: 💊
+                - heading "Saúde" [level=3] [ref=f33e138]
+              - generic [ref=f33e139]:
+                - generic [ref=f33e140]: Padrão
+                - generic [ref=f33e141]: Despesa
+            - generic [ref=f33e143]:
+              - generic [ref=f33e144]:
+                - generic [ref=f33e145]: 🚗
+                - heading "Transporte" [level=3] [ref=f33e146]
+              - generic [ref=f33e147]:
+                - generic [ref=f33e148]: Padrão
+                - generic [ref=f33e149]: Despesa
+            - generic [ref=f33e151]:
+              - generic [ref=f33e152]:
+                - generic [ref=f33e153]: 👕
+                - heading "Vestuário" [level=3] [ref=f33e154]
+              - generic [ref=f33e155]:
+                - generic [ref=f33e156]: Padrão
+                - generic [ref=f33e157]: Despesa

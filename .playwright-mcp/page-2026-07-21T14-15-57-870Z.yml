@@ -1,0 +1,34 @@
+- generic [ref=f22e2]:
+  - complementary [ref=f22e3]:
+    - generic [ref=f22e4]: Finanpy
+    - navigation [ref=f22e5]:
+      - link "Dashboard" [ref=f22e6] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Contas" [ref=f22e9] [cursor=pointer]:
+        - /url: /contas/
+      - link "Categorias" [ref=f22e12] [cursor=pointer]:
+        - /url: /categorias/
+      - link "Transações" [ref=f22e15] [cursor=pointer]:
+        - /url: /transacoes/
+      - link "Perfil" [ref=f22e18] [cursor=pointer]:
+        - /url: /perfil/
+    - generic [ref=f22e21]:
+      - generic [ref=f22e22]:
+        - generic [ref=f22e23]: T
+        - generic [ref=f22e25]:
+          - paragraph [ref=f22e26]: Teste Trans
+          - paragraph [ref=f22e27]: testetrans@finanpy.com
+      - button "Sair" [ref=f22e29] [cursor=pointer]
+  - main [ref=f22e32]:
+    - generic [ref=f22e35]:
+      - heading "Excluir Transação" [level=1] [ref=f22e39]
+      - paragraph [ref=f22e40]:
+        - text: Tem certeza que deseja excluir a transação
+        - strong [ref=f22e41]: Supermercado Extra
+        - text: no valor de
+        - strong [ref=f22e42]: R$ 520,30
+        - text: "?"
+      - generic [ref=f22e44]:
+        - button "Sim, excluir" [ref=f22e45] [cursor=pointer]
+        - link "Cancelar" [ref=f22e46] [cursor=pointer]:
+          - /url: /transacoes/

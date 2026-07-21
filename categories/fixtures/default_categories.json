@@ -1,0 +1,158 @@
+[
+    {
+        "model": "categories.category",
+        "pk": 1,
+        "fields": {
+            "user": null,
+            "name": "Alimentação",
+            "category_type": "expense",
+            "icon": "🍔",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 2,
+        "fields": {
+            "user": null,
+            "name": "Moradia",
+            "category_type": "expense",
+            "icon": "🏠",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 3,
+        "fields": {
+            "user": null,
+            "name": "Transporte",
+            "category_type": "expense",
+            "icon": "🚗",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 4,
+        "fields": {
+            "user": null,
+            "name": "Saúde",
+            "category_type": "expense",
+            "icon": "💊",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 5,
+        "fields": {
+            "user": null,
+            "name": "Educação",
+            "category_type": "expense",
+            "icon": "📚",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 6,
+        "fields": {
+            "user": null,
+            "name": "Lazer",
+            "category_type": "expense",
+            "icon": "🎮",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 7,
+        "fields": {
+            "user": null,
+            "name": "Vestuário",
+            "category_type": "expense",
+            "icon": "👕",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 8,
+        "fields": {
+            "user": null,
+            "name": "Outros",
+            "category_type": "expense",
+            "icon": "📦",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 9,
+        "fields": {
+            "user": null,
+            "name": "Salário",
+            "category_type": "income",
+            "icon": "💼",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 10,
+        "fields": {
+            "user": null,
+            "name": "Freelance",
+            "category_type": "income",
+            "icon": "💻",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 11,
+        "fields": {
+            "user": null,
+            "name": "Investimentos",
+            "category_type": "income",
+            "icon": "📈",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "categories.category",
+        "pk": 12,
+        "fields": {
+            "user": null,
+            "name": "Outros",
+            "category_type": "income",
+            "icon": "💰",
+            "is_default": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    }
+]

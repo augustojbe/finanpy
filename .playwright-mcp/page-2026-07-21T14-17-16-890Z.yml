@@ -1,0 +1,25 @@
+- generic [ref=f27e2]:
+  - complementary [ref=f27e3]:
+    - generic [ref=f27e4]: Finanpy
+    - navigation [ref=f27e5]:
+      - link "Dashboard" [ref=f27e6] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Contas" [ref=f27e9] [cursor=pointer]:
+        - /url: /contas/
+      - link "Categorias" [ref=f27e12] [cursor=pointer]:
+        - /url: /categorias/
+      - link "Transações" [ref=f27e15] [cursor=pointer]:
+        - /url: /transacoes/
+      - link "Perfil" [ref=f27e18] [cursor=pointer]:
+        - /url: /perfil/
+    - generic [ref=f27e21]:
+      - generic [ref=f27e22]:
+        - generic [ref=f27e23]: T
+        - generic [ref=f27e25]:
+          - paragraph [ref=f27e26]: Teste Trans
+          - paragraph [ref=f27e27]: testetrans@finanpy.com
+      - button "Sair" [ref=f27e29] [cursor=pointer]
+  - main [ref=f27e32]:
+    - generic [ref=f27e34]:
+      - heading "Dashboard" [level=1] [ref=f27e35]
+      - paragraph [ref=f27e36]: Em construção — Sprint 6.

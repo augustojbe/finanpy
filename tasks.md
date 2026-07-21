@@ -169,193 +169,193 @@
 
 ---
 
-### 🏦 Sprint 3 — App `accounts`: Contas Bancárias
+### 🏦 Sprint 3 — App `accounts`: Contas Bancárias ✅
 
 **Objetivo:** CRUD completo de contas financeiras com cálculo de saldo.
 
 ---
 
-- [ ] **3.1 — Model `Account` (`accounts/models.py`)**
-  - [ ] 3.1.1 — Criar classe `Account` com os campos:
-    - [ ] 3.1.1.1 — `user = ForeignKey(settings.AUTH_USER_MODEL, on_delete=CASCADE)`
-    - [ ] 3.1.1.2 — `name = CharField(max_length=150)`
-    - [ ] 3.1.1.3 — `account_type = CharField(max_length=20, choices=AccountType.choices)`
-    - [ ] 3.1.1.4 — `initial_balance = DecimalField(max_digits=14, decimal_places=2, default=0)`
-    - [ ] 3.1.1.5 — `is_active = BooleanField(default=True)`
-    - [ ] 3.1.1.6 — `created_at` e `updated_at`
-  - [ ] 3.1.2 — Criar `class AccountType(models.TextChoices)` com: `CHECKING`, `SAVINGS`, `WALLET`, `INVESTMENT`
-  - [ ] 3.1.3 — Criar method `get_current_balance()` que calcula saldo = `initial_balance` + receitas - despesas via ORM
-  - [ ] 3.1.4 — Definir `__str__` retornando `self.name`
-  - [ ] 3.1.5 — Definir `class Meta` com `ordering = ['name']`
-  - [ ] 3.1.6 — Registrar no `admin.py` com `list_display` e `list_filter`
+- [x] **3.1 — Model `Account` (`accounts/models.py`)**
+  - [x] 3.1.1 — Criar classe `Account` com os campos:
+    - [x] 3.1.1.1 — `user = ForeignKey(settings.AUTH_USER_MODEL, on_delete=CASCADE)`
+    - [x] 3.1.1.2 — `name = CharField(max_length=150)`
+    - [x] 3.1.1.3 — `account_type = CharField(max_length=20, choices=AccountType.choices)`
+    - [x] 3.1.1.4 — `initial_balance = DecimalField(max_digits=14, decimal_places=2, default=0)`
+    - [x] 3.1.1.5 — `is_active = BooleanField(default=True)`
+    - [x] 3.1.1.6 — `created_at` e `updated_at`
+  - [x] 3.1.2 — Criar `class AccountType(models.TextChoices)` com: `CHECKING`, `SAVINGS`, `WALLET`, `INVESTMENT`
+  - [x] 3.1.3 — Criar method `get_current_balance()` que calcula saldo = `initial_balance` + receitas - despesas via ORM
+  - [x] 3.1.4 — Definir `__str__` retornando `self.name`
+  - [x] 3.1.5 — Definir `class Meta` com `ordering = ['name']`
+  - [x] 3.1.6 — Registrar no `admin.py` com `list_display` e `list_filter`
 
-- [ ] **3.2 — Formulários (`accounts/forms.py`)**
-  - [ ] 3.2.1 — Criar `AccountForm(ModelForm)` com campos: `name`, `account_type`, `initial_balance`
-  - [ ] 3.2.2 — Aplicar classes CSS do design system nos widgets via `attrs`
+- [x] **3.2 — Formulários (`accounts/forms.py`)**
+  - [x] 3.2.1 — Criar `AccountForm(ModelForm)` com campos: `name`, `account_type`, `initial_balance`
+  - [x] 3.2.2 — Aplicar classes CSS do design system nos widgets via `attrs`
 
-- [ ] **3.3 — Views (`accounts/views.py`)**
-  - [ ] 3.3.1 — Criar `AccountListView` (LoginRequiredMixin + ListView)
-    - [ ] 3.3.1.1 — Filtrar queryset por `user=self.request.user`
-    - [ ] 3.3.1.2 — Calcular e passar saldo total no contexto
-  - [ ] 3.3.2 — Criar `AccountCreateView` (LoginRequiredMixin + CreateView)
-    - [ ] 3.3.2.1 — Sobrescrever `form_valid()` para definir `form.instance.user = self.request.user`
-    - [ ] 3.3.2.2 — Adicionar mensagem de sucesso
-    - [ ] 3.3.2.3 — Redirecionar para lista de contas
-  - [ ] 3.3.3 — Criar `AccountUpdateView` (LoginRequiredMixin + UpdateView)
-    - [ ] 3.3.3.1 — Sobrescrever `get_queryset()` para filtrar por usuário
-  - [ ] 3.3.4 — Criar `AccountDeleteView` (LoginRequiredMixin + DeleteView)
-    - [ ] 3.3.4.1 — Sobrescrever `get_queryset()` para filtrar por usuário
-    - [ ] 3.3.4.2 — Verificar se conta tem transações; se sim, negar exclusão com mensagem de erro
+- [x] **3.3 — Views (`accounts/views.py`)**
+  - [x] 3.3.1 — Criar `AccountListView` (LoginRequiredMixin + ListView)
+    - [x] 3.3.1.1 — Filtrar queryset por `user=self.request.user`
+    - [x] 3.3.1.2 — Calcular e passar saldo total no contexto
+  - [x] 3.3.2 — Criar `AccountCreateView` (LoginRequiredMixin + CreateView)
+    - [x] 3.3.2.1 — Sobrescrever `form_valid()` para definir `form.instance.user = self.request.user`
+    - [x] 3.3.2.2 — Adicionar mensagem de sucesso
+    - [x] 3.3.2.3 — Redirecionar para lista de contas
+  - [x] 3.3.3 — Criar `AccountUpdateView` (LoginRequiredMixin + UpdateView)
+    - [x] 3.3.3.1 — Sobrescrever `get_queryset()` para filtrar por usuário
+  - [x] 3.3.4 — Criar `AccountDeleteView` (LoginRequiredMixin + DeleteView)
+    - [x] 3.3.4.1 — Sobrescrever `get_queryset()` para filtrar por usuário
+    - [x] 3.3.4.2 — Verificar se conta tem transações; se sim, negar exclusão com mensagem de erro
 
-- [ ] **3.4 — URLs e Templates**
-  - [ ] 3.4.1 — Criar `accounts/urls.py` com paths: list, create, update, delete
-  - [ ] 3.4.2 — Criar `accounts/templates/accounts/account_list.html`
-    - [ ] 3.4.2.1 — Herdar de `base_auth.html`
-    - [ ] 3.4.2.2 — Card de saldo total no topo
-    - [ ] 3.4.2.3 — Grid de cards para cada conta com: nome, tipo, saldo atual
-    - [ ] 3.4.2.4 — Botão de adicionar conta
-    - [ ] 3.4.2.5 — Botões de editar e excluir em cada card
-    - [ ] 3.4.2.6 — Estado vazio (sem contas cadastradas) com CTA para criar
-  - [ ] 3.4.3 — Criar `accounts/templates/accounts/account_form.html`
-    - [ ] 3.4.3.1 — Formulário com design system (inputs, labels, botões)
-    - [ ] 3.4.3.2 — Título dinâmico: "Nova Conta" ou "Editar Conta"
-  - [ ] 3.4.4 — Criar `accounts/templates/accounts/account_confirm_delete.html`
-    - [ ] 3.4.4.1 — Card de confirmação com mensagem e botões Cancelar / Excluir
+- [x] **3.4 — URLs e Templates**
+  - [x] 3.4.1 — Criar `accounts/urls.py` com paths: list, create, update, delete
+  - [x] 3.4.2 — Criar `accounts/templates/accounts/account_list.html`
+    - [x] 3.4.2.1 — Herdar de `base_auth.html`
+    - [x] 3.4.2.2 — Card de saldo total no topo
+    - [x] 3.4.2.3 — Grid de cards para cada conta com: nome, tipo, saldo atual
+    - [x] 3.4.2.4 — Botão de adicionar conta
+    - [x] 3.4.2.5 — Botões de editar e excluir em cada card
+    - [x] 3.4.2.6 — Estado vazio (sem contas cadastradas) com CTA para criar
+  - [x] 3.4.3 — Criar `accounts/templates/accounts/account_form.html`
+    - [x] 3.4.3.1 — Formulário com design system (inputs, labels, botões)
+    - [x] 3.4.3.2 — Título dinâmico: "Nova Conta" ou "Editar Conta"
+  - [x] 3.4.4 — Criar `accounts/templates/accounts/account_confirm_delete.html`
+    - [x] 3.4.4.1 — Card de confirmação com mensagem e botões Cancelar / Excluir
 
-- [ ] **3.5 — Migration**
-  - [ ] 3.5.1 — Rodar `python manage.py makemigrations accounts`
-  - [ ] 3.5.2 — Rodar `python manage.py migrate`
-  - [ ] 3.5.3 — Testar CRUD completo via interface
+- [x] **3.5 — Migration**
+  - [x] 3.5.1 — Rodar `python manage.py makemigrations accounts`
+  - [x] 3.5.2 — Rodar `python manage.py migrate`
+  - [x] 3.5.3 — Testar CRUD completo via interface
 
 ---
 
-### 🏷️ Sprint 4 — App `categories`: Categorias de Transações
+### 🏷️ Sprint 4 — App `categories`: Categorias de Transações ✅
 
 **Objetivo:** CRUD de categorias com suporte a categorias padrão do sistema.
 
 ---
 
-- [ ] **4.1 — Model `Category` (`categories/models.py`)**
-  - [ ] 4.1.1 — Criar `class CategoryType(models.TextChoices)` com: `INCOME` (Receita), `EXPENSE` (Despesa)
-  - [ ] 4.1.2 — Criar classe `Category` com os campos:
-    - [ ] 4.1.2.1 — `user = ForeignKey(settings.AUTH_USER_MODEL, on_delete=CASCADE, null=True, blank=True)` (null = categoria do sistema)
-    - [ ] 4.1.2.2 — `name = CharField(max_length=100)`
-    - [ ] 4.1.2.3 — `category_type = CharField(max_length=10, choices=CategoryType.choices)`
-    - [ ] 4.1.2.4 — `icon = CharField(max_length=10, blank=True)` (campo para emoji)
-    - [ ] 4.1.2.5 — `is_default = BooleanField(default=False)` (categorias do sistema)
-    - [ ] 4.1.2.6 — `created_at` e `updated_at`
-  - [ ] 4.1.3 — Definir `class Meta` com `ordering = ['name']` e `unique_together = ['user', 'name', 'category_type']`
-  - [ ] 4.1.4 — Registrar no `admin.py`
+- [x] **4.1 — Model `Category` (`categories/models.py`)**
+  - [x] 4.1.1 — Criar `class CategoryType(models.TextChoices)` com: `INCOME` (Receita), `EXPENSE` (Despesa)
+  - [x] 4.1.2 — Criar classe `Category` com os campos:
+    - [x] 4.1.2.1 — `user = ForeignKey(settings.AUTH_USER_MODEL, on_delete=CASCADE, null=True, blank=True)` (null = categoria do sistema)
+    - [x] 4.1.2.2 — `name = CharField(max_length=100)`
+    - [x] 4.1.2.3 — `category_type = CharField(max_length=10, choices=CategoryType.choices)`
+    - [x] 4.1.2.4 — `icon = CharField(max_length=10, blank=True)` (campo para emoji)
+    - [x] 4.1.2.5 — `is_default = BooleanField(default=False)` (categorias do sistema)
+    - [x] 4.1.2.6 — `created_at` e `updated_at`
+  - [x] 4.1.3 — Definir `class Meta` com `ordering = ['name']` e `unique_together = ['user', 'name', 'category_type']`
+  - [x] 4.1.4 — Registrar no `admin.py`
 
-- [ ] **4.2 — Dados Iniciais (Categorias Padrão)**
-  - [ ] 4.2.1 — Criar `categories/fixtures/default_categories.json` com categorias padrão
-  - [ ] 4.2.2 — Categorias padrão de Despesa: Alimentação 🍔, Moradia 🏠, Transporte 🚗, Saúde 💊, Educação 📚, Lazer 🎮, Vestuário 👕, Outros 📦
-  - [ ] 4.2.3 — Categorias padrão de Receita: Salário 💼, Freelance 💻, Investimentos 📈, Outros 💰
-  - [ ] 4.2.4 — Documentar no README: `python manage.py loaddata default_categories`
+- [x] **4.2 — Dados Iniciais (Categorias Padrão)**
+  - [x] 4.2.1 — Criar `categories/fixtures/default_categories.json` com categorias padrão
+  - [x] 4.2.2 — Categorias padrão de Despesa: Alimentação 🍔, Moradia 🏠, Transporte 🚗, Saúde 💊, Educação 📚, Lazer 🎮, Vestuário 👕, Outros 📦
+  - [x] 4.2.3 — Categorias padrão de Receita: Salário 💼, Freelance 💻, Investimentos 📈, Outros 💰
+  - [x] 4.2.4 — Documentar no README: `python manage.py loaddata default_categories`
 
-- [ ] **4.3 — Formulários (`categories/forms.py`)**
-  - [ ] 4.3.1 — Criar `CategoryForm(ModelForm)` com campos: `name`, `category_type`, `icon`
-  - [ ] 4.3.2 — Aplicar classes CSS do design system nos widgets
+- [x] **4.3 — Formulários (`categories/forms.py`)**
+  - [x] 4.3.1 — Criar `CategoryForm(ModelForm)` com campos: `name`, `category_type`, `icon`
+  - [x] 4.3.2 — Aplicar classes CSS do design system nos widgets
 
-- [ ] **4.4 — Views (`categories/views.py`)**
-  - [ ] 4.4.1 — Criar `CategoryListView` (LoginRequiredMixin + ListView)
-    - [ ] 4.4.1.1 — Listar: categorias do usuário + categorias padrão (user=None)
-    - [ ] 4.4.1.2 — Separar na template: "Suas categorias" vs "Categorias do sistema"
-  - [ ] 4.4.2 — Criar `CategoryCreateView` (LoginRequiredMixin + CreateView)
-    - [ ] 4.4.2.1 — Definir `form.instance.user = self.request.user` no `form_valid()`
-  - [ ] 4.4.3 — Criar `CategoryUpdateView` (LoginRequiredMixin + UpdateView)
-    - [ ] 4.4.3.1 — Permitir editar somente categorias do próprio usuário
-  - [ ] 4.4.4 — Criar `CategoryDeleteView` (LoginRequiredMixin + DeleteView)
-    - [ ] 4.4.4.1 — Verificar se categoria tem transações; negar se houver
-    - [ ] 4.4.4.2 — Bloquear exclusão de categorias padrão do sistema
+- [x] **4.4 — Views (`categories/views.py`)**
+  - [x] 4.4.1 — Criar `CategoryListView` (LoginRequiredMixin + ListView)
+    - [x] 4.4.1.1 — Listar: categorias do usuário + categorias padrão (user=None)
+    - [x] 4.4.1.2 — Separar na template: "Suas categorias" vs "Categorias do sistema"
+  - [x] 4.4.2 — Criar `CategoryCreateView` (LoginRequiredMixin + CreateView)
+    - [x] 4.4.2.1 — Definir `form.instance.user = self.request.user` no `form_valid()`
+  - [x] 4.4.3 — Criar `CategoryUpdateView` (LoginRequiredMixin + UpdateView)
+    - [x] 4.4.3.1 — Permitir editar somente categorias do próprio usuário
+  - [x] 4.4.4 — Criar `CategoryDeleteView` (LoginRequiredMixin + DeleteView)
+    - [x] 4.4.4.1 — Verificar se categoria tem transações; negar se houver
+    - [x] 4.4.4.2 — Bloquear exclusão de categorias padrão do sistema
 
-- [ ] **4.5 — URLs e Templates**
-  - [ ] 4.5.1 — Criar `categories/urls.py`
-  - [ ] 4.5.2 — Criar `categories/templates/categories/category_list.html`
-    - [ ] 4.5.2.1 — Seção de categorias do usuário com botões editar/excluir
-    - [ ] 4.5.2.2 — Seção de categorias padrão (somente leitura, badge "Padrão")
-    - [ ] 4.5.2.3 — Distinção visual por tipo: receita (emerald) vs despesa (rose)
-  - [ ] 4.5.3 — Criar `categories/templates/categories/category_form.html`
-  - [ ] 4.5.4 — Criar `categories/templates/categories/category_confirm_delete.html`
+- [x] **4.5 — URLs e Templates**
+  - [x] 4.5.1 — Criar `categories/urls.py`
+  - [x] 4.5.2 — Criar `categories/templates/categories/category_list.html`
+    - [x] 4.5.2.1 — Seção de categorias do usuário com botões editar/excluir
+    - [x] 4.5.2.2 — Seção de categorias padrão (somente leitura, badge "Padrão")
+    - [x] 4.5.2.3 — Distinção visual por tipo: receita (emerald) vs despesa (rose)
+  - [x] 4.5.3 — Criar `categories/templates/categories/category_form.html`
+  - [x] 4.5.4 — Criar `categories/templates/categories/category_confirm_delete.html`
 
-- [ ] **4.6 — Migration e Fixture**
-  - [ ] 4.6.1 — Rodar `python manage.py makemigrations categories`
-  - [ ] 4.6.2 — Rodar `python manage.py migrate`
-  - [ ] 4.6.3 — Rodar `python manage.py loaddata default_categories`
-  - [ ] 4.6.4 — Testar CRUD completo via interface
+- [x] **4.6 — Migration e Fixture**
+  - [x] 4.6.1 — Rodar `python manage.py makemigrations categories`
+  - [x] 4.6.2 — Rodar `python manage.py migrate`
+  - [x] 4.6.3 — Rodar `python manage.py loaddata default_categories`
+  - [x] 4.6.4 — Testar CRUD completo via interface
 
 ---
 
-### 💸 Sprint 5 — App `transactions`: Movimentações Financeiras
+### 💸 Sprint 5 — App `transactions`: Movimentações Financeiras ✅
 
 **Objetivo:** CRUD completo de transações com filtros e atualização de saldo.
 
 ---
 
-- [ ] **5.1 — Model `Transaction` (`transactions/models.py`)**
-  - [ ] 5.1.1 — Criar `class TransactionType(models.TextChoices)` com: `INCOME` (Receita), `EXPENSE` (Despesa)
-  - [ ] 5.1.2 — Criar classe `Transaction` com os campos:
-    - [ ] 5.1.2.1 — `user = ForeignKey(settings.AUTH_USER_MODEL, on_delete=CASCADE)`
-    - [ ] 5.1.2.2 — `account = ForeignKey('accounts.Account', on_delete=PROTECT)`
-    - [ ] 5.1.2.3 — `category = ForeignKey('categories.Category', on_delete=SET_NULL, null=True, blank=True)`
-    - [ ] 5.1.2.4 — `transaction_type = CharField(max_length=10, choices=TransactionType.choices)`
-    - [ ] 5.1.2.5 — `amount = DecimalField(max_digits=14, decimal_places=2)` (sempre positivo)
-    - [ ] 5.1.2.6 — `description = CharField(max_length=300)`
-    - [ ] 5.1.2.7 — `date = DateField()`
-    - [ ] 5.1.2.8 — `notes = TextField(blank=True)`
-    - [ ] 5.1.2.9 — `created_at` e `updated_at`
-  - [ ] 5.1.3 — Definir `class Meta` com `ordering = ['-date', '-created_at']`
-  - [ ] 5.1.4 — Definir `indexes` em `class Meta` para os campos `user`, `date`, `transaction_type`
-  - [ ] 5.1.5 — Definir `__str__` retornando `f'{self.description} — {self.amount}'`
-  - [ ] 5.1.6 — Registrar no `admin.py` com `list_display`, `list_filter`, `search_fields`
+- [x] **5.1 — Model `Transaction` (`transactions/models.py`)**
+  - [x] 5.1.1 — Criar `class TransactionType(models.TextChoices)` com: `INCOME` (Receita), `EXPENSE` (Despesa)
+  - [x] 5.1.2 — Criar classe `Transaction` com os campos:
+    - [x] 5.1.2.1 — `user = ForeignKey(settings.AUTH_USER_MODEL, on_delete=CASCADE)`
+    - [x] 5.1.2.2 — `account = ForeignKey('accounts.Account', on_delete=PROTECT)`
+    - [x] 5.1.2.3 — `category = ForeignKey('categories.Category', on_delete=SET_NULL, null=True, blank=True)`
+    - [x] 5.1.2.4 — `transaction_type = CharField(max_length=10, choices=TransactionType.choices)`
+    - [x] 5.1.2.5 — `amount = DecimalField(max_digits=14, decimal_places=2)` (sempre positivo)
+    - [x] 5.1.2.6 — `description = CharField(max_length=300)`
+    - [x] 5.1.2.7 — `date = DateField()`
+    - [x] 5.1.2.8 — `notes = TextField(blank=True)`
+    - [x] 5.1.2.9 — `created_at` e `updated_at`
+  - [x] 5.1.3 — Definir `class Meta` com `ordering = ['-date', '-created_at']`
+  - [x] 5.1.4 — Definir `indexes` em `class Meta` para os campos `user`, `date`, `transaction_type`
+  - [x] 5.1.5 — Definir `__str__` retornando `f'{self.description} — {self.amount}'`
+  - [x] 5.1.6 — Registrar no `admin.py` com `list_display`, `list_filter`, `search_fields`
 
-- [ ] **5.2 — Formulários (`transactions/forms.py`)**
-  - [ ] 5.2.1 — Criar `TransactionForm(ModelForm)` com campos: `transaction_type`, `description`, `amount`, `date`, `account`, `category`, `notes`
-  - [ ] 5.2.2 — No `__init__`, filtrar `account` e `category` para exibir somente as do usuário + categorias padrão
-  - [ ] 5.2.3 — Configurar `date` com widget `DateInput(type='date')`
-  - [ ] 5.2.4 — Validar que `amount > 0` no método `clean_amount()`
-  - [ ] 5.2.5 — Aplicar classes CSS do design system nos widgets
+- [x] **5.2 — Formulários (`transactions/forms.py`)**
+  - [x] 5.2.1 — Criar `TransactionForm(ModelForm)` com campos: `transaction_type`, `description`, `amount`, `date`, `account`, `category`, `notes`
+  - [x] 5.2.2 — No `__init__`, filtrar `account` e `category` para exibir somente as do usuário + categorias padrão
+  - [x] 5.2.3 — Configurar `date` com widget `DateInput(type='date')`
+  - [x] 5.2.4 — Validar que `amount > 0` no método `clean_amount()`
+  - [x] 5.2.5 — Aplicar classes CSS do design system nos widgets
 
-- [ ] **5.3 — Views (`transactions/views.py`)**
-  - [ ] 5.3.1 — Criar `TransactionListView` (LoginRequiredMixin + ListView)
-    - [ ] 5.3.1.1 — Filtrar queryset por `user=self.request.user`
-    - [ ] 5.3.1.2 — Aplicar filtro de mês/ano atual por padrão (via `GET` params)
-    - [ ] 5.3.1.3 — Aceitar filtros via GET: `month`, `year`, `type`, `category`
-    - [ ] 5.3.1.4 — Usar `select_related('account', 'category')` para evitar N+1
-    - [ ] 5.3.1.5 — Calcular e passar no contexto: `total_income`, `total_expense`, `balance`
-    - [ ] 5.3.1.6 — Passar lista de categorias do usuário no contexto (para o select de filtro)
-  - [ ] 5.3.2 — Criar `TransactionCreateView` (LoginRequiredMixin + CreateView)
-    - [ ] 5.3.2.1 — Passar `request.user` para o form no `get_form_kwargs()`
-    - [ ] 5.3.2.2 — Definir `form.instance.user = self.request.user` no `form_valid()`
-    - [ ] 5.3.2.3 — Adicionar mensagem de sucesso
-  - [ ] 5.3.3 — Criar `TransactionUpdateView` (LoginRequiredMixin + UpdateView)
-    - [ ] 5.3.3.1 — Filtrar queryset por usuário
-    - [ ] 5.3.3.2 — Passar `request.user` para o form
-  - [ ] 5.3.4 — Criar `TransactionDeleteView` (LoginRequiredMixin + DeleteView)
-    - [ ] 5.3.4.1 — Filtrar queryset por usuário
-    - [ ] 5.3.4.2 — Adicionar mensagem de sucesso após exclusão
+- [x] **5.3 — Views (`transactions/views.py`)**
+  - [x] 5.3.1 — Criar `TransactionListView` (LoginRequiredMixin + ListView)
+    - [x] 5.3.1.1 — Filtrar queryset por `user=self.request.user`
+    - [x] 5.3.1.2 — Aplicar filtro de mês/ano atual por padrão (via `GET` params)
+    - [x] 5.3.1.3 — Aceitar filtros via GET: `month`, `year`, `type`, `category`
+    - [x] 5.3.1.4 — Usar `select_related('account', 'category')` para evitar N+1
+    - [x] 5.3.1.5 — Calcular e passar no contexto: `total_income`, `total_expense`, `balance`
+    - [x] 5.3.1.6 — Passar lista de categorias do usuário no contexto (para o select de filtro)
+  - [x] 5.3.2 — Criar `TransactionCreateView` (LoginRequiredMixin + CreateView)
+    - [x] 5.3.2.1 — Passar `request.user` para o form no `get_form_kwargs()`
+    - [x] 5.3.2.2 — Definir `form.instance.user = self.request.user` no `form_valid()`
+    - [x] 5.3.2.3 — Adicionar mensagem de sucesso
+  - [x] 5.3.3 — Criar `TransactionUpdateView` (LoginRequiredMixin + UpdateView)
+    - [x] 5.3.3.1 — Filtrar queryset por usuário
+    - [x] 5.3.3.2 — Passar `request.user` para o form
+  - [x] 5.3.4 — Criar `TransactionDeleteView` (LoginRequiredMixin + DeleteView)
+    - [x] 5.3.4.1 — Filtrar queryset por usuário
+    - [x] 5.3.4.2 — Adicionar mensagem de sucesso após exclusão
 
-- [ ] **5.4 — URLs e Templates**
-  - [ ] 5.4.1 — Criar `transactions/urls.py` com paths: list, create, update, delete
-  - [ ] 5.4.2 — Criar `transactions/templates/transactions/transaction_list.html`
-    - [ ] 5.4.2.1 — Herdar de `base_auth.html`
-    - [ ] 5.4.2.2 — Cards de resumo: Total Receitas (emerald), Total Despesas (rose), Saldo (violet ou emerald/rose conforme positivo/negativo)
-    - [ ] 5.4.2.3 — Barra de filtros (form GET): seletor de mês/ano, tipo, categoria
-    - [ ] 5.4.2.4 — Tabela de transações com: data, descrição, categoria, conta, valor (colorido por tipo)
-    - [ ] 5.4.2.5 — Botões editar e excluir por linha
-    - [ ] 5.4.2.6 — Botão "Nova Transação" destacado
-    - [ ] 5.4.2.7 — Estado vazio (sem transações) com CTA
-    - [ ] 5.4.2.8 — Badge de tipo (Receita/Despesa) por linha
-  - [ ] 5.4.3 — Criar `transactions/templates/transactions/transaction_form.html`
-    - [ ] 5.4.3.1 — Campos do formulário com design system
-    - [ ] 5.4.3.2 — Título dinâmico: "Nova Transação" ou "Editar Transação"
-  - [ ] 5.4.4 — Criar `transactions/templates/transactions/transaction_confirm_delete.html`
+- [x] **5.4 — URLs e Templates**
+  - [x] 5.4.1 — Criar `transactions/urls.py` com paths: list, create, update, delete
+  - [x] 5.4.2 — Criar `transactions/templates/transactions/transaction_list.html`
+    - [x] 5.4.2.1 — Herdar de `base_auth.html`
+    - [x] 5.4.2.2 — Cards de resumo: Total Receitas (emerald), Total Despesas (rose), Saldo (violet ou emerald/rose conforme positivo/negativo)
+    - [x] 5.4.2.3 — Barra de filtros (form GET): seletor de mês/ano, tipo, categoria
+    - [x] 5.4.2.4 — Tabela de transações com: data, descrição, categoria, conta, valor (colorido por tipo)
+    - [x] 5.4.2.5 — Botões editar e excluir por linha
+    - [x] 5.4.2.6 — Botão "Nova Transação" destacado
+    - [x] 5.4.2.7 — Estado vazio (sem transações) com CTA
+    - [x] 5.4.2.8 — Badge de tipo (Receita/Despesa) por linha
+  - [x] 5.4.3 — Criar `transactions/templates/transactions/transaction_form.html`
+    - [x] 5.4.3.1 — Campos do formulário com design system
+    - [x] 5.4.3.2 — Título dinâmico: "Nova Transação" ou "Editar Transação"
+  - [x] 5.4.4 — Criar `transactions/templates/transactions/transaction_confirm_delete.html`
 
-- [ ] **5.5 — Migration**
-  - [ ] 5.5.1 — Rodar `python manage.py makemigrations transactions`
-  - [ ] 5.5.2 — Rodar `python manage.py migrate`
-  - [ ] 5.5.3 — Testar CRUD completo: criar receita, criar despesa, editar, excluir
-  - [ ] 5.5.4 — Verificar que filtros funcionam corretamente
+- [x] **5.5 — Migration**
+  - [x] 5.5.1 — Rodar `python manage.py makemigrations transactions`
+  - [x] 5.5.2 — Rodar `python manage.py migrate`
+  - [x] 5.5.3 — Testar CRUD completo: criar receita, criar despesa, editar, excluir
+  - [x] 5.5.4 — Verificar que filtros funcionam corretamente
 
 ---
 

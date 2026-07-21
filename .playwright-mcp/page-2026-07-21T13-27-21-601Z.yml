@@ -1,0 +1,38 @@
+- generic [active] [ref=f14e1]:
+  - generic [ref=f14e2]: Conta excluída com sucesso.
+  - generic [ref=f14e6]:
+    - complementary [ref=f14e7]:
+      - generic [ref=f14e8]: Finanpy
+      - navigation [ref=f14e9]:
+        - link "Dashboard" [ref=f14e10] [cursor=pointer]:
+          - /url: /dashboard/
+        - link "Contas" [ref=f14e13] [cursor=pointer]:
+          - /url: /contas/
+        - link "Categorias em breve" [ref=f14e16]:
+          - /url: "#"
+          - text: Categorias
+          - generic [ref=f14e19]: em breve
+        - link "Transações em breve" [ref=f14e20]:
+          - /url: "#"
+          - text: Transações
+          - generic [ref=f14e23]: em breve
+        - link "Perfil" [ref=f14e24] [cursor=pointer]:
+          - /url: /perfil/
+      - generic [ref=f14e27]:
+        - generic [ref=f14e28]:
+          - generic [ref=f14e29]: T
+          - generic [ref=f14e31]:
+            - paragraph [ref=f14e32]: Teste QA
+            - paragraph [ref=f14e33]: testeqa@finanpy.com
+        - button "Sair" [ref=f14e35] [cursor=pointer]
+    - main [ref=f14e38]:
+      - generic [ref=f14e40]:
+        - generic [ref=f14e41]:
+          - heading "Minhas Contas" [level=1] [ref=f14e42]
+          - link "Nova conta" [ref=f14e43] [cursor=pointer]:
+            - /url: /contas/nova/
+        - generic [ref=f14e44]:
+          - heading "Você ainda não tem contas cadastradas." [level=2] [ref=f14e48]
+          - paragraph [ref=f14e49]: Crie sua primeira conta para começar a organizar suas finanças.
+          - link "Criar primeira conta" [ref=f14e50] [cursor=pointer]:
+            - /url: /contas/nova/

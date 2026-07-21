@@ -1,0 +1,37 @@
+- generic [ref=f13e2]:
+  - complementary [ref=f13e3]:
+    - generic [ref=f13e4]: Finanpy
+    - navigation [ref=f13e5]:
+      - link "Dashboard" [ref=f13e6] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Contas" [ref=f13e9] [cursor=pointer]:
+        - /url: /contas/
+      - link "Categorias em breve" [ref=f13e12]:
+        - /url: "#"
+        - text: Categorias
+        - generic [ref=f13e15]: em breve
+      - link "Transações em breve" [ref=f13e16]:
+        - /url: "#"
+        - text: Transações
+        - generic [ref=f13e19]: em breve
+      - link "Perfil" [ref=f13e20] [cursor=pointer]:
+        - /url: /perfil/
+    - generic [ref=f13e23]:
+      - generic [ref=f13e24]:
+        - generic [ref=f13e25]: T
+        - generic [ref=f13e27]:
+          - paragraph [ref=f13e28]: Teste QA
+          - paragraph [ref=f13e29]: testeqa@finanpy.com
+      - button "Sair" [ref=f13e31] [cursor=pointer]
+  - main [ref=f13e34]:
+    - generic [ref=f13e37]:
+      - heading "Excluir Conta" [level=1] [ref=f13e41]
+      - paragraph [ref=f13e42]:
+        - text: Tem certeza que deseja excluir a conta
+        - strong [ref=f13e43]: Conta Principal Editada
+        - text: "? Esta ação não pode ser desfeita."
+      - generic [ref=f13e44]: ⚠️ Esta conta possui saldo. Ao excluí-la, as transações associadas serão mantidas.
+      - generic [ref=f13e46]:
+        - button "Sim, excluir" [ref=f13e47] [cursor=pointer]
+        - link "Cancelar" [ref=f13e48] [cursor=pointer]:
+          - /url: /contas/

@@ -1,0 +1,64 @@
+{% extends 'base_auth.html' %}
+
+{% block title %}
+    {% if object %}Editar Transação{% else %}Nova Transação{% endif %} — Finanpy
+{% endblock %}
+
+{% block page_content %}
+<div class="max-w-2xl mx-auto space-y-8">
+
+    <div>
+        <h1 class="text-3xl font-bold text-white">
+            {% if object %}Editar Transação{% else %}Nova Transação{% endif %}
+        </h1>
+        <p class="text-gray-400 text-sm mt-1">
+            {% if object %}Atualize os dados da sua transação.{% else %}Registre uma nova receita ou despesa.{% endif %}
+        </p>
+    </div>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+        <form method="post" novalidate>
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <div class="bg-rose-500/10 border border-rose-500/30 text-rose-400 px-4 py-3 rounded-lg text-sm mb-6">
+                    {% for error in form.non_field_errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="space-y-4">
+                {% for field in form %}
+                    <div class="space-y-1">
+                        <label for="{{ field.id_for_label }}" class="block text-sm font-medium text-gray-400">
+                            {{ field.label }}
+                        </label>
+                        {{ field }}
+                        {% if field.errors %}
+                            {% for error in field.errors %}
+                                <p class="text-xs text-rose-400">{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                        {% if field.help_text %}
+                            <p class="text-xs text-gray-500">{{ field.help_text }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="mt-6 flex items-center gap-3">
+                <button type="submit"
+                        class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                    Salvar
+                </button>
+                <a href="{% url 'transactions:list' %}"
+                   class="border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white font-medium py-2.5 px-6 rounded-lg transition-all duration-200 hover:bg-gray-800">
+                    Cancelar
+                </a>
+            </div>
+        </form>
+    </div>
+
+</div>
+{% endblock %}

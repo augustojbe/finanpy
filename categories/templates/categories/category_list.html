@@ -1,0 +1,120 @@
+{% extends 'base_auth.html' %}
+
+{% block title %}Categorias — Finanpy{% endblock %}
+
+{% block page_content %}
+<div class="space-y-8">
+
+    <div class="flex items-center justify-between">
+        <h1 class="text-3xl font-bold text-white">Categorias</h1>
+        <a href="{% url 'categories:create' %}"
+           class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+            Nova categoria
+        </a>
+    </div>
+
+    {% if not user_categories and not default_categories %}
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-12 text-center">
+            <div class="mx-auto w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 8V5a2 2 0 012-2z" />
+                </svg>
+            </div>
+            <h2 class="text-lg font-semibold text-white mb-2">Nenhuma categoria encontrada.</h2>
+            <p class="text-gray-400 text-sm mb-6">Crie categorias para organizar suas receitas e despesas.</p>
+            <a href="{% url 'categories:create' %}"
+               class="inline-block bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Criar primeira categoria
+            </a>
+        </div>
+    {% else %}
+
+        {% if user_categories %}
+            <section>
+                <h2 class="text-xl font-semibold text-white mb-4">Minhas Categorias</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {% for category in user_categories %}
+                        <div class="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-gray-700 transition-colors duration-200">
+                            <div class="flex items-start justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    {% if category.icon %}
+                                        <span class="text-xl">{{ category.icon }}</span>
+                                    {% endif %}
+                                    <h3 class="text-lg font-medium text-white">{{ category.name }}</h3>
+                                </div>
+                                {% if category.category_type == 'income' %}
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                        Receita
+                                    </span>
+                                {% else %}
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                                        Despesa
+                                    </span>
+                                {% endif %}
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <a href="{% url 'categories:update' category.pk %}"
+                                   class="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-colors duration-200"
+                                   title="Editar">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                    </svg>
+                                </a>
+                                <a href="{% url 'categories:delete' category.pk %}"
+                                   class="p-2 rounded-lg text-gray-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors duration-200"
+                                   title="Excluir">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        {% else %}
+            <section>
+                <h2 class="text-xl font-semibold text-white mb-4">Minhas Categorias</h2>
+                <p class="text-sm text-gray-500">Nenhuma categoria personalizada.</p>
+            </section>
+        {% endif %}
+
+        {% if default_categories %}
+            <section>
+                <h2 class="text-xl font-semibold text-white mb-4">Categorias do Sistema</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {% for category in default_categories %}
+                        <div class="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-gray-700 transition-colors duration-200">
+                            <div class="flex items-start justify-between mb-3">
+                                <div class="flex items-center gap-2">
+                                    {% if category.icon %}
+                                        <span class="text-xl">{{ category.icon }}</span>
+                                    {% endif %}
+                                    <h3 class="text-lg font-medium text-white">{{ category.name }}</h3>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-800 text-gray-400 border border-gray-700">
+                                        Padrão
+                                    </span>
+                                    {% if category.category_type == 'income' %}
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                            Receita
+                                        </span>
+                                    {% else %}
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                                            Despesa
+                                        </span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        {% endif %}
+
+    {% endif %}
+
+</div>
+{% endblock %}

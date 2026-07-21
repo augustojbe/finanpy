@@ -1,0 +1,132 @@
+- generic [active] [ref=f17e1]:
+  - generic [ref=f17e2]: Transação registrada com sucesso.
+  - generic [ref=f17e6]:
+    - complementary [ref=f17e7]:
+      - generic [ref=f17e8]: Finanpy
+      - navigation [ref=f17e9]:
+        - link "Dashboard" [ref=f17e10] [cursor=pointer]:
+          - /url: /dashboard/
+        - link "Contas" [ref=f17e13] [cursor=pointer]:
+          - /url: /contas/
+        - link "Categorias" [ref=f17e16] [cursor=pointer]:
+          - /url: /categorias/
+        - link "Transações" [ref=f17e19] [cursor=pointer]:
+          - /url: /transacoes/
+        - link "Perfil" [ref=f17e22] [cursor=pointer]:
+          - /url: /perfil/
+      - generic [ref=f17e25]:
+        - generic [ref=f17e26]:
+          - generic [ref=f17e27]: T
+          - generic [ref=f17e29]:
+            - paragraph [ref=f17e30]: Teste Trans
+            - paragraph [ref=f17e31]: testetrans@finanpy.com
+        - button "Sair" [ref=f17e33] [cursor=pointer]
+    - main [ref=f17e36]:
+      - generic [ref=f17e38]:
+        - generic [ref=f17e39]:
+          - heading "Transações" [level=1] [ref=f17e40]
+          - link "Nova transação" [ref=f17e41] [cursor=pointer]:
+            - /url: /transacoes/nova/
+        - generic [ref=f17e42]:
+          - generic [ref=f17e43]:
+            - generic [ref=f17e44]: Total Receitas
+            - paragraph [ref=f17e49]: R$ 3500,00
+            - paragraph [ref=f17e50]: Período selecionado
+          - generic [ref=f17e51]:
+            - generic [ref=f17e52]: Total Despesas
+            - paragraph [ref=f17e57]: R$ 450,75
+            - paragraph [ref=f17e58]: Período selecionado
+          - generic [ref=f17e59]:
+            - generic [ref=f17e60]: Saldo do período
+            - paragraph [ref=f17e65]: R$ 3049,25
+            - paragraph [ref=f17e66]: Período selecionado
+        - generic [ref=f17e68]:
+          - generic [ref=f17e69]:
+            - generic [ref=f17e70]: Mês
+            - combobox "Mês" [ref=f17e71]:
+              - option "Todos"
+              - option "Janeiro"
+              - option "Fevereiro"
+              - option "Março"
+              - option "Abril"
+              - option "Maio"
+              - option "Junho"
+              - option "Julho" [selected]
+              - option "Agosto"
+              - option "Setembro"
+              - option "Outubro"
+              - option "Novembro"
+              - option "Dezembro"
+          - generic [ref=f17e72]:
+            - generic [ref=f17e73]: Ano
+            - spinbutton "Ano" [ref=f17e74]: "2026"
+          - generic [ref=f17e75]:
+            - generic [ref=f17e76]: Tipo
+            - combobox "Tipo" [ref=f17e77]:
+              - option "Todos"
+              - option "Receita" [selected]
+              - option "Despesa"
+          - generic [ref=f17e78]:
+            - generic [ref=f17e79]: Categoria
+            - combobox "Categoria" [ref=f17e80]:
+              - option "Todas" [selected]
+              - option "Alimentação"
+              - option "Educação"
+              - option "Freela Extra"
+              - option "Freelance"
+              - option "Investimentos"
+              - option "Lazer"
+              - option "Moradia"
+              - option "Outros"
+              - option "Outros"
+              - option "Salário"
+              - option "Saúde"
+              - option "Transporte"
+              - option "Vestuário"
+          - generic [ref=f17e81]:
+            - button "Filtrar" [ref=f17e82] [cursor=pointer]
+            - link "Limpar" [ref=f17e83] [cursor=pointer]:
+              - /url: /transacoes/
+        - table [ref=f17e85]:
+          - rowgroup [ref=f17e86]:
+            - row [ref=f17e87]:
+              - columnheader "Data" [ref=f17e88]
+              - columnheader "Descrição" [ref=f17e89]
+              - columnheader "Categoria" [ref=f17e90]
+              - columnheader "Conta" [ref=f17e91]
+              - columnheader "Valor" [ref=f17e92]
+              - columnheader "Tipo" [ref=f17e93]
+              - columnheader "Ações" [ref=f17e94]
+          - rowgroup [ref=f17e95]:
+            - row [ref=f17e96]:
+              - cell "21/07/2026" [ref=f17e97]
+              - cell "Supermercado" [ref=f17e98]
+              - cell "🍔 Alimentação" [ref=f17e99]:
+                - generic [ref=f17e100]:
+                  - generic [ref=f17e101]: 🍔
+                  - generic [ref=f17e102]: Alimentação
+              - cell "Conta Principal" [ref=f17e103]
+              - cell "R$ 450,75" [ref=f17e104]
+              - cell "Despesa" [ref=f17e105]
+              - cell [ref=f17e107]:
+                - generic [ref=f17e108]:
+                  - link "Editar" [ref=f17e109] [cursor=pointer]:
+                    - /url: /transacoes/2/editar/
+                  - link "Excluir" [ref=f17e112] [cursor=pointer]:
+                    - /url: /transacoes/2/excluir/
+            - row [ref=f17e115]:
+              - cell "21/07/2026" [ref=f17e116]
+              - cell "Salário Julho" [ref=f17e117]
+              - cell "💼 Salário" [ref=f17e118]:
+                - generic [ref=f17e119]:
+                  - generic [ref=f17e120]: 💼
+                  - generic [ref=f17e121]: Salário
+              - cell "Conta Principal" [ref=f17e122]
+              - cell "R$ 3500,00" [ref=f17e123]
+              - cell "Receita" [ref=f17e124]
+              - cell [ref=f17e126]:
+                - generic [ref=f17e127]:
+                  - link "Editar" [ref=f17e128] [cursor=pointer]:
+                    - /url: /transacoes/1/editar/
+                  - link "Excluir" [ref=f17e131] [cursor=pointer]:
+                    - /url: /transacoes/1/excluir/

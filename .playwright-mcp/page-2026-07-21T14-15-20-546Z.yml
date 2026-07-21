@@ -1,0 +1,72 @@
+- generic [ref=f20e2]:
+  - complementary [ref=f20e3]:
+    - generic [ref=f20e4]: Finanpy
+    - navigation [ref=f20e5]:
+      - link "Dashboard" [ref=f20e6] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Contas" [ref=f20e9] [cursor=pointer]:
+        - /url: /contas/
+      - link "Categorias" [ref=f20e12] [cursor=pointer]:
+        - /url: /categorias/
+      - link "Transações" [ref=f20e15] [cursor=pointer]:
+        - /url: /transacoes/
+      - link "Perfil" [ref=f20e18] [cursor=pointer]:
+        - /url: /perfil/
+    - generic [ref=f20e21]:
+      - generic [ref=f20e22]:
+        - generic [ref=f20e23]: T
+        - generic [ref=f20e25]:
+          - paragraph [ref=f20e26]: Teste Trans
+          - paragraph [ref=f20e27]: testetrans@finanpy.com
+      - button "Sair" [ref=f20e29] [cursor=pointer]
+  - main [ref=f20e32]:
+    - generic [ref=f20e34]:
+      - generic [ref=f20e35]:
+        - heading "Editar Transação" [level=1] [ref=f20e36]
+        - paragraph [ref=f20e37]: Atualize os dados da sua transação.
+      - generic [ref=f20e39]:
+        - generic [ref=f20e40]:
+          - generic [ref=f20e41]:
+            - generic [ref=f20e42]: Tipo
+            - combobox "Tipo" [ref=f20e43]:
+              - option "---------"
+              - option "Receita"
+              - option "Despesa" [selected]
+          - generic [ref=f20e44]:
+            - generic [ref=f20e45]: Descrição
+            - textbox "Descrição" [ref=f20e46]: Supermercado
+          - generic [ref=f20e47]:
+            - generic [ref=f20e48]: Valor
+            - spinbutton "Valor" [ref=f20e49]: "450.75"
+          - generic [ref=f20e50]:
+            - generic [ref=f20e51]: Data
+            - textbox "Data" [ref=f20e52]
+          - generic [ref=f20e53]:
+            - generic [ref=f20e54]: Conta
+            - combobox "Conta" [ref=f20e55]:
+              - option "---------"
+              - option "Conta Principal" [selected]
+          - generic [ref=f20e56]:
+            - generic [ref=f20e57]: Categoria
+            - combobox "Categoria" [ref=f20e58]:
+              - option "---------"
+              - option "🍔 Alimentação" [selected]
+              - option "📚 Educação"
+              - option "💸 Freela Extra"
+              - option "💻 Freelance"
+              - option "📈 Investimentos"
+              - option "🎮 Lazer"
+              - option "🏠 Moradia"
+              - option "📦 Outros"
+              - option "💰 Outros"
+              - option "💼 Salário"
+              - option "💊 Saúde"
+              - option "🚗 Transporte"
+              - option "👕 Vestuário"
+          - generic [ref=f20e59]:
+            - generic [ref=f20e60]: Observações
+            - textbox "Observações" [ref=f20e61]
+        - generic [ref=f20e62]:
+          - button "Salvar" [ref=f20e63] [cursor=pointer]
+          - link "Cancelar" [ref=f20e64] [cursor=pointer]:
+            - /url: /transacoes/

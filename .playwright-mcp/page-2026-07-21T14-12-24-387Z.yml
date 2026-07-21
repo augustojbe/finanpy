@@ -1,0 +1,44 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e2]: Conta criada com sucesso.
+  - generic [ref=f9e6]:
+    - complementary [ref=f9e7]:
+      - generic [ref=f9e8]: Finanpy
+      - navigation [ref=f9e9]:
+        - link "Dashboard" [ref=f9e10] [cursor=pointer]:
+          - /url: /dashboard/
+        - link "Contas" [ref=f9e13] [cursor=pointer]:
+          - /url: /contas/
+        - link "Categorias" [ref=f9e16] [cursor=pointer]:
+          - /url: /categorias/
+        - link "Transações" [ref=f9e19] [cursor=pointer]:
+          - /url: /transacoes/
+        - link "Perfil" [ref=f9e22] [cursor=pointer]:
+          - /url: /perfil/
+      - generic [ref=f9e25]:
+        - generic [ref=f9e26]:
+          - generic [ref=f9e27]: T
+          - generic [ref=f9e29]:
+            - paragraph [ref=f9e30]: Teste Trans
+            - paragraph [ref=f9e31]: testetrans@finanpy.com
+        - button "Sair" [ref=f9e33] [cursor=pointer]
+    - main [ref=f9e36]:
+      - generic [ref=f9e38]:
+        - generic [ref=f9e39]:
+          - heading "Minhas Contas" [level=1] [ref=f9e40]
+          - link "Nova conta" [ref=f9e41] [cursor=pointer]:
+            - /url: /contas/nova/
+        - generic [ref=f9e42]:
+          - generic [ref=f9e43]: Saldo total
+          - paragraph [ref=f9e48]: R$ 5000,00
+        - generic [ref=f9e50]:
+          - generic [ref=f9e51]:
+            - generic [ref=f9e52]:
+              - heading "Conta Principal" [level=3] [ref=f9e53]
+              - paragraph [ref=f9e54]: 🏦 Conta Corrente
+            - generic [ref=f9e55]: Conta Corrente
+          - paragraph [ref=f9e56]: R$ 5000,00
+          - generic [ref=f9e57]:
+            - link "Editar" [ref=f9e58] [cursor=pointer]:
+              - /url: /contas/2/editar/
+            - link "Excluir" [ref=f9e61] [cursor=pointer]:
+              - /url: /contas/2/excluir/

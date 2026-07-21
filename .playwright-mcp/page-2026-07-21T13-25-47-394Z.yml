@@ -1,0 +1,31 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]: Conta criada com sucesso. Bem-vindo ao Finanpy!
+  - generic [ref=f7e6]:
+    - complementary [ref=f7e7]:
+      - generic [ref=f7e8]: Finanpy
+      - navigation [ref=f7e9]:
+        - link "Dashboard" [ref=f7e10] [cursor=pointer]:
+          - /url: /dashboard/
+        - link "Contas" [ref=f7e13] [cursor=pointer]:
+          - /url: /contas/
+        - link "Categorias em breve" [ref=f7e16]:
+          - /url: "#"
+          - text: Categorias
+          - generic [ref=f7e19]: em breve
+        - link "Transações em breve" [ref=f7e20]:
+          - /url: "#"
+          - text: Transações
+          - generic [ref=f7e23]: em breve
+        - link "Perfil" [ref=f7e24] [cursor=pointer]:
+          - /url: /perfil/
+      - generic [ref=f7e27]:
+        - generic [ref=f7e28]:
+          - generic [ref=f7e29]: T
+          - generic [ref=f7e31]:
+            - paragraph [ref=f7e32]: Teste QA
+            - paragraph [ref=f7e33]: testeqa@finanpy.com
+        - button "Sair" [ref=f7e35] [cursor=pointer]
+    - main [ref=f7e38]:
+      - generic [ref=f7e40]:
+        - heading "Dashboard" [level=1] [ref=f7e41]
+        - paragraph [ref=f7e42]: Em construção — Sprint 6.

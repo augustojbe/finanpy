@@ -1,0 +1,49 @@
+- generic [ref=f11e2]:
+  - complementary [ref=f11e3]:
+    - generic [ref=f11e4]: Finanpy
+    - navigation [ref=f11e5]:
+      - link "Dashboard" [ref=f11e6] [cursor=pointer]:
+        - /url: /dashboard/
+      - link "Contas" [ref=f11e9] [cursor=pointer]:
+        - /url: /contas/
+      - link "Categorias em breve" [ref=f11e12]:
+        - /url: "#"
+        - text: Categorias
+        - generic [ref=f11e15]: em breve
+      - link "Transações em breve" [ref=f11e16]:
+        - /url: "#"
+        - text: Transações
+        - generic [ref=f11e19]: em breve
+      - link "Perfil" [ref=f11e20] [cursor=pointer]:
+        - /url: /perfil/
+    - generic [ref=f11e23]:
+      - generic [ref=f11e24]:
+        - generic [ref=f11e25]: T
+        - generic [ref=f11e27]:
+          - paragraph [ref=f11e28]: Teste QA
+          - paragraph [ref=f11e29]: testeqa@finanpy.com
+      - button "Sair" [ref=f11e31] [cursor=pointer]
+  - main [ref=f11e34]:
+    - generic [ref=f11e36]:
+      - generic [ref=f11e37]:
+        - heading "Editar Conta" [level=1] [ref=f11e38]
+        - paragraph [ref=f11e39]: Atualize os dados da sua conta bancária.
+      - generic [ref=f11e41]:
+        - generic [ref=f11e42]:
+          - generic [ref=f11e43]:
+            - generic [ref=f11e44]: Nome
+            - textbox "Nome" [ref=f11e45]: Conta Principal
+          - generic [ref=f11e46]:
+            - generic [ref=f11e47]: Tipo de conta
+            - combobox "Tipo de conta" [ref=f11e48]:
+              - option "Conta Corrente" [selected]
+              - option "Poupança"
+              - option "Carteira"
+              - option "Investimento"
+          - generic [ref=f11e49]:
+            - generic [ref=f11e50]: Saldo inicial
+            - spinbutton "Saldo inicial" [ref=f11e51]: "1500.00"
+        - generic [ref=f11e52]:
+          - button "Salvar" [ref=f11e53] [cursor=pointer]
+          - link "Cancelar" [ref=f11e54] [cursor=pointer]:
+            - /url: /contas/

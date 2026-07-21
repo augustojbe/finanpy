@@ -1,0 +1,22 @@
+- generic [ref=f5e3]:
+  - generic [ref=f5e4]:
+    - text: Finanpy
+    - paragraph [ref=f5e5]: Entre na sua conta
+  - generic [ref=f5e6]:
+    - generic [ref=f5e7]:
+      - generic [ref=f5e8]: Por favor, entre com um email e senha corretos. Note que ambos os campos diferenciam maiúsculas e minúsculas.
+      - generic [ref=f5e9]:
+        - generic [ref=f5e10]:
+          - generic [ref=f5e11]: E-mail
+          - textbox "E-mail" [active] [ref=f5e12]:
+            - /placeholder: seu@email.com
+            - text: admin@test.com
+        - generic [ref=f5e13]:
+          - generic [ref=f5e14]: Senha
+          - textbox "Senha" [ref=f5e15]:
+            - /placeholder: Sua senha
+      - button "Entrar" [ref=f5e16] [cursor=pointer]
+    - paragraph [ref=f5e17]:
+      - text: Não tem uma conta?
+      - link "Cadastre-se" [ref=f5e18] [cursor=pointer]:
+        - /url: /cadastro/
